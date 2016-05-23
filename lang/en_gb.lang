@@ -1,0 +1,60 @@
+rex_redactor2_title = Redactor 2 Editor
+
+#subpage help
+rex_redactor2_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.<br><br><b>Im Moment muss jede Textarea noch eine id haben, die mit redactor_ beginnt!</b>
+
+#subpage profiles
+rex_redactor2_profiles = Profile
+rex_redactor2_profiles_norowsmessage = Es wurden keine Profile gefunden
+
+rex_redactor2_profiles_column_name = Name
+rex_redactor2_profiles_column_description = Description
+rex_redactor2_profiles_column_language = Language
+
+rex_redactor2_profiles_formcaption_add = Add profile
+rex_redactor2_profiles_formcaption_edit = Edit profile
+
+rex_redactor2_profiles_label_name = Name
+rex_redactor2_profiles_label_description = Description
+rex_redactor2_profiles_label_urltype = URL-Type
+rex_redactor2_profiles_label_urltype_option_relative = relative
+rex_redactor2_profiles_label_urltype_option_absolute = absolute
+rex_redactor2_profiles_label_redactorbuttons = Redactor-Buttons
+rex_redactor2_profiles_label_redactorplugins = Redactor-Plugins
+
+rex_redactor2_profiles_buttons_alignment_description = Setzt die Ausrichtung des markierten Texts
+rex_redactor2_profiles_buttons_bold_description = Makes the marked text bold
+rex_redactor2_profiles_buttons_deleted_description = Streicht den markierten Text durch
+rex_redactor2_profiles_buttons_horizontalrule_description = Inserts a horizontal rule
+rex_redactor2_profiles_buttons_html_description = Switches in the HTML-mode
+rex_redactor2_profiles_buttons_italic_description = Makes the marked text italic
+rex_redactor2_profiles_buttons_link_description = Inserts an external link
+rex_redactor2_profiles_buttons_orderedlist_description = Inserts an ordererd list
+rex_redactor2_profiles_buttons_underline_description = Makes the marked text underlined
+rex_redactor2_profiles_buttons_unorderedlist_description = Inserts an unordererd list
+
+rex_redactor2_profiles_plugins_cleaner_description = Entfernt alle Formatierungen/Styles vom markieren Text
+rex_redactor2_profiles_plugins_clips_description = Fügt vordefinierte Textsnippets ein
+rex_redactor2_profiles_plugins_emaillink_description = Fügt einen Emaillink ein
+rex_redactor2_profiles_plugins_fontcolor_description = Defines the fontcolor
+rex_redactor2_profiles_plugins_fontfamily_description = Defines the fontfamily
+rex_redactor2_profiles_plugins_fontsize_description = Defines the fontsize
+rex_redactor2_profiles_plugins_fullscreen_description = Switches to fullscreen
+rex_redactor2_profiles_plugins_heading1_description = Inserts a headline with size 1
+rex_redactor2_profiles_plugins_heading2_description = Inserts a headline with size 2
+rex_redactor2_profiles_plugins_heading3_description = Inserts a headline with size 3
+rex_redactor2_profiles_plugins_heading4_description = Inserts a headline with size 4
+rex_redactor2_profiles_plugins_heading5_description = Inserts a headline with size 5
+rex_redactor2_profiles_plugins_heading6_description = Inserts a headline with size 6
+rex_redactor2_profiles_plugins_limiter_description = Limitiert die Anzahl Zeichen, die eingegeben werden können
+rex_redactor2_profiles_plugins_paragraph_description = Inserts a paragraph
+rex_redactor2_profiles_plugins_rex_linkmap_description = Fügt einen Link aus der Linkmap ein
+rex_redactor2_profiles_plugins_rex_mediapool_image_description = Fügt Bilder aus dem Medienpool ein
+rex_redactor2_profiles_plugins_rex_mediapool_link_description = Fügt einen Link aus dem Medienpool ein
+rex_redactor2_profiles_plugins_table_description = Inserts a table
+rex_redactor2_profiles_plugins_textdirection_description = Legt die Textausrichtung fest
+rex_redactor2_profiles_plugins_video_description = Inserts a video
+
+#permissions
+perm_general_rex_redactor2[] = Permissions for the Redactor-Addon
+perm_general_rex_redactor2[profiles] = Permissions for the page 'Profiles' of the Redactor-Addon

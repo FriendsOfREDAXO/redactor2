@@ -1,0 +1,11 @@
+package: rex_redactor2
+version: '2.0.0'
+author: Thomas Kaegi
+supportpage: github.com/phoebusryan/rex_redactor2
+
+page:
+    title: 'translate:title'
+    perm: rex_redactor2[]
+    pjax: true
+    subpages:
+        profiles: { title: 'translate:profiles', perm: rex_redactor2[profiles] }
