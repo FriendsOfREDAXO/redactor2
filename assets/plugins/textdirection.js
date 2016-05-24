@@ -4,6 +4,11 @@
 	{
 		return {
 			langs: {
+				de: {
+					"change-text-direction": "RTL-LTR",
+					"left-to-right": "Links nach rechts",
+					"right-to-left": "Rechts nach links"
+				},
 				en: {
 					"change-text-direction": "RTL-LTR",
 					"left-to-right": "Left to Right",

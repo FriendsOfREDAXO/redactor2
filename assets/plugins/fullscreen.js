@@ -4,6 +4,9 @@
 	{
 		return {
 			langs: {
+				de: {
+					"fullscreen": "Vollbild"
+				},
 				en: {
 					"fullscreen": "Fullscreen"
 				}
