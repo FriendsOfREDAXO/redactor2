@@ -7,15 +7,15 @@
 				de: {
 					"table": "Tabelle",
 					"insert-table": "Tabelle einfügen",
-					"insert-row-above": "Insert row above",
-					"insert-row-below": "Insert row below",
-					"insert-column-left": "Insert column left",
-					"insert-column-right": "Insert column right",
-					"add-head": "Add head",
-					"delete-head": "Delete head",
-					"delete-column": "Delete column",
-					"delete-row": "Delete row",
-					"delete-table": "Delete table"
+					"insert-row-above": "Zeile oberhalb einfügen",
+					"insert-row-below": "Zeile unterhalb einfügen",
+					"insert-column-left": "Spalte links einfügen",
+					"insert-column-right": "Spalte rechts einfügen",
+					"add-head": "Kopfzeile hinzufügen",
+					"delete-head": "Kopfzeile löschen",
+					"delete-column": "Spalte löschen",
+					"delete-row": "Zeile löschen",
+					"delete-table": "Tabelle löschen"
 				},
 				en: {
 					"table": "Table",
