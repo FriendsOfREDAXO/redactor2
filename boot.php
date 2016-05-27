@@ -76,7 +76,7 @@
 					}
 				//End - get pluginconfiguration
 				
-				$jsCode[] = 'shortcuts: [],';
+				$jsCode[] = 'shortcuts: false,';
 				$jsCode[] = 'buttons: [],';
 				$jsCode[] = 'plugins: [\''.implode('\',\'', $redactorPlugins).'\'],';
 				$jsCode[] = implode(PHP_EOL, $redactorConfig);
