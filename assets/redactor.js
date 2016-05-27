@@ -1,7 +1,7 @@
 /*
 	Redactor II
-	Version 1.2.4
-	Updated: May 21, 2015
+	Version 1.2.3
+	Updated: March 29, 2015
 
 	http://imperavi.com/redactor/
 
@@ -101,7 +101,7 @@
 
 	// Options
 	$.Redactor = Redactor;
-	$.Redactor.VERSION = '1.2.4';
+	$.Redactor.VERSION = '1.2.3';
 	$.Redactor.modules = ['air', 'autosave', 'block', 'buffer', 'build', 'button', 'caret', 'clean', 'code', 'core', 'detect', 'dropdown',
 						  'events', 'file', 'focus', 'image', 'indent', 'inline', 'insert', 'keydown', 'keyup',
 						  'lang', 'line', 'link', 'linkify', 'list', 'marker', 'modal', 'observe', 'offset', 'paragraphize', 'paste', 'placeholder',
@@ -3004,7 +3004,6 @@
 				start: function(html)
 				{
 					html = $.trim(html);
-					html = html.replace(/^(<span id="selection-marker-1" class="redactor-selection-marker">​<\/span>)/, '');
 
 					// clean
 					if (this.opts.type === 'textarea')
@@ -3049,7 +3048,7 @@
 					if (this.opts.type === 'textarea')
 					{
 						return this.core.textarea().val();
-                    }
+					}
 					else
 					{
 						var html = this.core.editor().html();
@@ -5117,14 +5116,13 @@
 						if (inline)
 						{
 							// remove same tag inside
-							var $div = $("<div/>").html(html);
+							var $div = $("<div/>").html($.parseHTML(html, document, true));
 							$div.find(inline.tagName.toLowerCase()).each(function()
 							{
 								$(this).contents().unwrap();
 							});
 
 							html = $div.html();
-
 						}
 
 						if (this.utils.isSelectAll())
@@ -5464,6 +5462,8 @@
 					// shortcuts setup
 					this.shortcuts.init(e, key);
 
+
+
 					// buffer
 					this.keydown.checkEvents(arrow, key);
                     this.keydown.setupBuffer(e, key);
@@ -5702,6 +5702,7 @@
 					// paragraphs
 					else if (this.keydown.block)
 					{
+
 						setTimeout($.proxy(function()
 						{
 							this.keydown.replaceToParagraph('DIV');
@@ -5726,13 +5727,13 @@
 								return false;
 							}
 						}
-
 					}
 					// outside
 					else if (!this.keydown.block)
 					{
 						return this.keydown.insertParagraph(e);
 					}
+
 
 					// remove inline tags in new-empty paragraph
 					setTimeout($.proxy(function()
@@ -5742,20 +5743,7 @@
 						{
 							var parent = this.selection.block();
 							$(inline).remove();
-							//this.caret.start(parent);
-
-                            var range = document.createRange();
-                            range.setStart(parent, 0);
-
-                            var textNode = document.createTextNode('\u200B');
-
-                            range.insertNode(textNode);
-                            range.setStartAfter(textNode);
-                            range.collapse(true);
-
-                            var sel = window.getSelection();
-            				sel.removeAllRanges();
-            				sel.addRange(range);
+							this.caret.start(parent);
 						}
 
 					}, this), 1);
@@ -6070,20 +6058,7 @@
 					{
 						var p = document.createElement('p');
 						$(blockElem).replaceWith(p);
-
-                        // caret to p
-                        var range = document.createRange();
-                        range.setStart(p, 0);
-
-                        var textNode = document.createTextNode('\u200B');
-
-                        range.insertNode(textNode);
-                        range.setStartAfter(textNode);
-                        range.collapse(true);
-
-                        var sel = window.getSelection();
-        				sel.removeAllRanges();
-        				sel.addRange(range);
+						this.caret.start(p);
 
 						return false;
 					}
@@ -6213,13 +6188,13 @@
 							return;
 						}
 
+
 						// if caret before figure - delete image
 						if (this.keyup.block && this.keydown.block && this.keyup.block.tagName === 'FIGURE' && this.utils.isStartOfElement(this.keydown.block))
 						{
     						e.preventDefault();
 
                             this.selection.save();
-                            $(this.keyup.block).find('figcaption').remove();
     						$(this.keyup.block).find('img').first().remove();
     						this.utils.replaceToTag(this.keyup.block, 'p');
 
@@ -6855,7 +6830,6 @@
 					this.placeholder.hide();
 					this.buffer.set();
 
-
 					if ($list.length !== 0 && $list[0].tagName === tag && this.utils.isRedactorParent($list))
 					{
 						this.selection.save();
@@ -6871,6 +6845,7 @@
 						});
 
 						$list.find('ul, ol').remove();
+
 						$list.find('li').each(function()
 						{
 							return $(this).replaceWith(function()
@@ -6889,22 +6864,8 @@
 						return;
 					}
 
-
 					this.selection.save();
-
-					if ($list.length !== 0 && $list[0].tagName !== tag)
-					{
-                        $list.each($.proxy(function(i,s)
-                        {
-                            this.utils.replaceToTag(s, tag);
-
-                        }, this));
-					}
-					else
-					{
-					    document.execCommand('insert' + cmd);
-					}
-
+					document.execCommand('insert' + cmd);
 					this.selection.restore();
 
 					var $insertedList = this.list.get();
@@ -7940,7 +7901,7 @@
 				init: function(e)
 				{
 					this.rtePaste = true;
-					var pre = (this.opts.type === 'pre' || this.utils.isCurrentOrParent('pre')) ? true : false;
+					var pre = (this.opts.type === 'pre' || this.utils.isCurrentOrParent('pre'));
 
 					// clipboard event
 					if (!this.paste.pre && !this.detect.isMobile() && this.opts.clipboardImageUpload && this.opts.imageUpload && this.paste.detectClipboardUpload(e))
@@ -7970,7 +7931,6 @@
 						// buffer
 						this.buffer.set();
 						this.selection.restore();
-
 						this.utils.restoreScroll();
 
 						// paste info
@@ -8004,7 +7964,7 @@
 
 					return html;
 				},
-				createPasteBox: function(pre)
+				createPasteBox: function(e, pre)
 				{
 					var css = { position: 'fixed', width: 0, top: 0, left: '-9999px' };
 
@@ -8627,7 +8587,7 @@
 				},
 				restore: function(removeMarkers)
 				{
-                    var node1 = this.marker.find(1);
+					var node1 = this.marker.find(1);
 					var node2 = this.marker.find(2);
 
 					if (this.detect.isFirefox())
