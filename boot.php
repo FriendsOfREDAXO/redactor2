@@ -11,7 +11,7 @@
 		
 		//Start - get redactor-profiles
 			$sql = rex_sql::factory();
-			$profiles = $sql->setQuery("SELECT `name`, `urltype`, `redactor_plugins` FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC")->getArray();
+			$profiles = $sql->setQuery("SELECT `name`, `minheight`,`maxheight`,`urltype`, `redactor_plugins` FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC")->getArray();
 			unset($sql);
 			
 			$jsCode = [];
@@ -36,6 +36,8 @@
 				$jsCode[] = '  },';
 				
 				$jsCode[] = '  lang: \''.$redactorLanguage.'\',';
+				$jsCode[] = '  minHeight: '.$profile['minheight'].',';
+				$jsCode[] = '  maxHeight: '.$profile['maxheight'].',';
 				$jsCode[] = '  urltype: \''.$profile['urltype'].'\',';
 				
 				//Start - get pluginconfiguration
