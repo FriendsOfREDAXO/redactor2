@@ -5,7 +5,7 @@
 		return {
 			init: function()
 			{
-				var button = this.button.addFirst('html', 'HTML');
+				var button = this.button.add('html', 'HTML');
 				this.button.addCallback(button, this.source.toggle);
 
 				var style = {
