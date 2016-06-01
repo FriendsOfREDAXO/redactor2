@@ -6,9 +6,9 @@
 			langs: {
 				de: {
 					"align": "Ausrichtung",
-					"align-left": "Linksbündig",
+					"align-left": "LinksbÃ¼ndig",
 					"align-center": "Zentriert",
-					"align-right": "Rechtsbündig"
+					"align-right": "RechtsbÃ¼ndig"
 				},
 				en: {
 					"align": "Align",
