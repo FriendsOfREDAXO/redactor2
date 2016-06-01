@@ -1,7 +1,7 @@
 rex_redactor2_title = Redactor 2 Editor
 
 #subpage help
-rex_redactor2_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.<br><br><b>Im Moment muss jede Textarea noch eine id haben, die mit redactor_ beginnt!</b>
+rex_redactor2_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.</b>
 
 #subpage profiles
 rex_redactor2_profiles = Profile
@@ -9,33 +9,27 @@ rex_redactor2_profiles_norowsmessage = Es wurden keine Profile gefunden
 
 rex_redactor2_profiles_column_name = Name
 rex_redactor2_profiles_column_description = Beschreibung
-rex_redactor2_profiles_column_language = Sprache
 
 rex_redactor2_profiles_formcaption_add = Profil hinzufügen
 rex_redactor2_profiles_formcaption_edit = Profil editieren
 
 rex_redactor2_profiles_label_name = Name
 rex_redactor2_profiles_label_description = Beschreibung
+rex_redactor2_profiles_label_minheight = Mindesthöhe
+rex_redactor2_profiles_label_maxheight = Maximalhöhe
 rex_redactor2_profiles_label_urltype = URL-Art
 rex_redactor2_profiles_label_urltype_option_relative = Relativ
 rex_redactor2_profiles_label_urltype_option_absolute = Absolut
-rex_redactor2_profiles_label_redactorbuttons = Redactor-Buttons
-rex_redactor2_profiles_label_redactorplugins = Redactor-Plugins
+rex_redactor2_profiles_label_redactorplugins = Buttons
 
-rex_redactor2_profiles_buttons_alignment_description = Setzt die Ausrichtung des markierten Texts
-rex_redactor2_profiles_buttons_bold_description = Macht den markierten Text fett
-rex_redactor2_profiles_buttons_deleted_description = Streicht den markierten Text durch
-rex_redactor2_profiles_buttons_horizontalrule_description = Fügt eine horizontale Linie ein
-rex_redactor2_profiles_buttons_html_description = Wechselt in den HTML-Modus
-rex_redactor2_profiles_buttons_italic_description = Macht den markierten Text kursiv
-rex_redactor2_profiles_buttons_link_description = Fügt einen externen Link ein
-rex_redactor2_profiles_buttons_orderedlist_description = Fügt eine sortierte Liste ein
-rex_redactor2_profiles_buttons_underline_description = Unterstreicht den markierten Text
-rex_redactor2_profiles_buttons_unorderedlist_description = Fügt eine unsortierte Liste ein
-
+rex_redactor2_profiles_plugins_alignment_description = Setzt die Ausrichtung des markierten Texts
+rex_redactor2_profiles_plugins_blockquote_description = Fügt ein Zitat ein
+rex_redactor2_profiles_plugins_bold_description = Macht den markierten Text fett
 rex_redactor2_profiles_plugins_cleaner_description = Entfernt alle Formatierungen/Styles vom markieren Text
 rex_redactor2_profiles_plugins_clips_description = Fügt vordefinierte Textsnippets ein
-rex_redactor2_profiles_plugins_emaillink_description = Inserts an emaillink
+rex_redactor2_profiles_plugins_deleted_description = Streicht den markierten Text durch
+rex_redactor2_profiles_plugins_emaillink_description = Fügt einen Email-Link ein
+rex_redactor2_profiles_plugins_externallink_description = Fügt einen externen Link ein
 rex_redactor2_profiles_plugins_fontcolor_description = Definiert die Schriftfarbe
 rex_redactor2_profiles_plugins_fontfamily_description = Definiert die Schriftart
 rex_redactor2_profiles_plugins_fontsize_description = Definiert die Schriftgrösse
@@ -46,14 +40,19 @@ rex_redactor2_profiles_plugins_heading3_description = Fügt eine Überschrift de
 rex_redactor2_profiles_plugins_heading4_description = Fügt eine Überschrift der Grösse 4 ein
 rex_redactor2_profiles_plugins_heading5_description = Fügt eine Überschrift der Grösse 5 ein
 rex_redactor2_profiles_plugins_heading6_description = Fügt eine Überschrift der Grösse 6 ein
+rex_redactor2_profiles_plugins_horizontalrule_description = Fügt eine horizontale Linie ein
+rex_redactor2_profiles_plugins_internallink_description = Fügt einen internen Link mit Hilfe der Linkmap ein
+rex_redactor2_profiles_plugins_italic_description = Macht den markierten Text kursiv
 rex_redactor2_profiles_plugins_limiter_description = Limitiert die Anzahl Zeichen, die eingegeben werden können
-rex_redactor2_profiles_plugins_paragraph_description = Fügt einen Paragraphen ein
-rex_redactor2_profiles_plugins_rex_linkmap_description = Fügt einen Link aus der Linkmap ein
-rex_redactor2_profiles_plugins_rex_mediapool_image_description = Fügt Bilder aus dem Medienpool ein
-rex_redactor2_profiles_plugins_rex_mediapool_link_description = Fügt einen Link aus dem Medienpool ein
-rex_redactor2_profiles_plugins_table_description = Fügt Tabellen ein
+rex_redactor2_profiles_plugins_media_description = Fügt ein Bild mithilfe des Medienpool ein
+rex_redactor2_profiles_plugins_medialink_description = Fügt einen Link auf eine Datei aus dem Medienpool ein
+rex_redactor2_profiles_plugins_orderedlist_description = Fügt eine sortierte Liste ein
+rex_redactor2_profiles_plugins_properties_description = Gibt dem aktuellen Block eine benutzerdefinierte ID oder Klasse
+rex_redactor2_profiles_plugins_source_description = Wechselt in den HTML-Modus
+rex_redactor2_profiles_plugins_table_description = Fügt eine Tabelle ein
 rex_redactor2_profiles_plugins_textdirection_description = Legt die Textausrichtung fest
-rex_redactor2_profiles_plugins_video_description = Fügt ein Video ein
+rex_redactor2_profiles_plugins_underline_description = Unterstreicht den markierten Text
+rex_redactor2_profiles_plugins_unorderedlist_description = Fügt eine unsortierte Liste ein
 
 #permissions
 perm_general_rex_redactor2[] = Rechte für Redactor-Addon
