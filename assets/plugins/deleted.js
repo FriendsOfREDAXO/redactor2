@@ -10,8 +10,7 @@ $.Redactor.prototype.deleted = function() {
 		},
 		init: function() {
 			var button = this.button.add('deleted', this.lang.get('deleted'));
-//			this.button.setAwesome('blockquote', 'fa-quote-left');
-			
+			this.button.setIcon(button, '<i class="fa fa-strikethrough"></i>');
 			this.button.addCallback(button, this.deleted.set);
 		},
 		set: function() {

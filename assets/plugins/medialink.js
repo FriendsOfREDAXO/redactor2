@@ -10,7 +10,7 @@ $.Redactor.prototype.medialink = function() {
 		},
 		init: function() {
 			var button = this.button.add('medialink', this.lang.get('medialink'));
-			
+			this.button.setIcon(button, '<i class="fa fa-link"></i>');
 			this.button.addCallback(button, this.medialink.show);
 		},
 		show: function() {

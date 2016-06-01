@@ -43,8 +43,7 @@ $.Redactor.prototype.emaillink = function() {
 		},
 		init: function() {
 			var button = this.button.add('emaillink', this.lang.get('emaillink'));
-//			this.button.setAwesome('blockquote', 'fa-quote-left');
-			
+			this.button.setIcon(button, '<i class="fa fa-link"></i>');
 			this.button.addCallback(button, this.emaillink.show);
 		},
 		show: function() {

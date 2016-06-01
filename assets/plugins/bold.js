@@ -8,15 +8,9 @@ $.Redactor.prototype.bold = function() {
 				"bold": "Bold"
 			}
 		},
-		
-//		shortcutsAdd: {
-//			'ctrl+b, meta+b': { func: 'inline.format', params: ['bold'] },
-//		},
-		
 		init: function() {
 			var button = this.button.add('bold', this.lang.get('bold'));
-//			this.button.setAwesome('blockquote', 'fa-quote-left');
-			
+			this.button.setIcon(button, '<i class="fa fa-bold"></i>');
 			this.button.addCallback(button, this.bold.set);
 		},
 		set: function() {

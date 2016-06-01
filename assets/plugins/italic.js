@@ -9,14 +9,9 @@ $.Redactor.prototype.italic = function() {
 			}
 		},
 		
-//		shortcutsAdd: {
-//				'ctrl+i, meta+i': { func: 'inline.format', params: ['italic'] },
-//		},
-		
 		init: function() {
 			var button = this.button.add('italic', this.lang.get('italic'));
-//			this.button.setAwesome('blockquote', 'fa-quote-left');
-			
+			this.button.setIcon(button, '<i class="fa fa-italic"></i>');
 			this.button.addCallback(button, this.italic.set);
 		},
 		set: function() {

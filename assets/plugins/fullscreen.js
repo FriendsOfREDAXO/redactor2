@@ -16,6 +16,7 @@
 				this.fullscreen.isOpen = false;
 
 				var button = this.button.add('fullscreen', this.lang.get('fullscreen'));
+				this.button.setIcon(button, '<i class="fa fa-expand"></i>');
 				this.button.addCallback(button, this.fullscreen.toggle);
 
 				if (this.opts.fullscreen)

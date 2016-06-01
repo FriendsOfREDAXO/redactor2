@@ -10,7 +10,7 @@ $.Redactor.prototype.unorderedlist = function() {
 		},
 		init: function() {
 			var button = this.button.add('unorderedlist', this.lang.get('unorderedlist'));
-			
+			this.button.setIcon(button, '<i class="fa fa-list-ul"></i>');
 			this.button.addCallback(button, this.unorderedlist.set);
 		},
 		set: function() {

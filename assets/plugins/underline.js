@@ -10,8 +10,7 @@ $.Redactor.prototype.underline = function() {
 		},
 		init: function() {
 			var button = this.button.add('underline', this.lang.get('underline'));
-//			this.button.setAwesome('blockquote', 'fa-quote-left');
-			
+			this.button.setIcon(button, '<i class="fa fa-underline"></i>');
 			this.button.addCallback(button, this.underline.set);
 		},
 		set: function() {

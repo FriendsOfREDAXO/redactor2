@@ -6,6 +6,7 @@
 			init: function()
 			{
 				var button = this.button.add('html', 'HTML');
+				this.button.setIcon(button, '<i class="fa fa-code"></i>');
 				this.button.addCallback(button, this.source.toggle);
 
 				var style = {

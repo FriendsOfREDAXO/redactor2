@@ -10,8 +10,7 @@ $.Redactor.prototype.heading5 = function() {
 			},
 		init: function() {
 			var button = this.button.add('heading5', this.lang.get('heading5'));
-//			this.button.setAwesome('blockquote', 'fa-quote-left');
-			
+			this.button.setIcon(button, '<i class="fa fa-header"></i>');
 			this.button.addCallback(button, this.heading5.set);
 		},
 		set: function() {

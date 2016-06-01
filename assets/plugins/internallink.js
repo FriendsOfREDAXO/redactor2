@@ -10,7 +10,7 @@ $.Redactor.prototype.internallink = function() {
 		},
 		init: function() {
 			var button = this.button.add('internallink', this.lang.get('internallink'));
-			
+			this.button.setIcon(button, '<i class="fa fa-link"></i>');
 			this.button.addCallback(button, this.internallink.show);
 		},
 		show: function() {

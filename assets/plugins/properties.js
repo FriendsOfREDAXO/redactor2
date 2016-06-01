@@ -59,6 +59,7 @@
 				this.properties.setEvents();
 
 				var button = this.button.add('properties', this.lang.get('properties'));
+				this.button.setIcon(button, '<i class="fa fa-cog"></i>');
 				this.button.addCallback(button, this.properties.show);
 
 			},

@@ -10,8 +10,7 @@ $.Redactor.prototype.horizontalrule = function() {
 		},
 		init: function() {
 			var button = this.button.add('horizontalrule', this.lang.get('horizontalrule'));
-//			this.button.setAwesome('blockquote', 'fa-quote-left');
-			
+			this.button.setIcon(button, '<i class="fa fa-minus"></i>');
 			this.button.addCallback(button, this.horizontalrule.set);
 		},
 		set: function() {

@@ -22,6 +22,7 @@
 				});
 				
 				var button = this.button.add('clips', 'Clips');
+				this.button.setIcon(button, '<i class="fa fa-th-large"></i>');
 				this.button.addDropdown(button, dropdown);
 			},
 			set: function (value)

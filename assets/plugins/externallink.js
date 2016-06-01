@@ -43,8 +43,7 @@ $.Redactor.prototype.externallink = function() {
 		},
 		init: function() {
 			var button = this.button.add('externallink', this.lang.get('externallink'));
-//			this.button.setAwesome('blockquote', 'fa-quote-left');
-			
+			this.button.setIcon(button, '<i class="fa fa-link"></i>');
 			this.button.addCallback(button, this.externallink.show);
 		},
 		show: function() {
