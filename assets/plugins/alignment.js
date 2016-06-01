@@ -4,6 +4,12 @@
 	{
 		return {
 			langs: {
+				de: {
+					"align": "Ausrichtung",
+					"align-left": "Linksbündig",
+					"align-center": "Zentriert",
+					"align-right": "Rechtsbündig"
+				},
 				en: {
 					"align": "Align",
 					"align-left": "Align Left",
@@ -21,6 +27,7 @@
 				dropdown.right = { title: that.lang.get('align-right'), func: that.alignment.setRight };
 
 				var button = this.button.add('alignment', this.lang.get('align'));
+				this.button.setIcon(button, '<i class="fa fa-align-left"></i>');
 				this.button.addDropdown(button, dropdown);
 			},
 			removeAlign: function()
