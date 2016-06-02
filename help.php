@@ -4,9 +4,9 @@
 	$code = '';
 	$code .= '<fieldset class="form-horizontal">'.PHP_EOL;
 	$code .= '  <div class="form-group">'.PHP_EOL;
-	$code .= '    <label class="col-sm-2 control-label" for="redactor_1">VALUE 1</label>'.PHP_EOL;
+	$code .= '    <label class="col-sm-2 control-label" for="value1">VALUE 1</label>'.PHP_EOL;
 	$code .= '    <div class="col-sm-10">'.PHP_EOL;
-	$code .= '      <textarea class="form-control redactorEditor2-full" id="redactor_1" name="REX_INPUT_VALUE[1]">REX_VALUE[1]</textarea>'.PHP_EOL;
+	$code .= '      <textarea class="form-control redactorEditor2-full" id="value1" name="REX_INPUT_VALUE[1]">REX_VALUE[1]</textarea>'.PHP_EOL;
 	$code .= '    </div>'.PHP_EOL;
 	$code .= '  </div>'.PHP_EOL;
 	$code .= '</fieldset>'.PHP_EOL;
@@ -21,8 +21,8 @@
 	
 	$code = '';
 	$code .= '<?php'.PHP_EOL;
-	$code .= '  if (!rex_redactor::profileExists(\'simple\')) {'.PHP_EOL;
-	$code .= '    rex_redactor::insertProfile(\'simple\', \'Lorem Ipsum\', \'relative\', \'bold,table\');'.PHP_EOL;
+	$code .= '  if (!rex_redactor2::profileExists(\'simple\')) {'.PHP_EOL;
+	$code .= '    rex_redactor2::insertProfile(\'simple\', \'Lorem Ipsum\', \'300\', \'800\', \'relative\', \'bold,table\');'.PHP_EOL;
 	$code .= '  }'.PHP_EOL;
 	$code .= '?>';
 	
