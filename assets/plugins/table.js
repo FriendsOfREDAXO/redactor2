@@ -176,7 +176,7 @@
 								};
 
 
-				var button = this.button.add('link', 'table', this.lang.get('table'));
+				var button = this.button.add('table', this.lang.get('table'));
 				this.button.setIcon(button, '<i class="fa fa-table"></i>');
 				this.button.addDropdown(button, dropdown);
 			},
