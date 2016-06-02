@@ -1,11 +1,13 @@
 <?php
 	class rex_redactor2 {
 		
-		public static function insertProfile ($name, $description = '', $urltype, $redactorPlugins = '') {
+		public static function insertProfile ($name, $description = '', $minheight = '300', $maxheight = '800', $urltype = 'relative', $redactorPlugins = '') {
 			$sql = rex_sql::factory();
 			$sql->setTable(rex::getTablePrefix().'redactor2_profiles');
 			$sql->setValue('name', $name);
 			$sql->setValue('description', $description);
+			$sql->setValue('minheight', $minheight);
+			$sql->setValue('maxheight', $maxheight);
 			$sql->setValue('urltype', $urltype);
 			$sql->setValue('redactor_plugins', $redactorPlugins);
 			
