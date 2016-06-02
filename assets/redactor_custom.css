@@ -1,0 +1,59 @@
+.re-heading1,
+.re-heading2,
+.re-heading3,
+.re-heading4,
+.re-heading5,
+.re-heading6,
+ re-emaillink,
+ re-externallink,
+ re-internallink,
+ re-medialink {
+	position:relative;
+}
+
+.re-heading1:after,
+.re-heading2:after,
+.re-heading3:after,
+.re-heading4:after,
+.re-heading5:after,
+.re-heading6:after,
+ re-emaillink:after,
+ re-externallink:after,
+ re-internallink:after,
+ re-medialink:after {
+	font-size: 12px;
+	position: absolute;
+	bottom: 12px;
+	right: 4px;
+}
+
+.re-heading1:after {
+	content: "1";
+}
+.re-heading2:after {
+	content: "2";
+}
+.re-heading3:after {
+	content: "3";
+}
+.re-heading4:after {
+	content: "4";
+}
+.re-heading5:after {
+	content: "5";
+}
+.re-heading6:after {
+	content: "6";
+}
+.re-emaillink:after {
+	content: "@";
+}
+.re-externallink:after {
+	content: "E";
+}
+.re-internallink:after {
+	content: "I";
+}
+.re-medialink:after {
+	content: "M";
+}
