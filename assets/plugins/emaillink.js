@@ -13,7 +13,7 @@ $.Redactor.prototype.emaillink = function() {
 				"emaillink_linktext": "Linktext",
 				"emaillink_emailaddress": "Emailaddress",
 				"emaillink_insert": "Insert",
-				"emaillink_abort": "Cancel"
+				"emaillink_abort": "Abort"
 			}
 		},
 		getTemplate: function() {
@@ -22,22 +22,22 @@ $.Redactor.prototype.emaillink = function() {
 			var modalContent = '';
 			modalContent += '<div class="modal-section" id="redactor-modal-emaillink">';
 				
-				if (selectedText == '') {
-					modalContent += '  <section>';
-					modalContent += '    <label for="emaillink_linktext">' + this.lang.get('emaillink_linktext') + '</label>';
-					modalContent += '    <input type="text" id="emaillink_linktext">';
-					modalContent += '  </section>';
-				}
-				
+			if (selectedText == '') {
 				modalContent += '  <section>';
-				modalContent += '    <label for="emaillink_emailaddress">' + this.lang.get('emaillink_emailaddress') + '</label>';
-				modalContent += '    <input type="text" id="emaillink_emailaddress">';
+				modalContent += '    <label for="emaillink_linktext">' + this.lang.get('emaillink_linktext') + '</label>';
+				modalContent += '    <input type="text" id="emaillink_linktext">';
 				modalContent += '  </section>';
-				modalContent += '  <section>';
-				modalContent += '    <button id="redactor-modal-button-action">' + this.lang.get('emaillink_insert') + '</button>';
-				modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('emaillink_abort') + '</button>';
-				modalContent += '  </section>';
-				modalContent += '</div>';
+			}
+			
+			modalContent += '  <section>';
+			modalContent += '    <label for="emaillink_emailaddress">' + this.lang.get('emaillink_emailaddress') + '</label>';
+			modalContent += '    <input type="text" id="emaillink_emailaddress">';
+			modalContent += '  </section>';
+			modalContent += '  <section>';
+			modalContent += '    <button id="redactor-modal-button-action">' + this.lang.get('emaillink_insert') + '</button>';
+			modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('emaillink_abort') + '</button>';
+			modalContent += '  </section>';
+			modalContent += '</div>';
 				
 			return String() + modalContent;
 		},
