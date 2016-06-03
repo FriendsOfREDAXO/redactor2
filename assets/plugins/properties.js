@@ -4,8 +4,15 @@
 	{
 		return {
 			langs: {
+				de: {
+					"properties": "Eigenschaften",
+					"properties_save": "Speichern",
+					"properties_abort": "Abbrechen"
+				},
 				en: {
-					"properties": "Properties"
+					"properties": "Properties",
+					"properties_save": "Save",
+					"properties_abort": "Abort"
 				}
 			},
 			block: false,
@@ -23,7 +30,7 @@
 				 return String()
 				 + '<div class="modal-section" id="redactor-modal-properties">'
 				 	+ '<section>'
-				 		+ '<label id="modal-properties-id-label">Id</label>'
+				 		+ '<label id="modal-properties-id-label">ID</label>'
 				 		+ '<input type="text" id="modal-properties-id" />'
 				 	+ '</section>'
 				 	+ '<section>'
@@ -31,8 +38,8 @@
 					 	+ '<input type="text" id="modal-properties-class" />'
 					 + '</section>'
 					+ '<section>'
-						+ '<button id="redactor-modal-button-action">Save</button>'
-						+ '<button id="redactor-modal-button-cancel">Cancel</button>'
+						+ '<button id="redactor-modal-button-action">' + this.lang.get('properties_save') + '</button>'
+						+ '<button id="redactor-modal-button-cancel">' + this.lang.get('properties_abort') + '</button>'
 					+ '</section>'
 				 + '</div>';
 			},
