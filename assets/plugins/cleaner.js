@@ -10,7 +10,7 @@ $.Redactor.prototype.cleaner = function() {
 		},
 		init: function() {
 			var button = this.button.add('cleaner', this.lang.get('cleaner'));
-			
+			this.button.setIcon(button, '<i class="fa fa-eraser"></i>');
 			this.button.addCallback(button, this.cleaner.set);
 		},
 		set: function() {
