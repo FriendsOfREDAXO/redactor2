@@ -116,10 +116,10 @@
 							$this->i18n('profiles_plugins_fullscreen_description').'<br>'.
 							'<br>'.
 							'<b>groupheading[1|2|3|4|5|6]</b><br>'.
-							$this->i18n('profiles_plugins_heading_description').'<br>'.
+							$this->i18n('profiles_plugins_groupheading_description').'<br>'.
 							'<br>'.
 							'<b>grouplink[email|external|internal|media]</b><br>'.
-							$this->i18n('profiles_plugins_link_description').'<br>'.
+							$this->i18n('profiles_plugins_grouplink_description').'<br>'.
 							'<br>'.
 							'<b>heading1</b><br>'.
 							$this->i18n('profiles_plugins_heading1_description').'<br>'.
@@ -165,6 +165,12 @@
 							'<br>'.
 							'<b>source</b><br>'.
 							$this->i18n('profiles_plugins_source_description').'<br>'.
+							'<br>'.
+							'<b>sub</b><br>'.
+							$this->i18n('profiles_plugins_sub_description').'<br>'.
+							'<br>'.
+							'<b>sup</b><br>'.
+							$this->i18n('profiles_plugins_sup_description').'<br>'.
 							'<br>'.
 							'<b>table</b><br>'.
 							$this->i18n('profiles_plugins_table_description').'<br>'.
