@@ -2,7 +2,7 @@ $.Redactor.prototype.sub = function() {
 	return {
 		langs: {
 			de: {
-				"sub": "Hochgestellt"
+				"sub": "Tiefgestellt"
 			},
 			en: {
 				"sub": "Sub"
@@ -10,7 +10,7 @@ $.Redactor.prototype.sub = function() {
 		},
 		init: function() {
 			var button = this.button.add('sub', this.lang.get('sub'));
-			this.button.setIcon(button, '<i class="fa fa-sub"></i>');
+			this.button.setIcon(button, '<i class="fa fa-subscript"></i>');
 			this.button.addCallback(button, this.sub.set);
 		},
 		set: function() {

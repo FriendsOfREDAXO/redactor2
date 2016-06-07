@@ -2,7 +2,7 @@ $.Redactor.prototype.sup = function() {
 	return {
 		langs: {
 			de: {
-				"sup": "Tiefgestellt"
+				"sup": "Hochgestellt"
 			},
 			en: {
 				"sup": "Sup"
@@ -10,7 +10,7 @@ $.Redactor.prototype.sup = function() {
 		},
 		init: function() {
 			var button = this.button.add('sup', this.lang.get('sup'));
-			this.button.setIcon(button, '<i class="fa fa-sup"></i>');
+			this.button.setIcon(button, '<i class="fa fa-superscript"></i>');
 			this.button.addCallback(button, this.sup.set);
 		},
 		set: function() {
