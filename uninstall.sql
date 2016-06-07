@@ -1,1 +1,1 @@
-DROP TABLE `%TABLE_PREFIX%redactor_profiles2`;
+DROP TABLE `%TABLE_PREFIX%redactor2_profiles`;
