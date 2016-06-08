@@ -221,7 +221,7 @@
 				this.buffer.set();
 
 				var current = this.selection.current();
-				if ($(current).closest('li').length !== 0)
+				if ($(current).closest('li', this.core.editor().get(0)).length !== 0)
 				{
 					$(current).closest('ul, ol').first().after(html);
 				}
