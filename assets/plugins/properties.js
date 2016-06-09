@@ -73,9 +73,9 @@
 			show: function()
 			{
 				this.modal.addTemplate('properties', this.properties.getTemplate());
-				this.modal.load('properties', 'Properties', 600);
+				this.modal.load('properties', this.lang.get('properties'), 600);
 
-				var button = this.modal.getActionButton().text('Save');
+				var button = this.modal.getActionButton().text(this.lang.get('properties_save'));
 				button.on('click', this.properties.save);
 
 				this.properties.showId();
