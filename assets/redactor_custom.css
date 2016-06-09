@@ -4,10 +4,10 @@
 .re-heading4,
 .re-heading5,
 .re-heading6,
- re-emaillink,
- re-externallink,
- re-internallink,
- re-medialink {
+.re-emaillink,
+.re-externallink,
+.re-internallink,
+.re-medialink {
 	position:relative;
 }
 
@@ -17,14 +17,14 @@
 .re-heading4:after,
 .re-heading5:after,
 .re-heading6:after,
- re-emaillink:after,
- re-externallink:after,
- re-internallink:after,
- re-medialink:after {
-	font-size: 12px;
+.re-emaillink:after,
+.re-externallink:after,
+.re-internallink:after,
+.re-medialink:after {
+	font-size: 10px;
 	position: absolute;
 	bottom: 12px;
-	right: 4px;
+	right: 8px;
 }
 
 .re-heading1:after {
@@ -56,4 +56,28 @@
 }
 .re-medialink:after {
 	content: "M";
+}
+
+.redactor-dropdown-groupheading1 span {
+	font-size:22px;
+}
+
+.redactor-dropdown-groupheading2 span {
+	font-size:20px;
+}
+
+.redactor-dropdown-groupheading3 span {
+	font-size:18px;
+}
+
+.redactor-dropdown-groupheading4 span {
+	font-size:16px;
+}
+
+.redactor-dropdown-groupheading5 span {
+	font-size:14px;
+}
+
+.redactor-dropdown-groupheading6 span {
+	font-size:12px;
 }
