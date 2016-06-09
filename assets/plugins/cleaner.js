@@ -18,7 +18,7 @@ $.Redactor.prototype.cleaner = function() {
 			
 			if (selectedText != '') {
 				var selectedText = this.clean.stripTags(selectedText);
-				this.insert.html(selectedText);
+				this.insert.set(selectedText);
 			}
 		}
 	};
