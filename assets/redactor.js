@@ -211,14 +211,25 @@
 		},
 		shortcutsAdd: false,
 
-		activeButtons: ['deleted', 'italic', 'bold'],
+		activeButtons: ['deleted', 'italic', 'bold', 'underline','sup', 'sub', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'blockquote'],
 		activeButtonsStates: {
 			b: 'bold',
 			strong: 'bold',
 			i: 'italic',
 			em: 'italic',
 			del: 'deleted',
-			strike: 'deleted'
+			strike: 'deleted',
+			u: 'underline',
+			sup: 'sup',
+			sub: 'sub',
+			h1: 'heading1',
+			h2: 'heading2',
+			h3: 'heading3',
+			h4: 'heading4',
+			h5: 'heading5',
+			h6: 'heading6',
+			p: 'paragraph',
+			blockquote: 'blockquote'
 		},
 
 		// private lang
