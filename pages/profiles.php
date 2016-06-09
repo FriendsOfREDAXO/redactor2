@@ -57,6 +57,11 @@
 			$field->setLabel($this->i18n('profiles_label_maxheight'));
 		//End - add maxheight-field
 		
+		//Start - add characterlimit-field
+			$field = $form->addTextField('characterlimit');
+			$field->setLabel($this->i18n('profiles_label_characterlimit'));
+		//End - add characterlimit-field
+		
 		//Start - add urltype-field
 			$field = $form->addSelectField('urltype');
 			$field->setLabel($this->i18n('profiles_label_urltype'));
@@ -148,9 +153,6 @@
 							'<b>italic</b><br>'.
 							$this->i18n('profiles_plugins_italic_description').'<br>'.
 							'<br>'.
-							'<b>limiter[20]</b><br>'.
-							$this->i18n('profiles_plugins_limiter_description').'<br>'.
-							'<br>'.
 							'<b>media</b><br>'.
 							$this->i18n('profiles_plugins_media_description').'<br>'.
 							'<br>'.
@@ -159,6 +161,9 @@
 							'<br>'.
 							'<b>orderedlist</b><br>'.
 							$this->i18n('profiles_plugins_orderedlist_description').'<br>'.
+							'<br>'.
+							'<b>paragraph</b><br>'.
+							$this->i18n('profiles_plugins_paragraph_description').'<br>'.
 							'<br>'.
 							'<b>properties</b><br>'.
 							$this->i18n('profiles_plugins_properties_description').'<br>'.
