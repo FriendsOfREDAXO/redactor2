@@ -41,7 +41,9 @@
 				$jsCode[] = '  urltype: \''.$profile['urltype'].'\',';
 				if ($profile['characterlimit'] != 0) {
 					$jsCode[] = '  limiter: '.$profile['characterlimit'].',';
-					rex_view::addJsFile($this->getAssetsUrl('plugins/limiter.js'));
+					if (!in_array($this->getAssetsUrl('plugins/limiter.js'), rex_view::getJsFiles())) {
+						rex_view::addJsFile($this->getAssetsUrl('plugins/limiter.js'));
+					}
 				}
 				
 				//Start - get pluginconfiguration
