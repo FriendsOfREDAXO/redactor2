@@ -171,6 +171,9 @@
 							'<b>source</b><br>'.
 							$this->i18n('profiles_plugins_source_description').'<br>'.
 							'<br>'.
+							'<b>styles[code=Code|kbd=Shortcut|mark=Markiert|samp=Sample|var=Variable]</b><br>'.
+							$this->i18n('profiles_plugins_styles_description').'<br>'.
+							'<br>'.
 							'<b>sub</b><br>'.
 							$this->i18n('profiles_plugins_sub_description').'<br>'.
 							'<br>'.
