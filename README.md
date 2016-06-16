@@ -1,6 +1,6 @@
-Redactor-Editor für REDAXO 5
-============================
+Redactor-Editor
+===============
 
-Redactor II v1.2.4 - http://imperavi.com/redactor/
+Addon für REDAXO 5: Bindet den WYSIWYG-Editor [Redactor](http://imperavi.com/redactor/) im Backend ein.
 
-Das Addon bindet den WYSIWYG-Editor Redactor im Backend ein.
+![Screenshot](https://raw.githubusercontent.com/FriendsOfREDAXO/rex_redactor2/assets/redactor2.png)
