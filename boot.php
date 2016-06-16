@@ -2,6 +2,9 @@
 	if (rex::isBackend()) {
 		rex_view::addCssFile($this->getAssetsUrl('redactor.css'));
 		rex_view::addCssFile($this->getAssetsUrl('redactor_custom.css'));
+		if (file_exists($this->getAssetsPath('skin.css'))) {
+			rex_view::addCssFile($this->getAssetsUrl('skin.css'));
+		}
 		rex_view::addJsFile($this->getAssetsUrl('redactor.js'));
 		
 		$redactorLanguage = rex::getProperty('lang');
