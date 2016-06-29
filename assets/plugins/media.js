@@ -24,7 +24,7 @@ $.Redactor.prototype.media = function() {
 			});
 		},
 		set: function(filename) {
-			this.insert.html('<img src="/media/'+filename+'" alt="">');
+			this.insert.html('<img src="index.php?rex_media_type=redactorImage&rex_media_file='+filename+'" alt="">');
 		}
 	};
 };
