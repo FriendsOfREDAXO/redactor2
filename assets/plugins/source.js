@@ -78,7 +78,7 @@
 			},
 			setCaretOnHide: function(html)
 			{
-			    this.source.start = this.source.$textarea.get(0).selectionStart;
+				this.source.start = this.source.$textarea.get(0).selectionStart;
 				this.source.end = this.source.$textarea.get(0).selectionEnd;
 
 				// if selection starts from end
