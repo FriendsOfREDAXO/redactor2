@@ -14,11 +14,27 @@ $.Redactor.prototype.cleaner = function() {
 			this.button.addCallback(button, this.cleaner.set);
 		},
 		set: function() {
-			var selectedText = this.selection.text();
-			
-			if (selectedText != '') {
-				var selectedText = this.clean.stripTags(selectedText);
-				this.insert.html(selectedText);
+			var isRedactorSelected = this.selection.isRedactor();
+			if (this.selection.isRedactor()) {
+				// remove what already can be removed
+				this.inline.removeFormat();
+				this.inline.removeAllAttr();
+				this.inline.removeAllClass();
+				
+				// get the current selection
+				var html = this.selection.html();
+				
+				// Strip out html
+				html = html.replace(/(<([^>]+)>)/ig,"");
+				
+				// buffer
+				this.buffer.set();
+				
+				// Replace selection with clean text
+				this.selection.replace(html);
+				
+				// Sync code
+				this.code.sync();
 			}
 		}
 	};
