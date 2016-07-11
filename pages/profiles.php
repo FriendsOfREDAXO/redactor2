@@ -108,15 +108,15 @@
 							'<b>externallink</b><br>'.
 							$this->i18n('profiles_plugins_externallink_description').'<br>'.
 							'<br>'.
-							//'<b>fontcolor[Weiss=#ffffff|Schwarz=#000000]</b><br>'.
-							//$this->i18n('profiles_plugins_fontcolor_description').'<br>'.
-							//'<br>'.
-							//'<b>fontfamily[Arial|Times]</b><br>'.
-							//$this->i18n('profiles_plugins_fontfamily_description').'<br>'.
-							//'<br>'.
-							//'<b>fontsize[12px|15pt|120%]</b><br>'.
-							//$this->i18n('profiles_plugins_fontsize_description').'<br>'.
-							//'<br>'.
+							'<b>fontcolor[Weiss=#ffffff|Schwarz=#000000]</b><br>'.
+							$this->i18n('profiles_plugins_fontcolor_description').'<br>'.
+							'<br>'.
+							'<b>fontfamily[Arial|Times]</b><br>'.
+							$this->i18n('profiles_plugins_fontfamily_description').'<br>'.
+							'<br>'.
+							'<b>fontsize[12px|15pt|120%]</b><br>'.
+							$this->i18n('profiles_plugins_fontsize_description').'<br>'.
+							'<br>'.
 							'<b>fullscreen</b><br>'.
 							$this->i18n('profiles_plugins_fullscreen_description').'<br>'.
 							'<br>'.
