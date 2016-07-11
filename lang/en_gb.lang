@@ -4,7 +4,7 @@ rex_redactor2_title = Redactor 2 Editor
 rex_redactor2_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.</b><br><br>Es gibt die Möglichkeit, dem Editor eigene CSS-Styles zu geben. Dafür muss lediglich im Ordner /assets/addons/rex_redactor2 eine Datei mit dem Namen skin.css angelegt werden.
 
 #subpage profiles
-rex_redactor2_profiles = Profile
+rex_redactor2_profiles = Profiles
 rex_redactor2_profiles_norowsmessage = No profiles were found
 
 rex_redactor2_profiles_column_name = Name
@@ -29,7 +29,7 @@ rex_redactor2_profiles_plugins_bold_description = Makes the marked text bold
 rex_redactor2_profiles_plugins_cleaner_description = Entfernt alle Formatierungen/Styles vom markieren Text
 rex_redactor2_profiles_plugins_clips_description = Fügt vordefinierte Textsnippets ein
 rex_redactor2_profiles_plugins_deleted_description = Streicht den markierten Text durch
-rex_redactor2_profiles_plugins_emaillink_description = Fügt einen Email-Link ein
+rex_redactor2_profiles_plugins_emaillink_description = Inserts an external link
 rex_redactor2_profiles_plugins_externallink_description = Inserts an external link
 rex_redactor2_profiles_plugins_fontcolor_description = Defines the fontcolor
 rex_redactor2_profiles_plugins_fontfamily_description = Defines the fontfamily
