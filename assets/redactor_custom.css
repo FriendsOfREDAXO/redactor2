@@ -1,3 +1,8 @@
+.redactor-air li a.re-button,
+.redactor-toolbar li a.re-button {
+	font-size:14px;
+}
+
 .re-heading1,
 .re-heading2,
 .re-heading3,
