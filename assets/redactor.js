@@ -6734,14 +6734,15 @@
 					var re3 = new RegExp('\.(html|php)$', 'i');
 					var re4 = new RegExp('^/', 'i');
 					var re5 = new RegExp('^tel:(.*?)', 'i');
+					var re6 = new RegExp('^redaxo://(.*?)', 'i');
 
 					// add protocol
-					if (url.search(re1) === -1 && url.search(re2) !== -1)
+					if (url.search(re1) === -1 && url.search(re2) !== -1 && url.search(re4) === -1)
 					{
 						url = 'http://' + url;
 					}
 
-					if (url.search(re1) !== -1 || url.search(re3) !== -1 || url.search(re4) !== -1 || url.search(re5) !== -1)
+					if (url.search(re1) !== -1 || url.search(re3) !== -1 || url.search(re4) !== -1 || url.search(re5) !== -1 || url.search(re6) !== -1)
 					{
 						return url;
 					}
