@@ -55,6 +55,7 @@
 					if (trim($profile['redactor_plugins']) != '') {
 						$plugins = explode(',', $profile['redactor_plugins']);
 						foreach ($plugins as $plugin) {
+							$plugin = trim($plugin);
 							if (preg_match('/(.*)\[(.*)\]/', $plugin, $matches)) {
 								//Start - explode parameters
 									$parameters = explode('|', $matches[2]);
