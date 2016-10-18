@@ -32,8 +32,8 @@
 	
 	$code = '';
 	$code .= '<?php'.PHP_EOL;
-	$code .= '  if (!rex_redactor2::profileExists(\'simple\')) {'.PHP_EOL;
-	$code .= '    rex_redactor2::insertProfile(\'simple\', \'Lorem Ipsum\', \'300\', \'800\', \'relative\', \'bold,table\');'.PHP_EOL;
+	$code .= '  if (!redactor2::profileExists(\'simple\')) {'.PHP_EOL;
+	$code .= '    redactor2::insertProfile(\'simple\', \'Lorem Ipsum\', \'300\', \'800\', \'relative\', \'bold,table\');'.PHP_EOL;
 	$code .= '  }'.PHP_EOL;
 	$code .= '?>';
 	

@@ -1,65 +1,65 @@
-rex_redactor2_title = Redactor 2 Editor
+redactor2_title = Redactor 2 Editor
 
 #subpage help
-rex_redactor2_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.</b><br><br>Es gibt die Möglichkeit, dem Editor eigene CSS-Styles zu geben. Dafür muss lediglich im Ordner /assets/addons/rex_redactor2 eine Datei mit dem Namen skin.css angelegt werden.
+redactor2_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.</b><br><br>Es gibt die Möglichkeit, dem Editor eigene CSS-Styles zu geben. Dafür muss lediglich im Ordner /assets/addons/redactor2 eine Datei mit dem Namen skin.css angelegt werden.
 
 #subpage profiles
-rex_redactor2_profiles = Profiles
-rex_redactor2_profiles_norowsmessage = No profiles were found
+redactor2_profiles = Profiles
+redactor2_profiles_norowsmessage = No profiles were found
 
-rex_redactor2_profiles_column_name = Name
-rex_redactor2_profiles_column_description = Description
+redactor2_profiles_column_name = Name
+redactor2_profiles_column_description = Description
 
-rex_redactor2_profiles_formcaption_add = Add profile
-rex_redactor2_profiles_formcaption_edit = Edit profile
+redactor2_profiles_formcaption_add = Add profile
+redactor2_profiles_formcaption_edit = Edit profile
 
-rex_redactor2_profiles_label_name = Name
-rex_redactor2_profiles_label_description = Description
-rex_redactor2_profiles_label_minheight = Minimal height
-rex_redactor2_profiles_label_maxheight = Maximum height
-rex_redactor2_profiles_label_characterlimit = Characterlimit
-rex_redactor2_profiles_label_urltype = URL-Type
-rex_redactor2_profiles_label_urltype_option_relative = Relative
-rex_redactor2_profiles_label_urltype_option_absolute = Absolute
-rex_redactor2_profiles_label_redactorplugins = Buttons
+redactor2_profiles_label_name = Name
+redactor2_profiles_label_description = Description
+redactor2_profiles_label_minheight = Minimal height
+redactor2_profiles_label_maxheight = Maximum height
+redactor2_profiles_label_characterlimit = Characterlimit
+redactor2_profiles_label_urltype = URL-Type
+redactor2_profiles_label_urltype_option_relative = Relative
+redactor2_profiles_label_urltype_option_absolute = Absolute
+redactor2_profiles_label_redactorplugins = Buttons
 
-rex_redactor2_profiles_plugins_alignment_description = Setzt die Ausrichtung des markierten Texts
-rex_redactor2_profiles_plugins_blockquote_description = Fügt ein Zitat ein
-rex_redactor2_profiles_plugins_bold_description = Makes the marked text bold
-rex_redactor2_profiles_plugins_cleaner_description = Entfernt alle Formatierungen/Styles vom markieren Text
-rex_redactor2_profiles_plugins_clips_description = Fügt vordefinierte Textsnippets ein
-rex_redactor2_profiles_plugins_deleted_description = Streicht den markierten Text durch
-rex_redactor2_profiles_plugins_emaillink_description = Inserts an external link
-rex_redactor2_profiles_plugins_externallink_description = Inserts an external link
-rex_redactor2_profiles_plugins_fontcolor_description = Defines the fontcolor
-rex_redactor2_profiles_plugins_fontfamily_description = Defines the fontfamily
-rex_redactor2_profiles_plugins_fontsize_description = Defines the fontsize
-rex_redactor2_profiles_plugins_fullscreen_description = Switches to fullscreen
-rex_redactor2_profiles_plugins_groupheading_description = Inserts a heading via dropdown
-rex_redactor2_profiles_plugins_grouplink_description = Inserts a link via dropdown
-rex_redactor2_profiles_plugins_heading1_description = Inserts a heading with size 1
-rex_redactor2_profiles_plugins_heading2_description = Inserts a heading with size 2
-rex_redactor2_profiles_plugins_heading3_description = Inserts a heading with size 3
-rex_redactor2_profiles_plugins_heading4_description = Inserts a heading with size 4
-rex_redactor2_profiles_plugins_heading5_description = Inserts a heading with size 5
-rex_redactor2_profiles_plugins_heading6_description = Inserts a heading with size 6
-rex_redactor2_profiles_plugins_horizontalrule_description = Inserts a horizontal rule
-rex_redactor2_profiles_plugins_internallink_description = Fügt einen internen Link mit Hilfe der Linkmap ein
-rex_redactor2_profiles_plugins_italic_description = Makes the marked text italic
-rex_redactor2_profiles_plugins_media_description = Fügt ein Bild mithilfe des Medienpool ein
-rex_redactor2_profiles_plugins_medialink_description = Fügt einen Link auf eine Datei aus dem Medienpool ein
-rex_redactor2_profiles_plugins_orderedlist_description = Inserts an ordererd list
-rex_redactor2_profiles_plugins_paragraph_description = Fügt einen Paragraph ein
-rex_redactor2_profiles_plugins_properties_description = Gibt dem aktuellen Block eine benutzerdefinierte ID oder Klasse
-rex_redactor2_profiles_plugins_source_description = Switches in the HTML-mode
-rex_redactor2_profiles_plugins_styles_description = Ermöglicht eigene nutzbare Inline-Tags zu definieren
-rex_redactor2_profiles_plugins_sub_description = Stellt Text tief
-rex_redactor2_profiles_plugins_sup_description = Stellt Text hoch
-rex_redactor2_profiles_plugins_table_description = Inserts a table
-rex_redactor2_profiles_plugins_textdirection_description = Legt die Textausrichtung fest
-rex_redactor2_profiles_plugins_underline_description = Makes the marked text underlined
-rex_redactor2_profiles_buttons_unorderedlist_description = Inserts an unordered list
+redactor2_profiles_plugins_alignment_description = Setzt die Ausrichtung des markierten Texts
+redactor2_profiles_plugins_blockquote_description = Fügt ein Zitat ein
+redactor2_profiles_plugins_bold_description = Makes the marked text bold
+redactor2_profiles_plugins_cleaner_description = Entfernt alle Formatierungen/Styles vom markieren Text
+redactor2_profiles_plugins_clips_description = Fügt vordefinierte Textsnippets ein
+redactor2_profiles_plugins_deleted_description = Streicht den markierten Text durch
+redactor2_profiles_plugins_emaillink_description = Inserts an external link
+redactor2_profiles_plugins_externallink_description = Inserts an external link
+redactor2_profiles_plugins_fontcolor_description = Defines the fontcolor
+redactor2_profiles_plugins_fontfamily_description = Defines the fontfamily
+redactor2_profiles_plugins_fontsize_description = Defines the fontsize
+redactor2_profiles_plugins_fullscreen_description = Switches to fullscreen
+redactor2_profiles_plugins_groupheading_description = Inserts a heading via dropdown
+redactor2_profiles_plugins_grouplink_description = Inserts a link via dropdown
+redactor2_profiles_plugins_heading1_description = Inserts a heading with size 1
+redactor2_profiles_plugins_heading2_description = Inserts a heading with size 2
+redactor2_profiles_plugins_heading3_description = Inserts a heading with size 3
+redactor2_profiles_plugins_heading4_description = Inserts a heading with size 4
+redactor2_profiles_plugins_heading5_description = Inserts a heading with size 5
+redactor2_profiles_plugins_heading6_description = Inserts a heading with size 6
+redactor2_profiles_plugins_horizontalrule_description = Inserts a horizontal rule
+redactor2_profiles_plugins_internallink_description = Fügt einen internen Link mit Hilfe der Linkmap ein
+redactor2_profiles_plugins_italic_description = Makes the marked text italic
+redactor2_profiles_plugins_media_description = Fügt ein Bild mithilfe des Medienpool ein
+redactor2_profiles_plugins_medialink_description = Fügt einen Link auf eine Datei aus dem Medienpool ein
+redactor2_profiles_plugins_orderedlist_description = Inserts an ordererd list
+redactor2_profiles_plugins_paragraph_description = Fügt einen Paragraph ein
+redactor2_profiles_plugins_properties_description = Gibt dem aktuellen Block eine benutzerdefinierte ID oder Klasse
+redactor2_profiles_plugins_source_description = Switches in the HTML-mode
+redactor2_profiles_plugins_styles_description = Ermöglicht eigene nutzbare Inline-Tags zu definieren
+redactor2_profiles_plugins_sub_description = Stellt Text tief
+redactor2_profiles_plugins_sup_description = Stellt Text hoch
+redactor2_profiles_plugins_table_description = Inserts a table
+redactor2_profiles_plugins_textdirection_description = Legt die Textausrichtung fest
+redactor2_profiles_plugins_underline_description = Makes the marked text underlined
+redactor2_profiles_buttons_unorderedlist_description = Inserts an unordered list
 
 #permissions
-perm_general_rex_redactor2[] = Permissions for the Redactor-Addon
-perm_general_rex_redactor2[profiles] = Permissions for the page 'Profiles' of the Redactor-Addon
+perm_general_redactor2[] = Permissions for the Redactor-Addon
+perm_general_redactor2[profiles] = Permissions for the page 'Profiles' of the Redactor-Addon

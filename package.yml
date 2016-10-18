@@ -1,11 +1,11 @@
-package: rex_redactor2
+package: redactor2
 version: '2.2.4'
 author: Friends Of REDAXO
-supportpage: github.com/FriendsOfREDAXO/rex_redactor2
+supportpage: github.com/FriendsOfREDAXO/redactor2
 
 page:
     title: 'translate:title'
-    perm: rex_redactor2[]
+    perm: redactor2[]
     pjax: true
     subpages:
-        profiles: { title: 'translate:profiles', perm: rex_redactor2[profiles] }
+        profiles: { title: 'translate:profiles', perm: redactor2[profiles] }

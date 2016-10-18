@@ -1,5 +1,5 @@
 <?php
-	class rex_redactor2 {
+	class redactor2 {
 		
 		public static function insertProfile ($name, $description = '', $minheight = '300', $maxheight = '800', $urltype = 'relative', $redactorPlugins = '') {
 			$sql = rex_sql::factory();
