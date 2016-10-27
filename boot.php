@@ -42,6 +42,7 @@
 				$jsCode[] = '  minHeight: '.$profile['minheight'].',';
 				$jsCode[] = '  maxHeight: '.$profile['maxheight'].',';
 				$jsCode[] = '  urltype: \''.$profile['urltype'].'\',';
+				$jsCode[] = '  imageTag: \'\',';
 				if ($profile['characterlimit'] != 0) {
 					$jsCode[] = '  limiter: '.$profile['characterlimit'].',';
 					if (!in_array($this->getAssetsUrl('plugins/limiter.js'), rex_view::getJsFiles())) {
