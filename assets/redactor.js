@@ -6680,7 +6680,7 @@
 					var re5 = new RegExp('^tel:(.*?)', 'i');
 
 					// add protocol
-					if (url.search(re1) === -1 && url.search(re2) !== -1)
+					if (url.search(re1) === -1 && url.search(re2) !== -1 && url.substring(0,1) != '/')
 					{
 						url = 'http://' + url;
 					}
