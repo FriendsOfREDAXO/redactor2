@@ -168,6 +168,9 @@
 							'<b>properties</b><br>'.
 							$this->i18n('profiles_plugins_properties_description').'<br>'.
 							'<br>'.
+							'<b>redo</b><br>'.
+							$this->i18n('profiles_plugins_redo_description').'<br>'.
+							'<br>'.
 							'<b>source</b><br>'.
 							$this->i18n('profiles_plugins_source_description').'<br>'.
 							'<br>'.
@@ -188,6 +191,9 @@
 							'<br>'.
 							'<b>underline</b><br>'.
 							$this->i18n('profiles_plugins_underline_description').'<br>'.
+							'<br>'.
+							'<b>undo</b><br>'.
+							$this->i18n('profiles_plugins_undo_description').'<br>'.
 							'<br>'.
 							'<b>unorderedlist</b><br>'.
 							$this->i18n('profiles_plugins_unorderedlist_description').'<br>'.

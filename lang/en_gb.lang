@@ -51,6 +51,7 @@ redactor2_profiles_plugins_medialink_description = Fügt einen Link auf eine Dat
 redactor2_profiles_plugins_orderedlist_description = Inserts an ordererd list
 redactor2_profiles_plugins_paragraph_description = Fügt einen Paragraph ein
 redactor2_profiles_plugins_properties_description = Gibt dem aktuellen Block eine benutzerdefinierte ID oder Klasse
+redactor2_profiles_plugins_redo_description = Wiederholt die letzte Aktion
 redactor2_profiles_plugins_source_description = Switches in the HTML-mode
 redactor2_profiles_plugins_styles_description = Ermöglicht eigene nutzbare Inline-Tags zu definieren
 redactor2_profiles_plugins_sub_description = Stellt Text tief
@@ -58,6 +59,7 @@ redactor2_profiles_plugins_sup_description = Stellt Text hoch
 redactor2_profiles_plugins_table_description = Inserts a table
 redactor2_profiles_plugins_textdirection_description = Legt die Textausrichtung fest
 redactor2_profiles_plugins_underline_description = Makes the marked text underlined
+redactor2_profiles_plugins_undo_description = Macht die letzte Aktion rückgängig
 redactor2_profiles_buttons_unorderedlist_description = Inserts an unordered list
 
 #permissions
