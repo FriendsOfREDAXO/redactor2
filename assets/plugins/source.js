@@ -78,7 +78,7 @@
 			},
 			setCaretOnHide: function(html)
 			{
-				this.source.start = this.source.$textarea.get(0).selectionStart;
+			    this.source.start = this.source.$textarea.get(0).selectionStart;
 				this.source.end = this.source.$textarea.get(0).selectionEnd;
 
 				// if selection starts from end
@@ -121,7 +121,8 @@
 				this.button.enableAll();
 				this.core.editor().show().focus();
 				this.selection.restore();
-				//this.code.sync();
+
+                this.core.callback('visual');
 			},
 			show: function()
 			{
@@ -131,8 +132,8 @@
 				var height = this.core.editor().innerHeight();
 				var code = this.code.get();
 
-				code = code.replace(/\n\n\n/g, "\n");
-				code = code.replace(/\n\n/g, "\n");
+                // callback
+                code = this.core.callback('source', code);
 
 				this.core.editor().hide();
 				this.button.disableAll('html');
