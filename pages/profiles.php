@@ -1,81 +1,91 @@
 <?php
 	$func = rex_request('func', 'string');
-	
+
 	if ($func == '') {
 		$list = rex_list::factory("SELECT `id`, `name`, `description` FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC");
 		$list->addTableAttribute('class', 'table-striped');
 		$list->setNoRowsMessage($this->i18n('profiles_norowsmessage'));
-		
+
 		// icon column
 		$thIcon = '<a href="'.$list->getUrl(['func' => 'add']).'"><i class="rex-icon rex-icon-add-action"></i></a>';
 		$tdIcon = '<i class="rex-icon fa-file-text-o"></i>';
 		$list->addColumn($thIcon, $tdIcon, 0, ['<th class="rex-table-icon">###VALUE###</th>', '<td class="rex-table-icon">###VALUE###</td>']);
 		$list->setColumnParams($thIcon, ['func' => 'edit', 'id' => '###id###']);
-		
+
 		$list->setColumnLabel('name', $this->i18n('profiles_column_name'));
 		$list->setColumnLabel('description', $this->i18n('profiles_column_description'));
-		
+
 		$list->setColumnParams('name', ['id' => '###id###', 'func' => 'edit']);
-		
+
 		$list->removeColumn('id');
-		
+
 		$content = $list->get();
-		
+
 		$fragment = new rex_fragment();
 		$fragment->setVar('content', $content, false);
 		$content = $fragment->parse('core/page/section.php');
-		
+
 		echo $content;
 	} else if ($func == 'add' || $func == 'edit') {
 		$id = rex_request('id', 'int');
-		
+
 		if ($func == 'edit') {
 			$formLabel = $this->i18n('profiles_formcaption_edit');
 		} elseif ($func == 'add') {
 			$formLabel = $this->i18n('profiles_formcaption_add');
 		}
-		
+
 		$form = rex_form::factory(rex::getTablePrefix().'redactor2_profiles', '', 'id='.$id);
-		
+
 		//Start - add name-field
 			$field = $form->addTextField('name');
 			$field->setLabel($this->i18n('profiles_label_name'));
 		//End - add name-field
-		
+
 		//Start - add description-field
 			$field = $form->addTextField('description');
 			$field->setLabel($this->i18n('profiles_label_description'));
 		//End - add description-field
-		
+
 		//Start - add minheight-field
 			$field = $form->addTextField('minheight');
 			$field->setLabel($this->i18n('profiles_label_minheight'));
 		//End - add minheight-field
-		
+
 		//Start - add maxheight-field
 			$field = $form->addTextField('maxheight');
 			$field->setLabel($this->i18n('profiles_label_maxheight'));
 		//End - add maxheight-field
-		
+
 		//Start - add characterlimit-field
 			$field = $form->addTextField('characterlimit');
 			$field->setLabel($this->i18n('profiles_label_characterlimit'));
 		//End - add characterlimit-field
-		
+
 		//Start - add urltype-field
 			$field = $form->addSelectField('urltype');
 			$field->setLabel($this->i18n('profiles_label_urltype'));
-			
+
 			$select = $field->getSelect();
 			$select->setSize(1);
 			$select->addOption($this->i18n('profiles_label_urltype_option_relative'), 'relative');
 			$select->addOption($this->i18n('profiles_label_urltype_option_absolute'), 'absolute');
 		//End - add urltype-field
-		
+
+		//Start - add shortcuts-field
+		$field = $form->addSelectField('shortcuts');
+		$field->setLabel($this->i18n('profiles_label_shortcuts'));
+
+		$select = $field->getSelect();
+		$select->setSize(1);
+		$select->addOption($this->i18n('no'), 0);
+		$select->addOption($this->i18n('yes'), 1);
+		//End - add shortcuts-field
+
 		//Start - add redactor_plugins-field
 			$field = $form->addTextAreaField('redactor_plugins');
 			$field->setLabel($this->i18n('profiles_label_redactorplugins'));
-			
+
 			$field = $form->addRawField('
 				<dl class="rex-form-group form-group">
 					<dt>
@@ -203,19 +213,19 @@
 				</dl>
 			');
 		//End - add redactor_plugins-field
-		
+
 		if ($func == 'edit') {
 			$form->addParam('id', $id);
 		}
-		
+
 		$content = $form->get();
-		
+
 		$fragment = new rex_fragment();
 		$fragment->setVar('class', 'edit', false);
 		$fragment->setVar('title', $formLabel, false);
 		$fragment->setVar('body', $content, false);
 		$content = $fragment->parse('core/page/section.php');
-		
+
 		echo $content;
 	}
 ?>
