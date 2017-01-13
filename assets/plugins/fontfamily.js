@@ -41,8 +41,7 @@ $.Redactor.prototype.fontfamily = function() {
 			this.inline.format('span', 'style', 'font-family:' + value + ';');
 		},
 		remove: function() {
-			this.inline.removeFormat();
-			//this.inline.removeStyleRule('font-family');
+			this.inline.removeStyleRule('font-family');
 		}
 	};
 };

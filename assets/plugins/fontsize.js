@@ -41,8 +41,7 @@ $.Redactor.prototype.fontsize = function() {
 			this.inline.format('span', 'style', 'font-size: ' + size + ';');
 		},
 		remove: function() {
-			this.inline.removeFormat();
-			//this.inline.removeStyleRule('font-size');
+			this.inline.removeStyleRule('font-size');
 		}
 	};
 };
