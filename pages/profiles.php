@@ -2,7 +2,7 @@
 	$func = rex_request('func', 'string');
 	
 	if ($func == '') {
-		$list = rex_list::factory("SELECT `id`, `name`, `description` FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC");
+		$list = rex_list::factory("SELECT `id`, `name`, `description`, CONCAT('redactorEditor2-',`name`) as `cssclass` FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC");
 		$list->addTableAttribute('class', 'table-striped');
 		$list->setNoRowsMessage($this->i18n('profiles_norowsmessage'));
 		
@@ -14,6 +14,7 @@
 		
 		$list->setColumnLabel('name', $this->i18n('profiles_column_name'));
 		$list->setColumnLabel('description', $this->i18n('profiles_column_description'));
+		$list->setColumnLabel('cssclass', $this->i18n('profiles_column_cssclass'));
 		
 		$list->setColumnParams('name', ['id' => '###id###', 'func' => 'edit']);
 		
