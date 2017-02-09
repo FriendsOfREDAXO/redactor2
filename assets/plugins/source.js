@@ -137,6 +137,7 @@
 
 				this.core.editor().hide();
 				this.button.disableAll('html');
+				this.button.enable('fullscreen');
 				this.source.$textarea.val(code).height(height).addClass('open').show();
 				this.source.$textarea.on('keyup.redactor-source', $.proxy(function()
 				{

@@ -9,6 +9,7 @@ redactor2_profiles_norowsmessage = Es wurden keine Profile gefunden
 
 redactor2_profiles_column_name = Name
 redactor2_profiles_column_description = Beschreibung
+redactor2_profiles_column_cssclass = CSS-Klasse
 
 redactor2_profiles_formcaption_add = Profil hinzufügen
 redactor2_profiles_formcaption_edit = Profil editieren
