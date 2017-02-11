@@ -8,6 +8,7 @@
 		rex_view::addJsFile($this->getAssetsUrl('redactor.js'));
 
 		$redactorLanguage = rex::getProperty('lang');
+		$contentLanguage  = rex_clang::getCurrent();
 		$redactorLanguage = substr($redactorLanguage, 0, 2);
 
 		rex_view::addJsFile($this->getAssetsUrl('langs/'.$redactorLanguage.'.js'));
@@ -89,6 +90,7 @@
 					}
 				//End - get pluginconfiguration
 
+				$jsCode[] = 'clang_id: '. $contentLanguage->getId() .',';
 				$jsCode[] = 'shortcuts: '. ($profile['shortcuts'] ? 'true' : 'false') .',';
 				$jsCode[] = 'buttons: [],';
 				$jsCode[] = 'plugins: [\'limiter\',\''.implode('\',\'', $redactorPlugins).'\'],';
