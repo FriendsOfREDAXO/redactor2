@@ -147,6 +147,9 @@
 							'<b>grouplink[email|external|internal|media]</b><br>'.
 							$this->i18n('profiles_plugins_grouplink_description').'<br>'.
 							'<br>'.
+							'<b>grouplist[unorderedlist|orderedlist|indent|outdent]</b><br>'.
+							$this->i18n('profiles_plugins_grouplist_description').'<br>'.
+							'<br>'.
 							'<b>heading1</b><br>'.
 							$this->i18n('profiles_plugins_heading1_description').'<br>'.
 							'<br>'.
