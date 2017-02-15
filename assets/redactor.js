@@ -6407,8 +6407,15 @@
 				onShiftEnter: function(e)
 				{
 					this.buffer.set();
-
-					return (this.keydown.pre) ? this.keydown.insertNewLine(e) : this.insert.raw('<br>');
+					// immer br und newline bei strg + enter
+					if (this.keydown.pre) {
+						this.keydown.insertNewLine(e);
+					}
+					else {
+						this.insert.raw('<br>');
+						this.keydown.insertNewLine(e);
+					}
+					return false;
 				},
 				onBackspaceAndDeleteBefore: function()
 				{
