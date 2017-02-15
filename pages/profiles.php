@@ -73,16 +73,26 @@
 			$select->addOption($this->i18n('profiles_label_urltype_option_absolute'), 'absolute');
 		//End - add urltype-field
 
-		//Start - add shortcuts-field
-		$field = $form->addSelectField('shortcuts');
-		$field->setLabel($this->i18n('profiles_label_shortcuts'));
-
-		$select = $field->getSelect();
-		$select->setSize(1);
-		$select->addOption($this->i18n('no'), 0);
-		$select->addOption($this->i18n('yes'), 1);
-		//End - add shortcuts-field
-
+		//Start - add toolbarfixed-field
+			$field = $form->addSelectField('toolbarfixed');
+			$field->setLabel($this->i18n('profiles_label_toolbarfixed'));
+			
+			$select = $field->getSelect();
+			$select->setSize(1);
+			$select->addOption($this->i18n('profiles_label_toolbarfixed_option_true'), '1');
+			$select->addOption($this->i18n('profiles_label_toolbarfixed_option_false'), '0');
+		//End - add toolbarfixed-field
+		
+		//Start - add toolbarfixed-field
+			$field = $form->addSelectField('shortcuts');
+			$field->setLabel($this->i18n('profiles_label_shortcuts'));
+			
+			$select = $field->getSelect();
+			$select->setSize(1);
+			$select->addOption($this->i18n('profiles_label_shortcuts_option_true'), '1');
+			$select->addOption($this->i18n('profiles_label_shortcuts_option_false'), '0');
+		//End - add toolbarfixed-field
+		
 		//Start - add redactor_plugins-field
 			$field = $form->addTextAreaField('redactor_plugins');
 			$field->setLabel($this->i18n('profiles_label_redactorplugins'));
@@ -136,6 +146,9 @@
 							'<br>'.
 							'<b>grouplink[email|external|internal|media]</b><br>'.
 							$this->i18n('profiles_plugins_grouplink_description').'<br>'.
+							'<br>'.
+							'<b>grouplist[unorderedlist|orderedlist|indent|outdent]</b><br>'.
+							$this->i18n('profiles_plugins_grouplist_description').'<br>'.
 							'<br>'.
 							'<b>heading1</b><br>'.
 							$this->i18n('profiles_plugins_heading1_description').'<br>'.

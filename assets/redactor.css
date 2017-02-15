@@ -787,6 +787,7 @@
   #redactor-modal input[type="password"],
   #redactor-modal input[type="email"],
   #redactor-modal input[type="url"],
+  #redactor-modal input[type="number"],
   #redactor-modal textarea {
     box-sizing: border-box;
     position: relative;
@@ -807,6 +808,7 @@
     #redactor-modal input[type="password"]:focus,
     #redactor-modal input[type="email"]:focus,
     #redactor-modal input[type="url"]:focus,
+    #redactor-modal input[type="number"]:focus,
     #redactor-modal textarea:focus {
       -moz-transition: border 0.3s ease-in;
       transition: border 0.3s ease-in;
