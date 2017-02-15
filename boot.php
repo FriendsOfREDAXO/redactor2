@@ -44,7 +44,7 @@
 				$jsCode[] = '  maxHeight: '.$profile['maxheight'].',';
 				$jsCode[] = '  urltype: \''.$profile['urltype'].'\',';
 				$jsCode[] = '  toolbarFixed: '.(($profile['toolbarfixed']) ? 'true' : 'false').',';
-				$jsCode[] = '  shortcuts: '.(($profile['shortcuts']) ? 'true' : 'false').',';
+				$jsCode[] = '  shortcutsAdd: '.(($profile['shortcuts']) ? 'true' : 'false').',';
 				$jsCode[] = '  imageTag: \'\',';
 				if ($profile['characterlimit'] != 0) {
 					$jsCode[] = '  limiter: '.$profile['characterlimit'].',';
@@ -93,7 +93,6 @@
 				//End - get pluginconfiguration
 
 				$jsCode[] = 'clang_id: '. $contentLanguage->getId() .',';
-				$jsCode[] = 'shortcuts: '. ($profile['shortcuts'] ? 'true' : 'false') .',';
 				$jsCode[] = 'buttons: [],';
 				$jsCode[] = 'plugins: [\'limiter\',\''.implode('\',\'', $redactorPlugins).'\'],';
 				$jsCode[] = implode(PHP_EOL, $redactorConfig);
