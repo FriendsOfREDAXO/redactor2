@@ -22,6 +22,12 @@ redactor2_profiles_label_characterlimit = Zeichenlimit
 redactor2_profiles_label_urltype = URL-Art
 redactor2_profiles_label_urltype_option_relative = Relativ
 redactor2_profiles_label_urltype_option_absolute = Absolut
+redactor2_profiles_label_toolbarfixed = Toolbar fixiert?
+redactor2_profiles_label_toolbarfixed_option_true = Ja
+redactor2_profiles_label_toolbarfixed_option_false = Nein
+redactor2_profiles_label_shortcuts = Shortcuts aktiv?
+redactor2_profiles_label_shortcuts_option_true = Ja
+redactor2_profiles_label_shortcuts_option_false = Nein
 redactor2_profiles_label_redactorplugins = Buttons
 
 redactor2_profiles_plugins_alignment_description = Setzt die Ausrichtung des markierten Texts
