@@ -73,6 +73,26 @@
 			$select->addOption($this->i18n('profiles_label_urltype_option_absolute'), 'absolute');
 		//End - add urltype-field
 		
+		//Start - add toolbarfixed-field
+			$field = $form->addSelectField('toolbarfixed');
+			$field->setLabel($this->i18n('profiles_label_toolbarfixed'));
+			
+			$select = $field->getSelect();
+			$select->setSize(1);
+			$select->addOption($this->i18n('profiles_label_toolbarfixed_option_true'), '1');
+			$select->addOption($this->i18n('profiles_label_toolbarfixed_option_false'), '0');
+		//End - add toolbarfixed-field
+		
+		//Start - add toolbarfixed-field
+			$field = $form->addSelectField('shortcuts');
+			$field->setLabel($this->i18n('profiles_label_shortcuts'));
+			
+			$select = $field->getSelect();
+			$select->setSize(1);
+			$select->addOption($this->i18n('profiles_label_shortcuts_option_true'), '1');
+			$select->addOption($this->i18n('profiles_label_shortcuts_option_false'), '0');
+		//End - add toolbarfixed-field
+		
 		//Start - add redactor_plugins-field
 			$field = $form->addTextAreaField('redactor_plugins');
 			$field->setLabel($this->i18n('profiles_label_redactorplugins'));
