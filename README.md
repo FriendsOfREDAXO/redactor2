@@ -7,7 +7,7 @@ Addon für REDAXO 5: Bindet den WYSIWYG-Editor [Redactor](http://imperavi.com/re
 
 ## Beschreibung
 
-Textareas mit der Klasse `redactorEditor2-%profileName%` werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt, z. B. `<textarea class="redactorEditor2-full"></textarea>`.
+Textareas mit der Klasse `redactorEditor2-%profileName%` werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt, z. B. `<textarea class="redactorEditor2-full"></textarea>`, in yForm-Textareas im "Individuelle Attribute"-Feld: `{"class":"redactorEditor2-full"}`
 
 Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.
 
