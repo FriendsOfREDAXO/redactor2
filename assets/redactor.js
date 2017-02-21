@@ -1,7 +1,7 @@
 /*
 	Redactor II
-	Version 2.1
-	Updated: February 13, 2017
+	Version 2.2
+	Updated: February 20, 2017
 
 	http://imperavi.com/redactor/
 
@@ -101,7 +101,7 @@
 
 	// Options
 	$.Redactor = Redactor;
-	$.Redactor.VERSION = '2.1';
+	$.Redactor.VERSION = '2.2';
 	$.Redactor.modules = ['air', 'autosave', 'block', 'buffer', 'build', 'button', 'caret', 'clean', 'code', 'core', 'detect', 'dropdown',
 						  'events', 'file', 'focus', 'image', 'indent', 'inline', 'insert', 'keydown', 'keyup',
 						  'lang', 'line', 'link', 'linkify', 'list', 'marker', 'modal', 'observe', 'offset', 'paragraphize', 'paste', 'placeholder',
@@ -1162,6 +1162,7 @@
 					this.core.editor().html(buffer[0]);
 
 					this.selection.restoreInstant(buffer[1]);
+					this.observe.load();
 				},
 				redo: function()
 				{
@@ -1176,6 +1177,7 @@
 					this.core.editor().html(buffer[0]);
 
 					this.selection.restoreInstant(buffer[1]);
+					this.observe.load();
 				},
 				clear: function()
 				{
@@ -1793,7 +1795,7 @@
 				},
 				buildButtonTooltip: function($btn, title)
 				{
-    				if (this.opts.air)
+    				if (this.opts.air || this.detect.isMobile())
     				{
         				return;
     				}
@@ -2533,7 +2535,16 @@
 					}
 
 					// add span marker
-					$div.find('span, a').attr('data-redactor-span', true);
+					$div.find('span, a').attr('data-redactor-span', true).each(function()
+					{
+    					// add style cache
+    					var $el = $(this);
+
+    					if ($el.attr('style'))
+    					{
+        					$el.attr('data-redactor-style-cache', $el.attr('style'));
+    					}
+					});
 
 					html = $div.html();
 
@@ -2603,7 +2614,7 @@
 					});
 
 					// remove span without attributes & span marker
-				    $div.find('span, a').removeAttr('data-redactor-span').each(function()
+				    $div.find('span, a').removeAttr('data-redactor-span data-redactor-style-cache').each(function()
 					{
     					if (this.attributes.length === 0)
     					{
@@ -2744,7 +2755,6 @@
 					{
 						html = this.clean.encodeHtml(html);
 					}
-
 
 					if (data.paragraphize)
 					{
@@ -3052,7 +3062,8 @@
 						}
 						else if (tags[i] === 'span')
 						{
-    						html = html.replace(new RegExp('<' + tags[i] + '(.*?[^>])(class="(.*?[^>])")?(.*?[^>])>', 'gi'), '###' + tags[i] + ' $2###');
+    						html = html.replace(new RegExp('<' + tags[i] + '([^>]*)class="([^>]*)"[^>]*>', 'gi'), '###' + tags[i] + ' class="$2"###');
+                            html = html.replace(new RegExp('<' + tags[i] + '([^>]*)data-redactor-style-cache="([^>]*)"[^>]*>', 'gi'), '###' + tags[i] + ' cache="$2"###');
 						}
 						else
 						{
@@ -3103,9 +3114,14 @@
 
 					for (var i = 0; i < len; i++)
 					{
-                        if (tags[i] === 'td' || tags[i] === 'th' || tags[i] === 'span')
+                        if (tags[i] === 'td' || tags[i] === 'th')
                         {
 						    html = html.replace(new RegExp('###' + tags[i] + '\s?(.*?[^#])###', 'gi'), '<' + tags[i] + '$1>');
+                        }
+                        else if (tags[i] === 'span')
+                        {
+                            html = html.replace(new RegExp('###' + tags[i] + ' cache="(.*?[^#])"###', 'gi'), '<' + tags[i] + ' style="$1" data-redactor-span="true" data-redactor-style-cache="$1">');
+                            html = html.replace(new RegExp('###' + tags[i] + '\s?(.*?[^#])###', 'gi'), '<' + tags[i] + '$1>');
                         }
                     }
 
@@ -3355,6 +3371,8 @@
 					{
 						html = this.opts.emptyHtml;
 					}
+
+					html = html.replace(/<p><span id="selection-marker-1" class="redactor-selection-marker">​<\/span><\/p>/, '');
 
 					this.events.stopDetectChanges();
 					this.core.editor().html(html);
@@ -4118,8 +4136,7 @@
 					var event = this.core.getEvent();
 					var type = (event === 'click' || event === 'arrow') ? false : 'click';
 
-
-					this.core.addEvent(type);
+                    this.core.addEvent(type);
 					this.utils.disableSelectAll();
 					this.core.callback('click', e);
 				},
@@ -4630,10 +4647,14 @@
     						this.image.resizer = this.image.loadEditableControls($image);
 
     						$(document).on('mousedown.redactor-image-resize-hide.' + this.uuid, $.proxy(this.image.hideResize, this));
-                            this.image.resizer.on('mousedown.redactor touchstart.redactor', $.proxy(function(e)
+
+    						if (this.image.resizer)
     						{
-    							this.image.setResizable(e, $image);
-    						}, this));
+                                this.image.resizer.on('mousedown.redactor touchstart.redactor', $.proxy(function(e)
+        						{
+        							this.image.setResizable(e, $image);
+        						}, this));
+    						}
 
     					}, this);
 
@@ -5276,24 +5297,29 @@
 		inline: function()
 		{
 			return {
-
     			getClearedNodes: function()
     			{
                     var nodes = this.selection.nodes();
         			var newNodes = [];
         			var len = nodes.length;
-                    var started = len;
+                    var started = 0;
 
+                    // find array slice
                     for (var i = 0; i < len; i++)
 					{
-						if (i > started && !this.utils.isBlockTag(nodes[i].tagName))
-						{
-                            newNodes.push(nodes[i]);
-						}
-
 						if ($(nodes[i]).hasClass('redactor-selection-marker'))
 						{
-    						started = i + 1;
+    						started = i + 2;
+    						break;
+						}
+					}
+
+                    // find selected inline & text nodes
+                    for (var i = 0; i < len; i++)
+					{
+						if (i >= started && !this.utils.isBlockTag(nodes[i].tagName))
+						{
+                            newNodes.push(nodes[i]);
 						}
 					}
 
@@ -5457,7 +5483,6 @@
                     this.core.editor().find('strike').each(function()
     				{
                         var $el = self.utils.replaceToTag(this, tag);
-
         				for (var key in attr)
                         {
         				    self.inline.setAttr($el, key, attr[key], type);
@@ -5482,6 +5507,10 @@
             				    self.inline.removeSpecificAttr($parent, key, attr[key]);
             				}
                         }
+
+                        // cache style
+                        $el.attr('data-redactor-style-cache', $el.attr('style'));
+
     				});
 
     				this.selection.restoreInstant();
@@ -9392,6 +9421,7 @@
 
 					var sel = this.selection.get();
 					var range = this.selection.range(sel);
+
 					if (this.utils.isCollapsed())
 					{
 						return [this.selection.current()];
@@ -9404,7 +9434,7 @@
 						// single node
 						if (node === endNode)
 						{
-							return [node];
+							return [this.selection.parent()];
 						}
 
 						// iterate
@@ -9935,8 +9965,8 @@
 							$(this.opts.toolbarFixedTarget).on('scroll.redactor.' + this.uuid, function()
 							{
 								self.core.toolbar().hide();
-								clearTimeout($.data(this, "scrollCheck" ) );
-								$.data( this, "scrollCheck", setTimeout(function()
+								clearTimeout($.data(this, "scrollCheck"));
+								$.data(this, "scrollCheck", setTimeout(function()
 								{
 									self.core.toolbar().show();
 									self.toolbar.observeScroll();
@@ -10000,7 +10030,7 @@
 					var width = this.core.box().innerWidth();
 
 					var position = (this.detect.isDesktop()) ? 'fixed' : 'absolute';
-					var top = (this.detect.isDesktop()) ? this.opts.toolbarFixedTopOffset : ($(this.opts.toolbarFixedTarget).scrollTop() - boxTop);
+					var top = (this.detect.isDesktop()) ? this.opts.toolbarFixedTopOffset : ($(this.opts.toolbarFixedTarget).scrollTop() - boxTop + this.opts.toolbarFixedTopOffset);
 					var left = (this.detect.isDesktop()) ? this.core.box().offset().left : 0;
 
 					if (this.opts.toolbarFixedTarget !== document)
