@@ -1,7 +1,7 @@
 /*
 	Redactor II
-	Version 2.2
-	Updated: February 20, 2017
+	Version 2.4
+	Updated: March 7, 2017
 
 	http://imperavi.com/redactor/
 
@@ -101,7 +101,7 @@
 
 	// Options
 	$.Redactor = Redactor;
-	$.Redactor.VERSION = '2.2';
+	$.Redactor.VERSION = '2.3';
 	$.Redactor.modules = ['air', 'autosave', 'block', 'buffer', 'build', 'button', 'caret', 'clean', 'code', 'core', 'detect', 'dropdown',
 						  'events', 'file', 'focus', 'image', 'indent', 'inline', 'insert', 'keydown', 'keyup',
 						  'lang', 'line', 'link', 'linkify', 'list', 'marker', 'modal', 'observe', 'offset', 'paragraphize', 'paste', 'placeholder',
@@ -1706,7 +1706,7 @@
 									func: 'link.show',
 									observe: {
 										element: 'a',
-										in: {
+										'in': {
 											title: this.lang.get('link-edit'),
 										},
 										out: {
@@ -4764,7 +4764,6 @@
 
 					$(document).off('mousedown.redactor-image-resize-hide.' + this.uuid);
 
-
 					if (typeof this.image.resizeHandle !== 'undefined')
 					{
 						this.image.resizeHandle.el.attr('rel', this.image.resizeHandle.el.attr('style'));
@@ -6291,7 +6290,7 @@
 					}
 
 					// on Shift+Space or Ctrl+Space
-					if (key === this.keyCode.SPACE && (e.ctrlKey || e.shiftKey))
+					if (!this.keyup.lastShiftKey && key === this.keyCode.SPACE && (e.ctrlKey || e.shiftKey))
 					{
 						e.preventDefault();
 
@@ -6318,10 +6317,28 @@
 						return this.keydown.onTab(e, key);
 					}
 
+                    // firefox bugfix
+					if (this.detect.isFirefox() && key === this.keyCode.BACKSPACE && this.keydown.block && this.keydown.block.tagName === 'P' && this.utils.isStartOfElement(this.keydown.block))
+					{
+    					var $prev = $(this.keydown.block).prev();
+    					if ($prev.length !== 0)
+    					{
+        					e.preventDefault();
+
+        					$prev.append(this.marker.get());
+        					$prev.append($(this.keydown.block).html());
+        					$(this.keydown.block).remove();
+
+                            this.selection.restore();
+
+        					return;
+    					}
+					}
+
 					// backspace & delete
 					if (key === this.keyCode.BACKSPACE || key === this.keyCode.DELETE)
 					{
-    					if (this.observe.image && typeof this.observe.image !== 'undefined')
+    					if (this.observe.image && typeof this.observe.image !== 'undefined' && $('#redactor-image-box').length !== 0)
     					{
         					e.preventDefault();
 
@@ -6343,7 +6360,6 @@
 
 						this.keydown.onBackspaceAndDeleteBefore();
 					}
-
 
 					if (key === this.keyCode.DELETE)
 					{
@@ -6451,7 +6467,7 @@
 						this.code.syncFire = false;
 						this.keydown.removeEmptyLists();
 
-						this.core.editor().find('*[style]').not('img, #redactor-image-box, #redactor-image-editter, [data-redactor-span]').removeAttr('style');
+						this.core.editor().find('*[style]').not('img, figure, #redactor-image-box, #redactor-image-editter, [data-redactor-span]').removeAttr('style');
 
 						this.keydown.formatEmpty(e);
 						this.code.syncFire = true;
@@ -7017,6 +7033,8 @@
 					this.keyup.block = this.selection.block();
 					this.keyup.current = this.selection.current();
 					this.keyup.parent = this.selection.parent();
+					this.keyup.lastShiftKey = e.shiftKey;
+
 
 					// callback
 					var stop = this.core.callback('keyup', e);
@@ -8397,7 +8415,7 @@
 						var observe = value.observe,
 							element = observe.element,
 							$item   = value.item,
-							inValues = typeof observe.in !== 'undefined' ? observe.in : false,
+							inValues = typeof observe['in'] !== 'undefined' ? observe['in'] : false,
 							outValues = typeof observe.out !== 'undefined' ? observe.out : false;
 
 						if (($current.closest(element).length > 0 && isRedactor) || (element === 'a' && finded !== 0))
@@ -9954,16 +9972,29 @@
 
 					setTimeout($.proxy(function()
 					{
+    					var self = this;
 						this.toolbar.observeScroll(false);
 						if (this.detect.isDesktop())
 						{
-							$(this.opts.toolbarFixedTarget).on('scroll.redactor.' + this.uuid, $.proxy(this.toolbar.observeScroll, this));
+							$(this.opts.toolbarFixedTarget).on('scroll.redactor.' + this.uuid, function()
+							{
+                                if (self.core.editor().height() < 100 || self.placeholder.isEditorEmpty())
+            					{
+                					return;
+            					}
+
+    							self.toolbar.observeScroll();
+                            });
 						}
 						else
 						{
-							var self = this;
 							$(this.opts.toolbarFixedTarget).on('scroll.redactor.' + this.uuid, function()
 							{
+                                if (self.core.editor().height() < 100 || self.placeholder.isEditorEmpty())
+            					{
+                					return;
+            					}
+
 								self.core.toolbar().hide();
 								clearTimeout($.data(this, "scrollCheck"));
 								$.data(this, "scrollCheck", setTimeout(function()
@@ -9980,7 +10011,7 @@
 				},
 				getBoxTop: function()
 				{
-					return (this.opts.toolbarFixedTarget === document) ? this.core.box().offset().top : this.toolbarOffsetTop;
+					return (this.opts.toolbarFixedTarget === document) ? this.core.box().offset().top : this.toolbar.toolbarOffsetTop;
 				},
 				observeScroll: function(start)
 				{

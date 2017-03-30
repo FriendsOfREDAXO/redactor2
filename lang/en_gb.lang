@@ -1,7 +1,7 @@
 redactor2_title = Redactor 2 Editor
 
 #subpage help
-redactor2_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea id="redactor_full" <b>class="redactorEditor-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.</b><br><br>Es gibt die Möglichkeit, dem Editor eigene CSS-Styles zu geben. Dafür muss lediglich im Ordner /assets/addons/redactor2 eine Datei mit dem Namen skin.css angelegt werden.
+redactor2_help_infotext = This addon allows usage of the Redactor 2 WYSIWYG editor in the backend.<br><br>Textarea fields with the class <i>redactorEditor2-%profileName%</i> will automatically be turned into a proper Redactor 2 editor field.<br>Example: <textarea <b>class="redactorEditor2-full"</b>></textarea><br><br>You can setup multiple profiles with different configurations to use with the Redactor 2 editor in the backend. <br><br>You can even define your own skin for the editor using CSS. To do so, add a file called skin.css in the folder /assets/addons/redactor2
 
 #subpage profiles
 redactor2_profiles = Profiles
@@ -9,7 +9,7 @@ redactor2_profiles_norowsmessage = No profiles were found
 
 redactor2_profiles_column_name = Name
 redactor2_profiles_column_description = Description
-redactor2_profiles_column_cssclass = CSS-Class
+redactor2_profiles_column_cssclass = CSS class
 
 redactor2_profiles_formcaption_add = Add profile
 redactor2_profiles_formcaption_edit = Edit profile
@@ -19,7 +19,7 @@ redactor2_profiles_label_description = Description
 redactor2_profiles_label_minheight = Minimal height
 redactor2_profiles_label_maxheight = Maximum height
 redactor2_profiles_label_characterlimit = Characterlimit
-redactor2_profiles_label_urltype = URL-Type
+redactor2_profiles_label_urltype = URL type
 redactor2_profiles_label_urltype_option_relative = Relative
 redactor2_profiles_label_urltype_option_absolute = Absolute
 redactor2_profiles_label_toolbarfixed = Toolbar fixed?
@@ -30,45 +30,45 @@ redactor2_profiles_label_shortcuts_option_true = Yes
 redactor2_profiles_label_shortcuts_option_false = No
 redactor2_profiles_label_redactorplugins = Buttons
 
-redactor2_profiles_plugins_alignment_description = Setzt die Ausrichtung des markierten Texts
-redactor2_profiles_plugins_blockquote_description = Fügt ein Zitat ein
-redactor2_profiles_plugins_bold_description = Makes the marked text bold
-redactor2_profiles_plugins_cleaner_description = Entfernt alle Formatierungen/Styles vom markieren Text
-redactor2_profiles_plugins_clips_description = Fügt vordefinierte Textsnippets ein
-redactor2_profiles_plugins_deleted_description = Streicht den markierten Text durch
-redactor2_profiles_plugins_emaillink_description = Inserts an external link
+redactor2_profiles_plugins_alignment_description = Changes the alignment of the highlighted text
+redactor2_profiles_plugins_blockquote_description = Inserts a quote
+redactor2_profiles_plugins_bold_description = Makes the highlighted text bold
+redactor2_profiles_plugins_cleaner_description = Removes all styles from the highlighted text
+redactor2_profiles_plugins_clips_description = Inserts predefined text snippets
+redactor2_profiles_plugins_deleted_description = Strikes-through the highlighted text
+redactor2_profiles_plugins_emaillink_description = Inserts a mailto link
 redactor2_profiles_plugins_externallink_description = Inserts an external link
-redactor2_profiles_plugins_fontcolor_description = Defines the fontcolor
-redactor2_profiles_plugins_fontfamily_description = Defines the fontfamily
-redactor2_profiles_plugins_fontsize_description = Defines the fontsize
+redactor2_profiles_plugins_fontcolor_description = Defines the font color
+redactor2_profiles_plugins_fontfamily_description = Defines the font family
+redactor2_profiles_plugins_fontsize_description = Defines the font size
 redactor2_profiles_plugins_fullscreen_description = Switches to fullscreen
-redactor2_profiles_plugins_groupheading_description = Inserts a heading via dropdown
+redactor2_profiles_plugins_groupheading_description = Inserts a headline via dropdown
 redactor2_profiles_plugins_grouplink_description = Inserts a link via dropdown
 redactor2_profiles_plugins_grouplist_description = Inserts a list via dropdown
-redactor2_profiles_plugins_heading1_description = Inserts a heading with size 1
-redactor2_profiles_plugins_heading2_description = Inserts a heading with size 2
-redactor2_profiles_plugins_heading3_description = Inserts a heading with size 3
-redactor2_profiles_plugins_heading4_description = Inserts a heading with size 4
-redactor2_profiles_plugins_heading5_description = Inserts a heading with size 5
-redactor2_profiles_plugins_heading6_description = Inserts a heading with size 6
+redactor2_profiles_plugins_heading1_description = Inserts a headline with size 1
+redactor2_profiles_plugins_heading2_description = Inserts a headline with size 2
+redactor2_profiles_plugins_heading3_description = Inserts a headline with size 3
+redactor2_profiles_plugins_heading4_description = Inserts a headline with size 4
+redactor2_profiles_plugins_heading5_description = Inserts a headline with size 5
+redactor2_profiles_plugins_heading6_description = Inserts a headline with size 6
 redactor2_profiles_plugins_horizontalrule_description = Inserts a horizontal rule
-redactor2_profiles_plugins_internallink_description = Fügt einen internen Link mit Hilfe der Linkmap ein
-redactor2_profiles_plugins_italic_description = Makes the marked text italic
-redactor2_profiles_plugins_media_description = Fügt ein Bild mithilfe des Medienpool ein
-redactor2_profiles_plugins_medialink_description = Fügt einen Link auf eine Datei aus dem Medienpool ein
+redactor2_profiles_plugins_internallink_description = Inserts an internal link using the link map
+redactor2_profiles_plugins_italic_description = Makes the highlighted text italic
+redactor2_profiles_plugins_media_description = Inserts a image file using the mediapool
+redactor2_profiles_plugins_medialink_description = Inserts a link to a file in the mediapool
 redactor2_profiles_plugins_orderedlist_description = Inserts an ordererd list
-redactor2_profiles_plugins_paragraph_description = Fügt einen Paragraph ein
-redactor2_profiles_plugins_properties_description = Gibt dem aktuellen Block eine benutzerdefinierte ID oder Klasse
-redactor2_profiles_plugins_redo_description = Wiederholt die letzte Aktion
-redactor2_profiles_plugins_source_description = Switches in the HTML-mode
-redactor2_profiles_plugins_styles_description = Ermöglicht eigene nutzbare Inline-Tags zu definieren
-redactor2_profiles_plugins_sub_description = Stellt Text tief
-redactor2_profiles_plugins_sup_description = Stellt Text hoch
+redactor2_profiles_plugins_paragraph_description = Inserts a paragraph
+redactor2_profiles_plugins_properties_description = Inserts a custom ID or class into the currently selected block
+redactor2_profiles_plugins_redo_description = Repeats the previous action
+redactor2_profiles_plugins_source_description = Switches to the HTML view
+redactor2_profiles_plugins_styles_description = Allows defining custom inline tags to use in the editor
+redactor2_profiles_plugins_sub_description = Inserts a subscripted string
+redactor2_profiles_plugins_sup_description = Inserts a superscripted string
 redactor2_profiles_plugins_table_description = Inserts a table
-redactor2_profiles_plugins_textdirection_description = Legt die Textausrichtung fest
-redactor2_profiles_plugins_underline_description = Makes the marked text underlined
-redactor2_profiles_plugins_undo_description = Macht die letzte Aktion rückgängig
-redactor2_profiles_buttons_unorderedlist_description = Inserts an unordered list
+redactor2_profiles_plugins_textdirection_description = Sets the text alignment
+redactor2_profiles_plugins_underline_description = Underlines the highlighted text
+redactor2_profiles_plugins_undo_description = Undo the previous action
+redactor2_profiles_plugins_unorderedlist_description = Inserts an unordered list
 
 #permissions
 perm_general_redactor2[] = Permissions for the Redactor-Addon
