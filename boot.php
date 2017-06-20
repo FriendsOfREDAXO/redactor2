@@ -14,7 +14,7 @@
 		
 		//Start - get redactor-profiles
 			$sql = rex_sql::factory();
-			$profiles = $sql->setQuery("SELECT `name`, `minheight`, `maxheight`, `characterlimit`, `urltype`, `toolbarfixed`, `shortcuts`, `redactor_plugins` FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC")->getArray();
+			$profiles = $sql->setQuery("SELECT `name`, `minheight`, `maxheight`, `characterlimit`, `urltype`, `toolbarfixed`, `shortcuts`,  `linkify`, `redactor_plugins` FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC")->getArray();
 			unset($sql);
 			
 			$jsCode = [];
