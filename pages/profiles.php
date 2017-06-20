@@ -83,7 +83,7 @@
 			$select->addOption($this->i18n('profiles_label_toolbarfixed_option_false'), '0');
 		//End - add toolbarfixed-field
 		
-		//Start - add toolbarfixed-field
+		//Start - add shortcuts-field
 			$field = $form->addSelectField('shortcuts');
 			$field->setLabel($this->i18n('profiles_label_shortcuts'));
 			
@@ -91,7 +91,17 @@
 			$select->setSize(1);
 			$select->addOption($this->i18n('profiles_label_shortcuts_option_true'), '1');
 			$select->addOption($this->i18n('profiles_label_shortcuts_option_false'), '0');
-		//End - add toolbarfixed-field
+		//End - add shortcuts-field
+		
+		//Start - add linkify-field
+			$field = $form->addSelectField('linkify');
+			$field->setLabel($this->i18n('profiles_label_linkify'));
+			
+			$select = $field->getSelect();
+			$select->setSize(1);
+			$select->addOption($this->i18n('profiles_label_linkify_option_true'), '1');
+			$select->addOption($this->i18n('profiles_label_linkify_option_false'), '0');
+		//End - add linkify-field
 		
 		//Start - add redactor_plugins-field
 			$field = $form->addTextAreaField('redactor_plugins');

@@ -28,6 +28,9 @@ redactor2_profiles_label_toolbarfixed_option_false = Nein
 redactor2_profiles_label_shortcuts = Shortcuts aktiv?
 redactor2_profiles_label_shortcuts_option_true = Ja
 redactor2_profiles_label_shortcuts_option_false = Nein
+redactor2_profiles_label_linkify = Links automatisch konvertieren?
+redactor2_profiles_label_linkify_option_true = Ja
+redactor2_profiles_label_linkify_option_false = Nein
 redactor2_profiles_label_redactorplugins = Buttons
 
 redactor2_profiles_plugins_alignment_description = Setzt die Ausrichtung des markierten Texts

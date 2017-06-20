@@ -39,6 +39,7 @@
 				$jsCode[] = '  },';
 				
 				$jsCode[] = '  linkSize: 1000,';
+				$jsCode[] = '  linkify: '.(($profile['linkify']) ? 'true' : 'false').',';
 				$jsCode[] = '  lang: \''.$redactorLanguage.'\',';
 				$jsCode[] = '  minHeight: '.$profile['minheight'].',';
 				$jsCode[] = '  maxHeight: '.$profile['maxheight'].',';
