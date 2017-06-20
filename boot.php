@@ -38,6 +38,7 @@
 				$jsCode[] = '    redactorSetup = true;';
 				$jsCode[] = '  },';
 				
+				$jsCode[] = '  linkSize: 1000,';
 				$jsCode[] = '  lang: \''.$redactorLanguage.'\',';
 				$jsCode[] = '  minHeight: '.$profile['minheight'].',';
 				$jsCode[] = '  maxHeight: '.$profile['maxheight'].',';
