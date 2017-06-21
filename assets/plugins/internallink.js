@@ -15,7 +15,7 @@ $.Redactor.prototype.internallink = function() {
 		},
 		show: function() {
 			var that = this;
-			var linkMap = openLinkMap();
+			var linkMap = openLinkMap('', '&clang='+ that.opts.clang_id);
 			$(linkMap).on('rex:selectLink', function (event, linkurl, linktext) {
 				event.preventDefault();
 				linkMap.close();
