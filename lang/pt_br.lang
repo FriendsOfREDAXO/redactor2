@@ -1,0 +1,75 @@
+redactor2_title =  Redactor 2 Editor
+
+#subpage help
+redactor2_help_infotext = Este addon permite a utilização do redator 2 WYSIWYG editor no back-end. <br><br>Campos textuais com a classe <i>redactorEditor2-%profileName%</i> serão automaticamente transformados em um apropriado Redator 2 campo editor..<br>Exemplo: <textarea <b>class="redactorEditor2-full"</b>></textarea><br><br>Você pode configurar vários perfis com configurações diferentes para usar com o redator 2 editor no back-end. <br><br>Você pode até mesmo definir sua própria pele para o editor usando CSS. Para fazer isso, adicione um arquivo chamado skin.css na pasta / ativos / addons / redactor2
+
+#subpage profiles
+redactor2_profiles = Perfis
+redactor2_profiles_norowsmessage = Nenhum perfil foi encontrado
+
+redactor2_profiles_column_name = Nome
+redactor2_profiles_column_description = Descrição
+redactor2_profiles_column_cssclass = Classe Css
+
+redactor2_profiles_formcaption_add = Adicionar perfil
+redactor2_profiles_formcaption_edit = Editar perfil
+
+redactor2_profiles_label_name = Nome
+redactor2_profiles_label_description = Descrição
+redactor2_profiles_label_minheight = Comprimento mínimo
+redactor2_profiles_label_maxheight = Comprimento máximo
+redactor2_profiles_label_characterlimit = Limite de caracteres
+redactor2_profiles_label_urltype = Tipo de URL
+redactor2_profiles_label_urltype_option_relative = Relativo
+redactor2_profiles_label_urltype_option_absolute = Absoluto
+redactor2_profiles_label_toolbarfixed = Toolbar fixada?
+redactor2_profiles_label_toolbarfixed_option_true = Sim
+redactor2_profiles_label_toolbarfixed_option_false = Não
+redactor2_profiles_label_shortcuts = Shortcuts ativo?
+redactor2_profiles_label_shortcuts_option_true = Sim
+redactor2_profiles_label_shortcuts_option_false = Não
+redactor2_profiles_label_redactorplugins = Butões
+
+redactor2_profiles_plugins_alignment_description = Altera o alinhamento do texto em destaque
+redactor2_profiles_plugins_blockquote_description = Insere uma citação
+redactor2_profiles_plugins_bold_description = Põe o texto em destaque em negrito
+redactor2_profiles_plugins_cleaner_description = Remove todos os estilos do texto em destaque
+redactor2_profiles_plugins_clips_description = Insere trechos de texto predefinidos
+redactor2_profiles_plugins_deleted_description = Risca o texto em destaque
+redactor2_profiles_plugins_emaillink_description = Insere um link mailto
+redactor2_profiles_plugins_externallink_description = Insere um link externo
+redactor2_profiles_plugins_fontcolor_description = Define uma cor de fonte
+redactor2_profiles_plugins_fontfamily_description = Define a família da fonte
+redactor2_profiles_plugins_fontsize_description = Define o tamanho da fonte
+redactor2_profiles_plugins_fullscreen_description = Alterna para tela cheia
+redactor2_profiles_plugins_groupheading_description = Insere um título via dropdown
+redactor2_profiles_plugins_grouplink_description = Insere um link via dropdown
+redactor2_profiles_plugins_grouplist_description = Insere uma lista via dropdown
+redactor2_profiles_plugins_heading1_description = Insere um título com o tamanho 1
+redactor2_profiles_plugins_heading2_description = Insere um título com o tamanho 2
+redactor2_profiles_plugins_heading3_description = Insere um título com o tamanho 3
+redactor2_profiles_plugins_heading4_description = Insere um título com o tamanho 4
+redactor2_profiles_plugins_heading5_description = Insere um título com o tamanho 5
+redactor2_profiles_plugins_heading6_description = Insere um título com o tamanho 6
+redactor2_profiles_plugins_horizontalrule_description = Insere uma linha horizontal
+redactor2_profiles_plugins_internallink_description = Insere um link interno usando o mapa de links
+redactor2_profiles_plugins_italic_description = Põeo texto em destaque em itálico
+redactor2_profiles_plugins_media_description = Insere um arquivo de imagem usando o mediapool
+redactor2_profiles_plugins_medialink_description = Insere um link em um arquivo usando o mediapool
+redactor2_profiles_plugins_orderedlist_description = Insere uma lista ordenada
+redactor2_profiles_plugins_paragraph_description = Insere um parágrafo
+redactor2_profiles_plugins_properties_description = Insere um ID ou uma classe personalizada no bloco atualmente selecionado
+redactor2_profiles_plugins_redo_description = Repete a ação anterior
+redactor2_profiles_plugins_source_description = Altera para a visão da HTML
+redactor2_profiles_plugins_styles_description = Permite definir tags inline personalizadas para uso no editor
+redactor2_profiles_plugins_sub_description = Insere uma seqüência subscrita
+redactor2_profiles_plugins_sup_description = Insere uma sequência sobrescrita
+redactor2_profiles_plugins_table_description = Insere uma tabela
+redactor2_profiles_plugins_textdirection_description = Define o alinhamento do texto
+redactor2_profiles_plugins_underline_description = Sublinha o texto destacado
+redactor2_profiles_plugins_undo_description = Desfazer a ação anterior
+redactor2_profiles_plugins_unorderedlist_description = Inserir uma lista não ordenada
+
+#permissions
+perm_general_redactor2[] = Permissões para o Redactor-Addon
+perm_general_redactor2[profiles] = Permissões para a página "Perfis" do Redactor-Addon

@@ -12,14 +12,14 @@
 				var style = {
 					'width': '100%',
 					'margin': '0',
-					'background': '#111',
+					'background': '#1d1d1d',
 					'box-sizing': 'border-box',
-					'color': 'rgba(255, 255, 255, .8)',
-					'font-size': '14px',
+					'color': '#ccc',
+					'font-size': '15px',
 					'outline': 'none',
-					'padding': '16px',
-					'line-height': '22px',
-					'font-family': 'Menlo, Monaco, Consolas, "Courier New", monospace'
+					'padding': '20px',
+					'line-height': '24px',
+					'font-family': 'Consolas, Menlo, Monaco, "Courier New", monospace'
 				};
 
 				this.source.$textarea = $('<textarea />');
@@ -74,7 +74,6 @@
 						this.source.end = this.utils.strpos(editorHtml, $editorDiv.find("#selection-marker-2").prop("outerHTML")) - $editorDiv.find("#selection-marker-1").prop("outerHTML").toString().length;
 					}
 				}
-
 			},
 			setCaretOnHide: function(html)
 			{
@@ -116,11 +115,13 @@
 
 				code = this.paragraphize.load(code);
 				code = this.source.setCaretOnHide(code);
+				code = code.replace('&amp;<span id="selection-marker-1" class="redactor-selection-marker">​</span>', '<span id="selection-marker-1" class="redactor-selection-marker">​</span>&amp;');
 
 				this.code.start(code);
 				this.button.enableAll();
 				this.core.editor().show().focus();
 				this.selection.restore();
+				this.placeholder.enable();
 
                 this.core.callback('visual');
 			},
@@ -129,7 +130,7 @@
 				this.selection.save();
 				this.source.setCaretOnShow();
 
-				var height = this.core.editor().innerHeight();
+				var height = this.core.editor().height();
 				var code = this.code.get();
 
                 // callback
@@ -137,7 +138,7 @@
 
 				this.core.editor().hide();
 				this.button.disableAll('html');
-				this.button.enable('fullscreen');
+
 				this.source.$textarea.val(code).height(height).addClass('open').show();
 				this.source.$textarea.on('keyup.redactor-source', $.proxy(function()
 				{

@@ -28,6 +28,9 @@ redactor2_profiles_label_toolbarfixed_option_false = No
 redactor2_profiles_label_shortcuts = Shortcuts active?
 redactor2_profiles_label_shortcuts_option_true = Yes
 redactor2_profiles_label_shortcuts_option_false = No
+redactor2_profiles_label_linkify = Convert links automatically?
+redactor2_profiles_label_linkify_option_true = Yes
+redactor2_profiles_label_linkify_option_false = No
 redactor2_profiles_label_redactorplugins = Buttons
 
 redactor2_profiles_plugins_alignment_description = Changes the alignment of the highlighted text
