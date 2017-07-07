@@ -45,7 +45,7 @@
 				$jsCode[] = '  maxHeight: '.$profile['maxheight'].',';
 				$jsCode[] = '  urltype: \''.$profile['urltype'].'\',';
 				$jsCode[] = '  toolbarFixed: '.(($profile['toolbarfixed']) ? 'true' : 'false').',';
-				$jsCode[] = '  shortcuts: '.(($profile['shortcuts']) ? 'true' : 'false').',';
+				$jsCode[] = '  shortcutsAdd: '.(($profile['shortcuts']) ? 'true' : 'false').',';
 				$jsCode[] = '  imageTag: \'\',';
 				if ($profile['characterlimit'] != 0) {
 					$jsCode[] = '  limiter: '.$profile['characterlimit'].',';
