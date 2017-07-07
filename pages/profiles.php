@@ -154,7 +154,7 @@
 							'<b>groupheading[1|2|3|4|5|6]</b><br>'.
 							$this->i18n('profiles_plugins_groupheading_description').'<br>'.
 							'<br>'.
-							'<b>grouplink[email|external|internal|media]</b><br>'.
+							'<b>grouplink[email|external|internal|media|telephone]</b><br>'.
 							$this->i18n('profiles_plugins_grouplink_description').'<br>'.
 							'<br>'.
 							'<b>grouplist[unorderedlist|orderedlist|indent|outdent]</b><br>'.
@@ -219,6 +219,9 @@
 							'<br>'.
 							'<b>table</b><br>'.
 							$this->i18n('profiles_plugins_table_description').'<br>'.
+							'<br>'.
+							'<b>telephonelink</b><br>'.
+							$this->i18n('profiles_plugins_telephonelink_description').'<br>'.
 							'<br>'.
 							'<b>textdirection</b><br>'.
 							$this->i18n('profiles_plugins_textdirection_description').'<br>'.
