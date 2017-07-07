@@ -9,6 +9,8 @@ $.Redactor.prototype.grouplink = function() {
 				"grouplink_external_url": "URL",
 				"grouplink_internal": "Interner Link",
 				"grouplink_media": "Media Link",
+				"grouplink_telephone": "Telefonlink",
+				"grouplink_telephone_telephonenumber": "Telefonnummer",
 				"grouplink_grouplinktext": "Linktext",
 				"grouplink_insert": "Einfügen",
 				"grouplink_abort": "Abbrechen"
@@ -21,6 +23,8 @@ $.Redactor.prototype.grouplink = function() {
 				"grouplink_external_url": "URL",
 				"grouplink_internal": "Internal link",
 				"grouplink_media": "Media link",
+				"grouplink_telephone": "Telephonelink",
+				"grouplink_telephone_telephonenumber": "Telephonenumber",
 				"grouplink_grouplinktext": "Linktext",
 				"grouplink_insert": "Insert",
 				"grouplink_abort": "Abort"
@@ -76,6 +80,31 @@ $.Redactor.prototype.grouplink = function() {
 				
 			return String() + modalContent;
 		},
+		getTelephoneTemplate: function() {
+			var selectedText = this.selection.text();
+			
+			var modalContent = '';
+			modalContent += '<div class="modal-section" id="redactor-modal-telephonegrouplink">';
+				
+			if (selectedText == '') {
+				modalContent += '  <section>';
+				modalContent += '    <label for="telephonegrouplink_grouplinktext">' + this.lang.get('grouplink_grouplinktext') + '</label>';
+				modalContent += '    <input type="text" id="telephonegrouplink_grouplinktext">';
+				modalContent += '  </section>';
+			}
+			
+			modalContent += '  <section>';
+			modalContent += '    <label for="telephonegrouplink_telephonenumber">' + this.lang.get('grouplink_telephone_telephonenumber') + '</label>';
+			modalContent += '    <input type="text" id="telephonegrouplink_telephonenumber">';
+			modalContent += '  </section>';
+			modalContent += '  <section>';
+			modalContent += '    <button id="redactor-modal-button-action">' + this.lang.get('grouplink_insert') + '</button>';
+			modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('grouplink_abort') + '</button>';
+			modalContent += '  </section>';
+			modalContent += '</div>';
+				
+			return String() + modalContent;
+		},
 		getExternalTemplate: function() {
 			var selectedText = this.selection.text();
 			
@@ -108,6 +137,16 @@ $.Redactor.prototype.grouplink = function() {
 			
 			var button = this.modal.getActionButton();
 			button.on('click', this.grouplink.insertEmail);
+			
+			this.modal.show();
+		},
+		setTelephone: function()
+		{
+			this.modal.addTemplate('grouplink', this.grouplink.getTelephoneTemplate());
+			this.modal.load('grouplink', this.lang.get('grouplink_telephone'), 600);
+			
+			var button = this.modal.getActionButton();
+			button.on('click', this.grouplink.insertTelephone);
 			
 			this.modal.show();
 		},
@@ -156,6 +195,20 @@ $.Redactor.prototype.grouplink = function() {
 			}
 			
 			this.insert.html('<a href="mailto:'+emailaddress+'">'+grouplinktext+'</a>');
+		},
+		insertTelephone: function()
+		{
+			var grouplinktext = $('#telephonegrouplink_grouplinktext').val();
+			var telephonenumber = $('#telephonegrouplink_telephonenumber').val();
+			this.modal.close();
+			
+			var selectedText = this.selection.text();
+			
+			if (selectedText != '') {
+				var grouplinktext = selectedText;
+			}
+			
+			this.insert.html('<a href="tel:'+telephonenumber+'">'+grouplinktext+'</a>');
 		},
 		insertExternal: function() {
 			var grouplinktext = $('#externalgrouplink_grouplinktext').val();
