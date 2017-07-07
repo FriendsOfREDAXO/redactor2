@@ -50,6 +50,9 @@ $.Redactor.prototype.grouplink = function() {
 			if (grouplink.indexOf("media") != -1) {
 				dropdown.media = { title: that.lang.get('grouplink_media'), func: that.grouplink.setMedia };
 			}
+			if (grouplink.indexOf("telephone") != -1) {
+				dropdown.telephone = { title: that.lang.get('grouplink_telephone'), func: that.grouplink.setTelephone };
+			}
 			
 			var button = this.button.add('grouplink', this.lang.get('grouplink'));
 			this.button.setIcon(button, '<i class="fa fa-link"></i>');
