@@ -68,6 +68,7 @@ redactor2_profiles_plugins_styles_description = Allows defining custom inline ta
 redactor2_profiles_plugins_sub_description = Inserts a subscripted string
 redactor2_profiles_plugins_sup_description = Inserts a superscripted string
 redactor2_profiles_plugins_table_description = Inserts a table
+redactor2_profiles_plugins_telephonelink_description = Inserts a tel link
 redactor2_profiles_plugins_textdirection_description = Sets the text alignment
 redactor2_profiles_plugins_underline_description = Underlines the highlighted text
 redactor2_profiles_plugins_undo_description = Undo the previous action
