@@ -68,6 +68,7 @@ redactor2_profiles_plugins_styles_description = Ermöglicht eigene nutzbare Inli
 redactor2_profiles_plugins_sub_description = Stellt Text tief
 redactor2_profiles_plugins_sup_description = Stellt Text hoch
 redactor2_profiles_plugins_table_description = Fügt eine Tabelle ein
+redactor2_profiles_plugins_telephonelink_description = Fügt einen Telefon-Link ein
 redactor2_profiles_plugins_textdirection_description = Legt die Textausrichtung fest
 redactor2_profiles_plugins_underline_description = Unterstreicht den markierten Text
 redactor2_profiles_plugins_undo_description = Macht die letzte Aktion rückgängig

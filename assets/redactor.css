@@ -162,7 +162,7 @@
   z-index: auto; }
 
 .redactor-link-tooltip {
-  z-index: 99; }
+  z-index: 1050; }
 
 .redactor-toolbar {
   z-index: 100; }

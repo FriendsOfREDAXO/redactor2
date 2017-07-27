@@ -25,7 +25,8 @@
 .re-emaillink:after,
 .re-externallink:after,
 .re-internallink:after,
-.re-medialink:after {
+.re-medialink:after,
+.re-telephonelink:after {
 	font-size: 10px;
 	position: absolute;
 	bottom: 12px;
@@ -61,6 +62,9 @@
 }
 .re-medialink:after {
 	content: "M";
+}
+.re-telephonelink:after {
+	content: "T";
 }
 
 .redactor-dropdown-groupheading1 span {
