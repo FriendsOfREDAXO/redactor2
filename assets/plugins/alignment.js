@@ -38,11 +38,13 @@
 				this.block.removeClass('text-center');
 				this.block.removeClass('text-right');
 				this.block.removeClass('text-justify');
+				this.block.removeClass('text-left'); // kreatif: added to force left align
 			},
 			setLeft: function()
 			{
 				this.buffer.set();
 				this.alignment.removeAlign();
+				this.block.addClass('text-left'); // kreatif: added to force left align
 			},
 			setCenter: function()
 			{
