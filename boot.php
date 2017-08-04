@@ -14,7 +14,7 @@
 		
 		//Start - get redactor-profiles
 			$sql = rex_sql::factory();
-			$profiles = $sql->setQuery("SELECT `name`, `minheight`, `maxheight`, `characterlimit`, `urltype`, `toolbarfixed`, `shortcuts`,  `linkify`, `redactor_plugins` FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC")->getArray();
+			$profiles = $sql->setQuery("SELECT * FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC")->getArray();
 			unset($sql);
 			
 			$jsCode = [];
@@ -92,6 +92,40 @@
 						}
 					}
 				//End - get pluginconfiguration
+				
+				//Start - get pluginconfiguration for custom plugins
+					if (trim($profile['redactor_customplugins']) != '') {
+						$plugins = explode(',', $profile['redactor_customplugins']);
+						foreach ($plugins as $plugin) {
+							list($pluginName, $pluginPath) = explode(':', $plugin);
+							$plugin = trim($pluginName);
+							
+							if (!in_array(rex_url::assets($pluginPath), rex_view::getJsFiles())) {
+								rex_view::addJsFile(rex_url::assets($pluginPath));
+							}
+							
+							if (preg_match('/(.*)\[(.*)\]/', $plugin, $matches)) {
+								//Start - explode parameters
+									$parameters = explode('|', $matches[2]);
+									$parameterString = '';
+									foreach ($parameters as $parameter) {
+										if (strpos($parameter, '=') !== false) {
+											list($key, $value) = explode('=',$parameter,2);
+											$parameterString .= "['".addslashes($key)."', '".addslashes($value)."'],";
+										} else {
+											$parameterString .= "'".$parameter."',";
+										}
+									}
+									
+									$redactorConfig[] =  $matches[1].': ['.$parameterString.'],';
+									$redactorPlugins[] = $matches[1];
+								//End - explode parameters
+							} else {
+								$redactorPlugins[] = $pluginName;
+							}
+						}
+					}
+				//End - get pluginconfiguration for custom plugins
 				
 				$jsCode[] = 'buttons: [],';
 				$jsCode[] = 'plugins: [\'limiter\',\''.implode('\',\'', $redactorPlugins).'\'],';

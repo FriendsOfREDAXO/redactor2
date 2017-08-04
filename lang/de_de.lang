@@ -31,7 +31,9 @@ redactor2_profiles_label_shortcuts_option_false = Nein
 redactor2_profiles_label_linkify = Links automatisch konvertieren?
 redactor2_profiles_label_linkify_option_true = Ja
 redactor2_profiles_label_linkify_option_false = Nein
-redactor2_profiles_label_redactorplugins = Buttons
+redactor2_profiles_label_redactorplugins = Plugins
+redactor2_profiles_label_redactorcustomplugins = Custom Plugins
+redactor2_profiles_label_redactorcustomplugins_help = Kommagetrennt mit der Syntax "name:pfad/zum/plugin.js"
 
 redactor2_profiles_plugins_alignment_description = Setzt die Ausrichtung des markierten Texts
 redactor2_profiles_plugins_blockquote_description = Fügt ein Zitat ein

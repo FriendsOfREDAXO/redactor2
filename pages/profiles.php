@@ -241,6 +241,22 @@
 			');
 		//End - add redactor_plugins-field
 		
+		//Start - add redactor_custom_plugins-field
+			$field = $form->addTextAreaField('redactor_customplugins');
+			$field->setLabel($this->i18n('profiles_label_redactorcustomplugins'));
+			
+			$field = $form->addRawField('
+				<dl class="rex-form-group form-group">
+					<dt>
+						&nbsp;
+					</dt>
+					<dd>
+						<p>'.$this->i18n('profiles_label_redactorcustomplugins_help').'</p>
+					</dd>
+				</dl>
+			');
+		//End - add redactor_custom_plugins-field
+		
 		if ($func == 'edit') {
 			$form->addParam('id', $id);
 		}
