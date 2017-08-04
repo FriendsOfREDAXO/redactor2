@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS `%TABLE_PREFIX%redactor2_profiles` (
   `shortcuts` tinyint(1) unsigned NOT NULL,
   `linkify` tinyint(1) unsigned NOT NULL,
   `redactor_plugins` text NOT NULL,
-  `redactor_custom_plugins` text NOT NULL,
+  `redactor_customplugins` text NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
