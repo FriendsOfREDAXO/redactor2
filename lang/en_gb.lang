@@ -31,7 +31,9 @@ redactor2_profiles_label_shortcuts_option_false = No
 redactor2_profiles_label_linkify = Convert links automatically?
 redactor2_profiles_label_linkify_option_true = Yes
 redactor2_profiles_label_linkify_option_false = No
-redactor2_profiles_label_redactorplugins = Buttons
+redactor2_profiles_label_redactorplugins = Plugins
+redactor2_profiles_label_redactorcustomplugins = Custom Plugins
+redactor2_profiles_label_redactorcustomplugins_help = Commaseparated with the Syntax "name:/path/to/plugin.js"
 
 redactor2_profiles_plugins_alignment_description = Changes the alignment of the highlighted text
 redactor2_profiles_plugins_blockquote_description = Inserts a quote
