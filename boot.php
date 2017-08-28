@@ -35,9 +35,9 @@
 				$jsCode[] = '  });';
 				$jsCode[] = '}';
 				$jsCode[] = 'Editor.redactor({';
-				$jsCode[] = '  initCallback: function() {';
+				$jsCode[] = '  callbacks: { init: function() {';
 				$jsCode[] = '    redactorSetup = true;';
-				$jsCode[] = '  },';
+				$jsCode[] = '  }},';
 
 				$jsCode[] = '  linkSize: 1000,';
 				$jsCode[] = '  linkify: '.(($profile['linkify']) ? 'true' : 'false').',';
@@ -138,6 +138,9 @@
 			$jsCode[] = '}';
 
 			$jsCode[] = '$(document).on(\'ready pjax:success\',function() {';
+			$jsCode[] = '  redactorInit();';
+			$jsCode[] = '});';
+			$jsCode[] = '$(document).on(\'be_table:row-added\',function() {';
 			$jsCode[] = '  redactorInit();';
 			$jsCode[] = '});';
 
