@@ -34,9 +34,9 @@
 				$jsCode[] = '  });';
 				$jsCode[] = '}';
 				$jsCode[] = 'Editor.redactor({';
-				$jsCode[] = '  initCallback: function() {';
+				$jsCode[] = '  callbacks: { init: function() {';
 				$jsCode[] = '    redactorSetup = true;';
-				$jsCode[] = '  },';
+				$jsCode[] = '  }},';
 				
 				$jsCode[] = '  linkSize: 1000,';
 				$jsCode[] = '  linkify: '.(($profile['linkify']) ? 'true' : 'false').',';
@@ -138,6 +138,9 @@
 			$jsCode[] = '$(document).on(\'ready pjax:success\',function() {';
 			$jsCode[] = '  redactorInit();';
 			$jsCode[] = '});';
+		        $jsCode[] = '$(document).on(\'be_table:row-added\',function() {';
+                        $jsCode[] = '  redactorInit();';
+                        $jsCode[] = '});';
 			
 			if (!rex_file::put($this->getAssetsUrl('cache/redactor2_profiles.js').'', implode(PHP_EOL, $jsCode))) {
 				echo 'js-file konnte nicht gespeichert werden';
