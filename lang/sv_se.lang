@@ -1,0 +1,81 @@
+redactor2_title = Redactor 2 Editor
+
+#subpage help
+redactor2_help_infotext = Denna tillägg tillåter användning av Redactor 2 WYSIWYG-editoren i backenden. <br> <br> Textarea-fält med klassen <i> redactorEditor2-% profileName% </i> kommer automatiskt att omvandlas till ett korrekt Redaktor 2-redigeringsfält.<br> Exempel: <textarea <b> class = "redactorEditor2-full" </ b >> </ textarea> <br> <br> Du kan konfigurera flera profiler med olika konfigurationer för att använda med Redactor 2-redigeraren i backend. <br><br> Du kan även definiera dina egna CSS-stilar för redaktören. Lägg då till en fil som heter skin.css i mappen / tillgångar / addons / redactor2
+
+#subpage profiles
+redactor2_profiles = Profiler
+redactor2_profiles_norowsmessage = Inga profiler hittades
+
+redactor2_profiles_column_name = Namn
+redactor2_profiles_column_description = Beskrivning
+redactor2_profiles_column_cssclass = CSS klass
+
+redactor2_profiles_formcaption_add = Tillfoga profil
+redactor2_profiles_formcaption_edit = Redigera profil
+
+redactor2_profiles_label_name = Namn
+redactor2_profiles_label_description = Beskrivning
+redactor2_profiles_label_minheight = Min. höjd
+redactor2_profiles_label_maxheight = Max. höjd
+redactor2_profiles_label_characterlimit = Max. antal tecken
+redactor2_profiles_label_urltype = URL-typ
+redactor2_profiles_label_urltype_option_relative = Relative
+redactor2_profiles_label_urltype_option_absolute = Absolut
+redactor2_profiles_label_toolbarfixed = Tool fast?
+redactor2_profiles_label_toolbarfixed_option_true = Ja
+redactor2_profiles_label_toolbarfixed_option_false = Nej
+redactor2_profiles_label_shortcuts = Shortcuts aktiv?
+redactor2_profiles_label_shortcuts_option_true = Ja
+redactor2_profiles_label_shortcuts_option_false = Nej
+redactor2_profiles_label_linkify = Konvertera länkar automatisk?
+redactor2_profiles_label_linkify_option_true = Ja
+redactor2_profiles_label_linkify_option_false = Nej
+redactor2_profiles_label_redactorplugins = Buttons
+redactor2_profiles_label_redactorcustomplugins = Custom Plugins
+redactor2_profiles_label_redactorcustomplugins_help = Komma-separerad med syntaxen "namn:led/till/plugin.js"
+
+redactor2_profiles_plugins_alignment_description = Ändrar justeringen av den markerade texten
+redactor2_profiles_plugins_blockquote_description = Infoga ett citat
+redactor2_profiles_plugins_bold_description = Gör den markerade texten fet
+redactor2_profiles_plugins_cleaner_description = Tar bort alla stilar från den markerade texten
+redactor2_profiles_plugins_clips_description = Infogar fördefinierade textrader
+redactor2_profiles_plugins_deleted_description = Genomstryka den markerade texten
+redactor2_profiles_plugins_emaillink_description = Infogar en mailto länk
+redactor2_profiles_plugins_externallink_description = Infogar en extern länk
+redactor2_profiles_plugins_fontcolor_description = Definierar textfärgen
+redactor2_profiles_plugins_fontfamily_description = Definierar typsnittfamiljen
+redactor2_profiles_plugins_fontsize_description = Definierar teckensnittstorleken
+redactor2_profiles_plugins_fullscreen_description = Växlar till fullskärm
+redactor2_profiles_plugins_groupheading_description = Infogar en rubrik via rullgardinsmenyn
+redactor2_profiles_plugins_grouplink_description = Infogar en länk via rullgardinsmenyn
+redactor2_profiles_plugins_grouplist_description = Infogar en lista via rullgardinsmenyn
+redactor2_profiles_plugins_heading1_description = Infogar en rubrik med nivå 1
+redactor2_profiles_plugins_heading2_description = Infogar en rubrik med nivå 2
+redactor2_profiles_plugins_heading3_description = Infogar en rubrik med nivå 3
+redactor2_profiles_plugins_heading4_description = Infogar en rubrik med nivå 4
+redactor2_profiles_plugins_heading5_description = Infogar en rubrik med nivå 5
+redactor2_profiles_plugins_heading6_description = Infogar en rubrik med nivå 6
+redactor2_profiles_plugins_horizontalrule_description = Infogar en horisontell linje
+redactor2_profiles_plugins_internallink_description = Infogar en intern länk med länkkartan
+redactor2_profiles_plugins_italic_description = Gör den markerade texten kursiv
+redactor2_profiles_plugins_media_description = Infogar en bildfil med hjälp av mediapoolen / filhanteraren
+redactor2_profiles_plugins_medialink_description = Infogar en länk till en fil i mediapoolen / filhanteraren
+redactor2_profiles_plugins_orderedlist_description = Infoga en sorterad lista
+redactor2_profiles_plugins_paragraph_description = Infoga ett stycke
+redactor2_profiles_plugins_properties_description = Infogar ett anpassat ID eller en klass i det aktuella valda blocket
+redactor2_profiles_plugins_redo_description = Upprepar föregående åtgärd
+redactor2_profiles_plugins_source_description = Växlar till HTML-vyn
+redactor2_profiles_plugins_styles_description = Tillåter att definiera anpassade inline-taggar som ska användas i redigeraren
+redactor2_profiles_plugins_sub_description = Infogar en nerställd sträng
+redactor2_profiles_plugins_sup_description = Infogar en uppställd sträng
+redactor2_profiles_plugins_table_description = Infogar en tabell
+redactor2_profiles_plugins_telephonelink_description = Tillfoga en telefon-länk
+redactor2_profiles_plugins_textdirection_description = Ställer in textjusteringen
+redactor2_profiles_plugins_underline_description = Understryker den markerade texten
+redactor2_profiles_plugins_undo_description = ångra föregående åtgärd
+redactor2_profiles_plugins_unorderedlist_description = Infogar en osorterat lista
+
+#permissions
+perm_general_redactor2[] = Behörigheter för Redactor-addon
+perm_general_redactor2[profiles] = Behörigheter för sidan "Profiler" i Redactor-addon
