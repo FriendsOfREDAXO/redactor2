@@ -1,0 +1,81 @@
+redactor2_title = Redactor 2 Editor
+
+#subpage help
+redactor2_help_infotext = L'addon include l'editor WYSIWYG Redactor nel backend.<br><br>Aree di testo con la classe <i>redactorEditor2-%profileName%</i> vengono automaticamente convertite da un campo di input normale in un  campo editor WYSIWYG<br>ad esempio: <textarea <b>class="redactorEditor2-full"</b>></textarea><br><br>Nel backend possono essere creati diversi profili con diverse impostazioni di configurazione per l'editor Redactor.</b><br><br>È possibile impostare nell'editor stili CSS personalizzati. Per fare questo, è sufficiente creare un file denominato skin.css e inserirlo nella cartella /assets/addons/redactor2.
+
+#subpage profiles
+redactor2_profiles = Profili
+redactor2_profiles_norowsmessage = Nessun profilo trovato
+
+redactor2_profiles_column_name = Nome
+redactor2_profiles_column_description = Descrizione
+redactor2_profiles_column_cssclass = Classe Css
+
+redactor2_profiles_formcaption_add = Aggiungi profilo
+redactor2_profiles_formcaption_edit = Modifica profilo
+
+redactor2_profiles_label_name = Nome
+redactor2_profiles_label_description = Descrizione
+redactor2_profiles_label_minheight = Altezza min.
+redactor2_profiles_label_maxheight = Altezza max.
+redactor2_profiles_label_characterlimit = Limite di caratteri
+redactor2_profiles_label_urltype = Tipo URL
+redactor2_profiles_label_urltype_option_relative = Relativa
+redactor2_profiles_label_urltype_option_absolute = Assoluta
+redactor2_profiles_label_toolbarfixed = Toolbar fissa?
+redactor2_profiles_label_toolbarfixed_option_true = Si
+redactor2_profiles_label_toolbarfixed_option_false = No
+redactor2_profiles_label_shortcuts = Shortcuts attivi?
+redactor2_profiles_label_shortcuts_option_true = Si
+redactor2_profiles_label_shortcuts_option_false = No
+redactor2_profiles_label_linkify = Converti automaticamente i link?
+redactor2_profiles_label_linkify_option_true = Si
+redactor2_profiles_label_linkify_option_false = no
+redactor2_profiles_label_redactorplugins = Plugins
+redactor2_profiles_label_redactorcustomplugins = Plugin personalizzati
+redactor2_profiles_label_redactorcustomplugins_help = Separazione comma con la sintassi "name:pfad/zum/plugin.js"
+
+redactor2_profiles_plugins_alignment_description = Imposta l'allineamento del testo selezionato
+redactor2_profiles_plugins_blockquote_description = Inserisce un commento
+redactor2_profiles_plugins_bold_description = Testo selezionato in grassetto
+redactor2_profiles_plugins_cleaner_description = Rimuove tutte le formattazioni / stili dal testo selezionato
+redactor2_profiles_plugins_clips_description = Inserisce snippets di testo predefiniti
+redactor2_profiles_plugins_deleted_description = Testo selezionato depennato
+redactor2_profiles_plugins_emaillink_description = Aggiunge un link di posta elettronica
+redactor2_profiles_plugins_externallink_description = Aggiunge un link esterno
+redactor2_profiles_plugins_fontcolor_description = Definisce il colore del carattere
+redactor2_profiles_plugins_fontfamily_description = Definisce il carattere
+redactor2_profiles_plugins_fontsize_description = Definisce la dimensione del carattere
+redactor2_profiles_plugins_fullscreen_description = Abilita schermo intero
+redactor2_profiles_plugins_groupheading_description = Inserisce un'intestazione tramite dropdown
+redactor2_profiles_plugins_grouplink_description = Inserisce un link tramite dropdown
+redactor2_profiles_plugins_grouplist_description = Inserisce una lista tramite dropdown
+redactor2_profiles_plugins_heading1_description = Inserisce un'intestazione di dimensione 1
+redactor2_profiles_plugins_heading2_description = Inserisce un'intestazione di dimensione 2
+redactor2_profiles_plugins_heading3_description = Inserisce un'intestazione di dimensione 3
+redactor2_profiles_plugins_heading4_description = Inserisce un'intestazione di dimensione 4
+redactor2_profiles_plugins_heading5_description = Inserisce un'intestazione di dimensione 5
+redactor2_profiles_plugins_heading6_description = Inserisce un'intestazione di dimensione 6
+redactor2_profiles_plugins_horizontalrule_description = Inserisce una linea orizzontale
+redactor2_profiles_plugins_internallink_description = Inserisce un collegamento interno utilizzando la linkmap
+redactor2_profiles_plugins_italic_description = Testo selezionato in corsivo
+redactor2_profiles_plugins_media_description = Inserisce un'immagine utilizzando il Media Pool
+redactor2_profiles_plugins_medialink_description = Aggiunge un collegamento a un file dal Media Pool
+redactor2_profiles_plugins_orderedlist_description = Inserisce un elenco ordinato
+redactor2_profiles_plugins_paragraph_description = Inserisce un paragrafo
+redactor2_profiles_plugins_properties_description = Aggiunge al blocco corrente una ID o una classe personalizzata
+redactor2_profiles_plugins_redo_description = Ripete l'ultima azione
+redactor2_profiles_plugins_source_description = Passa alla modalità HTML
+redactor2_profiles_plugins_styles_description = Consente di definire i propri inline tag utilizzabili
+redactor2_profiles_plugins_sub_description = Imposta il testo in basso
+redactor2_profiles_plugins_sup_description = Imposta il testo in alto
+redactor2_profiles_plugins_table_description = Inserisce una tabella
+redactor2_profiles_plugins_telephonelink_description = Inserisce un link telefonico
+redactor2_profiles_plugins_textdirection_description = Imposta l'allineamento del testo
+redactor2_profiles_plugins_underline_description = Sottolinea il testo selezionato
+redactor2_profiles_plugins_undo_description = Annulla l'ultima azione
+redactor2_profiles_plugins_unorderedlist_description = Inserisce un elenco non ordinato
+
+#permissions
+perm_general_redactor2[] = Diritti dell'addon Redactor
+perm_general_redactor2[profiles] = Diritti per la pagina 'Profili' dell'addon Redactor
