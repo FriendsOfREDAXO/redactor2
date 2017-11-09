@@ -144,7 +144,7 @@
 			$jsCode[] = '  redactorInit();';
 			$jsCode[] = '});';
 
-			if (!rex_file::put($this->getAssetsUrl('cache/redactor2_profiles.js').'', implode(PHP_EOL, $jsCode))) {
+			if (!rex_file::put($this->getAssetsPath('cache/redactor2_profiles.js').'', implode(PHP_EOL, $jsCode))) {
 				echo 'js-file konnte nicht gespeichert werden';
 			}
 
