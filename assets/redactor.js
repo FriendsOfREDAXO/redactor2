@@ -1,7 +1,7 @@
 /*
 	Redactor II
-	Version 2.10
-	Updated: September 4, 2017
+	Version 2.11
+	Updated: September 20, 2017
 
 	http://imperavi.com/redactor/
 
@@ -101,7 +101,7 @@
 
 	// Options
 	$.Redactor = Redactor;
-	$.Redactor.VERSION = '2.10';
+	$.Redactor.VERSION = '2.11';
 	$.Redactor.modules = ['air', 'autosave', 'block', 'buffer', 'build', 'button', 'caret', 'clean', 'code', 'core', 'detect', 'dropdown',
 						  'events', 'file', 'focus', 'image', 'indent', 'inline', 'insert', 'keydown', 'keyup',
 						  'lang', 'line', 'link', 'linkify', 'list', 'marker', 'modal', 'observe', 'offset', 'paragraphize', 'paste', 'placeholder',
@@ -327,7 +327,7 @@
 							'button', 'option', 'map', 'area', 'math', 'hr', 'fieldset', 'legend', 'hgroup', 'nav', 'figure', 'details', 'menu', 'summary', 'p'],
 		emptyHtml: '<p>&#x200b;</p>',
 		invisibleSpace: '&#x200b;',
-		emptyHtmlRendered: $('').html('​').html(),
+		emptyHtmlRendered: $('').html('').html(),
 		imageTypes: ['image/png', 'image/jpeg', 'image/gif'],
 		userAgent: navigator.userAgent.toLowerCase(),
 		observe: {
@@ -2597,11 +2597,11 @@
 					html = html.replace(/&amp;/g, '&');
 
 					// replace special characters in links
-					html = html.replace(/<a href="(.*?[^>]?)®(.*?[^>]?)">/gi, '<a href="$1&reg$2">');
+					html = html.replace(/<a href="(.*?[^>]?)�(.*?[^>]?)">/gi, '<a href="$1&reg$2">');
 
 					// save markers
-					html = html.replace(/<span id="selection-marker-1"(.*?[^>]?)>​<\/span>/gi, '###marker1###');
-					html = html.replace(/<span id="selection-marker-2"(.*?[^>]?)>​<\/span>/gi, '###marker2###');
+					html = html.replace(/<span id="selection-marker-1"(.*?[^>]?)><\/span>/gi, '###marker1###');
+					html = html.replace(/<span id="selection-marker-2"(.*?[^>]?)><\/span>/gi, '###marker2###');
 
 					// replace tags
 					var self = this;
@@ -2653,8 +2653,8 @@
 					html = this.paragraphize.load(html);
 
 					// restore markers
-					html = html.replace('###marker1###', '<span id="selection-marker-1" class="redactor-selection-marker">​</span>');
-					html = html.replace('###marker2###', '<span id="selection-marker-2" class="redactor-selection-marker">​</span>');
+					html = html.replace('###marker1###', '<span id="selection-marker-1" class="redactor-selection-marker"></span>');
+					html = html.replace('###marker2###', '<span id="selection-marker-2" class="redactor-selection-marker"></span>');
 
 					// empty
 					if (html.search(/^(||\s||<br\s?\/?>||&nbsp;)$/i) !== -1)
@@ -3118,7 +3118,7 @@
                     	{
                     		if (link.href)
                     		{
-                    			var tmp = '##%%a href="' + link.href + '"';
+                    			var tmp = '#####[a href="' + link.href + '"';
                     			var attr;
                     			for (var j = 0, length = link.attributes.length; j < length; j++)
                     			{
@@ -3129,7 +3129,7 @@
                     				}
                     			}
 
-                    			link.outerHTML = tmp + '%%##' + link.innerHTML + '##%%/a%##';
+                    			link.outerHTML = tmp + ']#####' + link.innerHTML + '#####[/a]#####';
                     		}
                     	});
                     }
@@ -3139,7 +3139,7 @@
                     // images
 					if (data.images && this.opts.pasteImages)
 					{
-						html = html.replace(/<img(.*?)src="(.*?)"(.*?[^>])>/gi, '##%%img$1src="$2"$3%%##');
+						html = html.replace(/<img(.*?)src="(.*?)"(.*?[^>])>/gi, '#####[img$1src="$2"$3]#####');
 					}
 
 					// plain text
@@ -3190,8 +3190,8 @@
 					// links & images
 					if ((data.links && this.opts.pasteLinks) || (data.images && this.opts.pasteImages))
 					{
-						html = html.replace(new RegExp('##%%', 'gi'), '<');
-						html = html.replace(new RegExp('%%##', 'gi'), '>');
+						html = html.replace(new RegExp('#####\\[', 'gi'), '<');
+						html = html.replace(new RegExp('\\]#####', 'gi'), '>');
                     }
 
 					// plain text
@@ -3380,7 +3380,7 @@
 				},
 				restoreSelectionMarkers: function(html)
 				{
-					html = html.replace(/&lt;span id=&quot;selection-marker-([0-9])&quot; class=&quot;redactor-selection-marker&quot;&gt;​&lt;\/span&gt;/g, '<span id="selection-marker-$1" class="redactor-selection-marker">​</span>');
+					html = html.replace(/&lt;span id=&quot;selection-marker-([0-9])&quot; class=&quot;redactor-selection-marker&quot;&gt;&lt;\/span&gt;/g, '<span id="selection-marker-$1" class="redactor-selection-marker"></span>');
 
 					return html;
 				},
@@ -3394,10 +3394,10 @@
 				},
 				encodeHtml: function(html)
 				{
-					html = html.replace(/”/g, '"');
-					html = html.replace(/“/g, '"');
-					html = html.replace(/‘/g, '\'');
-					html = html.replace(/’/g, '\'');
+					html = html.replace(//g, '"');
+					html = html.replace(//g, '"');
+					html = html.replace(//g, '\'');
+					html = html.replace(//g, '\'');
 					html = this.clean.encodeEntities(html);
 
 					return html;
@@ -3475,7 +3475,7 @@
 				start: function(html)
 				{
 					html = $.trim(html);
-					html = html.replace(/^(<span id="selection-marker-1" class="redactor-selection-marker">​<\/span>)/, '');
+					html = html.replace(/^(<span id="selection-marker-1" class="redactor-selection-marker"><\/span>)/, '');
 
 					// clean
 					if (this.opts.type === 'textarea')
@@ -3487,7 +3487,7 @@
 						html = this.opts.emptyHtml;
 					}
 
-					html = html.replace(/<p><span id="selection-marker-1" class="redactor-selection-marker">​<\/span><\/p>/, '');
+					html = html.replace(/<p><span id="selection-marker-1" class="redactor-selection-marker"><\/span><\/p>/, '');
 
 					this.events.stopDetectChanges();
 					this.core.editor().html(html);
@@ -8639,7 +8639,7 @@
 					this.$modalClose.off('mousedown.redactor-modal');
 					$(document).off('keyup.redactor-modal');
 					this.core.editor().off('keyup.redactor-modal');
-					this.$modalBox.off('click§.redactor-modal');
+					this.$modalBox.off('click�.redactor-modal');
 					$(window).off('resize.redactor-modal');
 				},
 				closeHandler: function(e)
@@ -9518,7 +9518,7 @@
 				isEditorEmpty: function()
 				{
 					var html = $.trim(this.core.editor().html()).replace(/[\t\n]/g, '');
-					var states = ['', '<p>​</p>', '<p>​<br></p>', this.opts.emptyHtmlRendered];
+					var states = ['', '<p></p>', '<p><br></p>', this.opts.emptyHtmlRendered];
 
 					return ($.inArray(html, states) !== -1);
 				},
