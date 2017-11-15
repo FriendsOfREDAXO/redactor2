@@ -1,5 +1,5 @@
 <?php
-	if (rex::isBackend()) {
+	if (rex::isBackend() && !empty(rex::getUser())) {
 		rex_view::addCssFile($this->getAssetsUrl('redactor.css'));
 		rex_view::addCssFile($this->getAssetsUrl('redactor_custom.css'));
 		if (file_exists($this->getAssetsPath('skin.css'))) {
@@ -35,9 +35,11 @@
 				$jsCode[] = '  });';
 				$jsCode[] = '}';
 				$jsCode[] = 'Editor.redactor({';
-				$jsCode[] = '  callbacks: { init: function() {';
-				$jsCode[] = '    redactorSetup = true;';
-				$jsCode[] = '  }},';
+				$jsCode[] = '  callbacks: {';
+				$jsCode[] = '    init: function() {';
+				$jsCode[] = '      redactorSetup = true;';
+				$jsCode[] = '    }';
+				$jsCode[] = '  },';
 
 				$jsCode[] = '  linkSize: 1000,';
 				$jsCode[] = '  linkify: '.(($profile['linkify']) ? 'true' : 'false').',';
@@ -128,7 +130,7 @@
 					}
 				//End - get pluginconfiguration for custom plugins
 				
-                $jsCode[] = 'clang_id: '. $contentLanguage->getId() .',';
+				$jsCode[] = 'clang_id: '. $contentLanguage->getId() .',';
 				$jsCode[] = 'buttons: [],';
 				$jsCode[] = 'plugins: [\'limiter\',\''.implode('\',\'', $redactorPlugins).'\'],';
 				$jsCode[] = implode(PHP_EOL, $redactorConfig);
