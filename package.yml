@@ -9,3 +9,6 @@ page:
     pjax: true
     subpages:
         profiles: { title: 'translate:profiles', perm: redactor2[profiles] }
+        
+requires:
+    redaxo: '>=5.2' # benötigt mindestens REDAXO 5.2
