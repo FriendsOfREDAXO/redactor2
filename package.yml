@@ -12,3 +12,5 @@ page:
         
 requires:
     redaxo: '>=5.2' # benötigt mindestens REDAXO 5.2
+    php:
+        version: '>=5.6' # benötigt mindestens PHP 5.6
