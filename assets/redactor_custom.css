@@ -26,7 +26,8 @@
 .re-externallink:after,
 .re-internallink:after,
 .re-medialink:after,
-.re-telephonelink:after {
+.re-telephonelink:after,
+.re-anchorlink:after {
 	font-size: 10px;
 	position: absolute;
 	bottom: 12px;
@@ -65,6 +66,9 @@
 }
 .re-telephonelink:after {
 	content: "T";
+}
+.re-anchorlink:after {
+	content: "#";
 }
 
 .redactor-dropdown-groupheading1 span {

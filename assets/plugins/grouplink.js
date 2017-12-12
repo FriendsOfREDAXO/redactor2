@@ -11,6 +11,8 @@ $.Redactor.prototype.grouplink = function() {
 				"grouplink_media": "Media Link",
 				"grouplink_telephone": "Telefonlink",
 				"grouplink_telephone_telephonenumber": "Telefonnummer",
+				"grouplink_anchor": "Ankerlink",
+				"grouplink_anchor_anchor": "Anker",
 				"grouplink_grouplinktext": "Linktext",
 				"grouplink_insert": "Einfügen",
 				"grouplink_abort": "Abbrechen"
@@ -25,6 +27,8 @@ $.Redactor.prototype.grouplink = function() {
 				"grouplink_media": "Media link",
 				"grouplink_telephone": "Telephonelink",
 				"grouplink_telephone_telephonenumber": "Telephonenumber",
+				"grouplink_anchor": "Anchorlink",
+				"grouplink_anchor_anchor": "Anchor",
 				"grouplink_grouplinktext": "Linktext",
 				"grouplink_insert": "Insert",
 				"grouplink_abort": "Abort"
@@ -52,6 +56,9 @@ $.Redactor.prototype.grouplink = function() {
 			}
 			if (grouplink.indexOf("telephone") != -1) {
 				dropdown.telephone = { title: that.lang.get('grouplink_telephone'), func: that.grouplink.setTelephone };
+			}
+			if (grouplink.indexOf("anchor") != -1) {
+				dropdown.anchor = { title: that.lang.get('grouplink_anchor'), func: that.grouplink.setAnchor };
 			}
 			
 			var button = this.button.add('grouplink', this.lang.get('grouplink'));
@@ -108,6 +115,31 @@ $.Redactor.prototype.grouplink = function() {
 				
 			return String() + modalContent;
 		},
+		getAnchorTemplate: function() {
+			var selectedText = this.selection.text();
+			
+			var modalContent = '';
+			modalContent += '<div class="modal-section" id="redactor-modal-anchorgrouplink">';
+				
+			if (selectedText == '') {
+				modalContent += '  <section>';
+				modalContent += '    <label for="anchorgrouplink_grouplinktext">' + this.lang.get('grouplink_grouplinktext') + '</label>';
+				modalContent += '    <input type="text" id="anchorgrouplink_grouplinktext">';
+				modalContent += '  </section>';
+			}
+			
+			modalContent += '  <section>';
+			modalContent += '    <label for="anchorgrouplink_anchor">' + this.lang.get('grouplink_anchor_anchor') + '</label>';
+			modalContent += '    <input type="text" id="anchorgrouplink_anchor">';
+			modalContent += '  </section>';
+			modalContent += '  <section>';
+			modalContent += '    <button id="redactor-modal-button-action">' + this.lang.get('grouplink_insert') + '</button>';
+			modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('grouplink_abort') + '</button>';
+			modalContent += '  </section>';
+			modalContent += '</div>';
+				
+			return String() + modalContent;
+		},
 		getExternalTemplate: function() {
 			var selectedText = this.selection.text();
 			
@@ -150,6 +182,16 @@ $.Redactor.prototype.grouplink = function() {
 			
 			var button = this.modal.getActionButton();
 			button.on('click', this.grouplink.insertTelephone);
+			
+			this.modal.show();
+		},
+		setAnchor: function()
+		{
+			this.modal.addTemplate('grouplink', this.grouplink.getAnchorTemplate());
+			this.modal.load('grouplink', this.lang.get('grouplink_anchor'), 600);
+			
+			var button = this.modal.getActionButton();
+			button.on('click', this.grouplink.insertAnchor);
 			
 			this.modal.show();
 		},
@@ -212,6 +254,20 @@ $.Redactor.prototype.grouplink = function() {
 			}
 			
 			this.insert.html('<a href="tel:'+telephonenumber+'">'+grouplinktext+'</a>');
+		},
+		insertAnchor: function()
+		{
+			var grouplinktext = $('#anchorgrouplink_grouplinktext').val();
+			var anchor = $('#anchorgrouplink_anchor').val();
+			this.modal.close();
+			
+			var selectedText = this.selection.text();
+			
+			if (selectedText != '') {
+				var grouplinktext = selectedText;
+			}
+			
+			this.insert.html('<a href="#'+anchor+'">'+grouplinktext+'</a>');
 		},
 		insertExternal: function() {
 			var grouplinktext = $('#externalgrouplink_grouplinktext').val();
