@@ -54,6 +54,14 @@ $.Redactor.prototype.emaillink = function() {
 			button.on('click', this.emaillink.set);
 			
 			this.modal.show();
+			
+			setTimeout(function() {
+				if ($('#emaillink_linktext').length != 0) {
+					document.getElementById('emaillink_linktext').focus();
+				} else {
+					document.getElementById('emaillink_emailaddress').focus();
+				}
+			}, 1);
 		},
 		set: function() {
 			var linktext = $('#emaillink_linktext').val();

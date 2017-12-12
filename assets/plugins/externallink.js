@@ -54,6 +54,14 @@ $.Redactor.prototype.externallink = function() {
 			button.on('click', this.externallink.set);
 			
 			this.modal.show();
+			
+			setTimeout(function() {
+				if ($('#externallink_linktext').length != 0) {
+					document.getElementById('externallink_linktext').focus();
+				} else {
+					document.getElementById('externallink_linkurl').focus();
+				}
+			}, 1);
 		},
 		set: function() {
 			var linktext = $('#externallink_linktext').val();

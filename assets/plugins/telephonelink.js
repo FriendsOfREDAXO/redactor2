@@ -54,6 +54,14 @@ $.Redactor.prototype.telephonelink = function() {
 			button.on('click', this.telephonelink.set);
 
 			this.modal.show();
+			
+			setTimeout(function() {
+				if ($('#telephonelink_linktext').length != 0) {
+					document.getElementById('telephonelink_linktext').focus();
+				} else {
+					document.getElementById('telephonelink_phonelink').focus();
+				}
+			}, 1);
 		},
 		set: function() {
 			var linktext = $('#telephonelink_linktext').val();

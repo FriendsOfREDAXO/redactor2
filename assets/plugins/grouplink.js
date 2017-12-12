@@ -174,6 +174,14 @@ $.Redactor.prototype.grouplink = function() {
 			button.on('click', this.grouplink.insertEmail);
 			
 			this.modal.show();
+			
+			setTimeout(function() {
+				if ($('#emailgrouplink_grouplinktext').length != 0) {
+					document.getElementById('emailgrouplink_grouplinktext').focus();
+				} else {
+					document.getElementById('emailgrouplink_emailaddress').focus();
+				}
+			}, 1);
 		},
 		setTelephone: function()
 		{
@@ -184,6 +192,14 @@ $.Redactor.prototype.grouplink = function() {
 			button.on('click', this.grouplink.insertTelephone);
 			
 			this.modal.show();
+			
+			setTimeout(function() {
+				if ($('#telephonegrouplink_grouplinktext').length != 0) {
+					document.getElementById('telephonegrouplink_grouplinktext').focus();
+				} else {
+					document.getElementById('telephonegrouplink_telephonenumber').focus();
+				}
+			}, 1);
 		},
 		setAnchor: function()
 		{
@@ -194,6 +210,14 @@ $.Redactor.prototype.grouplink = function() {
 			button.on('click', this.grouplink.insertAnchor);
 			
 			this.modal.show();
+			
+			setTimeout(function() {
+				if ($('#anchorgrouplink_grouplinktext').length != 0) {
+					document.getElementById('anchorgrouplink_grouplinktext').focus();
+				} else {
+					document.getElementById('anchorgrouplink_anchor').focus();
+				}
+			}, 1);
 		},
 		setExternal: function()
 		{
@@ -204,6 +228,14 @@ $.Redactor.prototype.grouplink = function() {
 			button.on('click', this.grouplink.insertExternal);
 			
 			this.modal.show();
+			
+			setTimeout(function() {
+				if ($('#externalgrouplink_grouplinktext').length != 0) {
+					document.getElementById('externalgrouplink_grouplinktext').focus();
+				} else {
+					document.getElementById('externalgrouplink_grouplinkurl').focus();
+				}
+			}, 1);
 		},
 		setInternal: function()
 		{
