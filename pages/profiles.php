@@ -1,5 +1,31 @@
 <?php
 	$func = rex_request('func', 'string');
+	$success = '';
+	$error = '';
+
+	if ($func == 'copy') {
+		$profile_id = rex_request('profile_id', 'int');
+		if ($profile_id > 0) {
+			$sql = rex_sql::factory();
+			
+			try {
+				$sql->setQuery('INSERT INTO '.rex::getTablePrefix() . 'redactor2_profiles (name, description, urltype, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, redactor_plugins, redactor_customplugins) SELECT name, description, urltype, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, redactor_plugins, redactor_customplugins FROM '.rex::getTablePrefix() . 'redactor2_profiles WHERE id = ?', [$profile_id]);
+				$success = $this->i18n('profiles_message_copy_success');
+			} catch (rex_sql_exception $e) {
+				$error = $sql->getError();
+			}
+			
+			$func = '';
+		}
+	}
+	
+	if ($success != '') {
+		echo rex_view::success($success);
+	}
+	
+	if ($error != '') {
+		echo rex_view::error($error);
+	}
 
 	if ($func == '') {
 		$list = rex_list::factory("SELECT `id`, `name`, `description`, CONCAT('redactorEditor2-',`name`) as `cssclass` FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC");
@@ -11,12 +37,18 @@
 		$tdIcon = '<i class="rex-icon fa-file-text-o"></i>';
 		$list->addColumn($thIcon, $tdIcon, 0, ['<th class="rex-table-icon">###VALUE###</th>', '<td class="rex-table-icon">###VALUE###</td>']);
 		$list->setColumnParams($thIcon, ['func' => 'edit', 'id' => '###id###']);
+		
+		$funcs = $this->i18n('profiles_column_functions');
+
+		$list->addColumn($funcs, '<i class="rex-icon rex-icon-duplicate"></i> ' . $this->i18n('profiles_copy'), -1, ['<th class="rex-table-action" colspan="1">###VALUE###</th>', '<td class="rex-table-action">###VALUE###</td>']);
 
 		$list->setColumnLabel('name', $this->i18n('profiles_column_name'));
 		$list->setColumnLabel('description', $this->i18n('profiles_column_description'));
 		$list->setColumnLabel('cssclass', $this->i18n('profiles_column_cssclass'));
+		$list->setColumnLabel($funcs, $this->i18n('profiles_column_functions'));
 		
 		$list->setColumnParams('name', ['id' => '###id###', 'func' => 'edit']);
+		$list->setColumnParams($funcs, ['func' => 'copy', 'profile_id' => '###id###']);
 
 		$list->removeColumn('id');
 

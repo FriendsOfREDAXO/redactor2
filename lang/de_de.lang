@@ -6,10 +6,14 @@ redactor2_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backen
 #subpage profiles
 redactor2_profiles = Profile
 redactor2_profiles_norowsmessage = Es wurden keine Profile gefunden
+redactor2_profiles_copy = Profil duplizieren
+
+redactor2_profiles_message_copy_success = Profil erfolgreich dupliziert
 
 redactor2_profiles_column_name = Name
 redactor2_profiles_column_description = Beschreibung
 redactor2_profiles_column_cssclass = CSS-Klasse
+redactor2_profiles_column_functions = Funktionen
 
 redactor2_profiles_formcaption_add = Profil hinzufügen
 redactor2_profiles_formcaption_edit = Profil editieren

@@ -6,10 +6,14 @@ redactor2_help_infotext = This addon allows usage of the Redactor 2 WYSIWYG edit
 #subpage profiles
 redactor2_profiles = Profiles
 redactor2_profiles_norowsmessage = No profiles were found
+redactor2_profiles_copy = Copy profile
+
+redactor2_profiles_message_copy_success = Profil successfully copied
 
 redactor2_profiles_column_name = Name
 redactor2_profiles_column_description = Description
 redactor2_profiles_column_cssclass = CSS class
+redactor2_profiles_column_functions = Functions
 
 redactor2_profiles_formcaption_add = Add profile
 redactor2_profiles_formcaption_edit = Edit profile
