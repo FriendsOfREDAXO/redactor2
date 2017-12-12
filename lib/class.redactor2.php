@@ -1,7 +1,7 @@
 <?php
 	class redactor2 {
 
-		public static function insertProfile ($name, $description = '', $minheight = '300', $maxheight = '800', $urltype = 'relative', $redactorPlugins = '') {
+		public static function insertProfile ($name, $description = '', $minheight = '300', $maxheight = '800', $urltype = 'relative', $characterlimit = 0, $toolbarfixed = 0, $shortcuts = 0, $linkify = 1, $redactorPlugins = '', $redactorCustomPlugins = '') {
 			$sql = rex_sql::factory();
 			$sql->setTable(rex::getTablePrefix().'redactor2_profiles');
 			$sql->setValue('name', $name);
@@ -9,8 +9,13 @@
 			$sql->setValue('minheight', $minheight);
 			$sql->setValue('maxheight', $maxheight);
 			$sql->setValue('urltype', $urltype);
+			$sql->setValue('characterlimit', $characterlimit);
 			$sql->setValue('shortcuts', $shortcuts);
+			$sql->setValue('toolbarfixed', $toolbarfixed);
+			$sql->setValue('shortcuts', $shortcuts);
+			$sql->setValue('linkify', $linkify);
 			$sql->setValue('redactor_plugins', $redactorPlugins);
+			$sql->setValue('redactor_customplugins', $redactorCustomPlugins);
 
 			try {
 				$sql->insert();
