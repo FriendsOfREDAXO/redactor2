@@ -9116,8 +9116,13 @@
 					{
 						href = href.substring(0, 24) + '...';
 					}
-
-					var aLink = $('<a href="' + $link.attr('href') + '" target="_blank" />').html(href).addClass('redactor-link-tooltip-action');
+					
+					//corechange for use with redaxo
+					if (href.substr(0,9) == 'redaxo://') {
+						var aLink = $('<a href="/index.php?article_id=' + href.substr(9) + '" target="_blank" />').html(href).addClass('redactor-link-tooltip-action');
+					} else {
+						var aLink = $('<a href="' + $link.attr('href') + '" target="_blank" />').html(href).addClass('redactor-link-tooltip-action');
+					}
 					var aEdit = $('<a href="#" />').html(this.lang.get('edit')).on('click', $.proxy(this.link.show, this)).addClass('redactor-link-tooltip-action');
 					var aUnlink = $('<a href="#" />').html(this.lang.get('unlink')).on('click', $.proxy(this.link.unlink, this)).addClass('redactor-link-tooltip-action');
 
