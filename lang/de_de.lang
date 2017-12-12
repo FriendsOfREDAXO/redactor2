@@ -35,6 +35,7 @@ redactor2_profiles_label_redactorplugins = Plugins
 redactor2_profiles_label_redactorcustomplugins = Custom Plugins
 redactor2_profiles_label_redactorcustomplugins_help = Kommagetrennt mit der Syntax "name:pfad/zum/plugin.js"
 
+redactor2_profiles_plugins_anchorlink_description = Fügt einen Anker-Link ein
 redactor2_profiles_plugins_alignment_description = Setzt die Ausrichtung des markierten Texts
 redactor2_profiles_plugins_blockquote_description = Fügt ein Zitat ein
 redactor2_profiles_plugins_bold_description = Macht den markierten Text fett

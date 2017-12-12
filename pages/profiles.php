@@ -115,6 +115,9 @@
 					<dd>
 						<p><a href="javascript:void(0);" onclick="$(\'#rex-redactor-plugins-help\').toggle(\'fast\');">Zeige/verberge Hilfe</a></p>
 						<div id="rex-redactor-plugins-help" style="display:none">'.
+							'<b>anchorlink</b><br>'.
+							$this->i18n('profiles_plugins_anchorlink_description').'<br>'.
+							'<br>'.
 							'<b>alignment</b><br>'.
 							$this->i18n('profiles_plugins_alignment_description').'<br>'.
 							'<br>'.
@@ -154,7 +157,7 @@
 							'<b>groupheading[1|2|3|4|5|6]</b><br>'.
 							$this->i18n('profiles_plugins_groupheading_description').'<br>'.
 							'<br>'.
-							'<b>grouplink[email|external|internal|media|telephone]</b><br>'.
+							'<b>grouplink[email|external|internal|media|telephone|anchor]</b><br>'.
 							$this->i18n('profiles_plugins_grouplink_description').'<br>'.
 							'<br>'.
 							'<b>grouplist[unorderedlist|orderedlist|indent|outdent]</b><br>'.

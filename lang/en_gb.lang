@@ -35,13 +35,14 @@ redactor2_profiles_label_redactorplugins = Plugins
 redactor2_profiles_label_redactorcustomplugins = Custom Plugins
 redactor2_profiles_label_redactorcustomplugins_help = Commaseparated with the Syntax "name:/path/to/plugin.js"
 
+redactor2_profiles_plugins_anchorlink_description = Inserts an anchor link
 redactor2_profiles_plugins_alignment_description = Changes the alignment of the highlighted text
 redactor2_profiles_plugins_blockquote_description = Inserts a quote
 redactor2_profiles_plugins_bold_description = Makes the highlighted text bold
 redactor2_profiles_plugins_cleaner_description = Removes all styles from the highlighted text
 redactor2_profiles_plugins_clips_description = Inserts predefined text snippets
 redactor2_profiles_plugins_deleted_description = Strikes-through the highlighted text
-redactor2_profiles_plugins_emaillink_description = Inserts a mailto link
+redactor2_profiles_plugins_emaillink_description = Inserts an mailto link
 redactor2_profiles_plugins_externallink_description = Inserts an external link
 redactor2_profiles_plugins_fontcolor_description = Defines the font color
 redactor2_profiles_plugins_fontfamily_description = Defines the font family
