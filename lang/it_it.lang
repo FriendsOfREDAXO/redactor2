@@ -18,7 +18,7 @@ redactor2_profiles_label_name = Nome
 redactor2_profiles_label_description = Descrizione
 redactor2_profiles_label_minheight = Altezza min.
 redactor2_profiles_label_maxheight = Altezza max.
-redactor2_profiles_label_characterlimit = Limite di caratteri
+redactor2_profiles_label_characterlimit = Limite di caratteri<br><i>0 = No limit</i>
 redactor2_profiles_label_urltype = Tipo URL
 redactor2_profiles_label_urltype_option_relative = Relativa
 redactor2_profiles_label_urltype_option_absolute = Assoluta

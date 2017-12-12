@@ -18,7 +18,7 @@ redactor2_profiles_label_name = Namn
 redactor2_profiles_label_description = Beskrivning
 redactor2_profiles_label_minheight = Min. höjd
 redactor2_profiles_label_maxheight = Max. höjd
-redactor2_profiles_label_characterlimit = Max. antal tecken
+redactor2_profiles_label_characterlimit = Max. antal tecken<br><i>0 = No limit</i>
 redactor2_profiles_label_urltype = URL-typ
 redactor2_profiles_label_urltype_option_relative = Relative
 redactor2_profiles_label_urltype_option_absolute = Absolut
