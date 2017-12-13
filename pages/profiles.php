@@ -306,4 +306,3 @@
 
 		echo $content;
 	}
-?>
