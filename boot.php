@@ -144,4 +144,3 @@
 			rex_view::addJsFile($this->getAssetsUrl('cache/redactor2_profiles.js'));
 		//End - get redactor-profiles
 	}
-?>
