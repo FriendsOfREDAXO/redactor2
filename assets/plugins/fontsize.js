@@ -8,6 +8,10 @@ $.Redactor.prototype.fontsize = function() {
 			en: {
 				"fontsize": "Fontsize",
 				"fontsize_remove": "Remove fontsize",
+			},
+			es: {
+				"fontsize": "Tamaño de fuente",
+				"fontsize_remove": "Borrar tamaño de fuente",
 			}
 		},
 		init: function() {

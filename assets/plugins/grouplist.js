@@ -14,6 +14,13 @@ $.Redactor.prototype.grouplist = function() {
 				"grouplist_orderedlist": "Ordered List",
 				"grouplist_indent": "Indent",
 				"grouplist_outdent": "Negative indent",
+			},
+			es: {
+				"grouplist": "Lista",
+				"grouplist_unorderedlist": "Lista desordenada",
+				"grouplist_orderedlist": "Lista ordenada",
+				"grouplist_indent": "Sangría",
+				"grouplist_outdent": "Sangría negativa",
 			}
 		},
 		init: function()

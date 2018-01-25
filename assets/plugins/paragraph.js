@@ -6,6 +6,9 @@ $.Redactor.prototype.paragraph = function() {
 				},
 				en: {
 					"paragraph": "Paragraph"
+				},
+				es: {
+					"paragraph": "Párrafo"
 				}
 			},
 		init: function() {

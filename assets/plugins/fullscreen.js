@@ -6,6 +6,9 @@ $.Redactor.prototype.fullscreen = function() {
 			},
 			en: {
 				"fullscreen": "Fullscreen"
+			},
+			es: {
+				"fullscreen": "Pantalla completa"
 			}
 		},
 		init: function()

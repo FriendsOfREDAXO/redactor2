@@ -29,6 +29,19 @@
 					"delete-column": "Delete column",
 					"delete-row": "Delete row",
 					"delete-table": "Delete table"
+				},
+				es: {
+					"table": "Tabla",
+					"insert-table": "Insertar tabla",
+					"insert-row-above": "Insertar fila arriba",
+					"insert-row-below": "Insertar fila debajo",
+					"insert-column-left": "Insertar columna izquierda",
+					"insert-column-right": "Insertar columna derecha",
+					"add-head": "Agregar cabeza",
+					"delete-head": "Borrar cabeza",
+					"delete-column": "Borrar columna",
+					"delete-row": "Borrar fila",
+					"delete-table": "Borrar tabla"
 				}
 			},
 			init: function()

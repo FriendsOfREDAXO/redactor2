@@ -6,6 +6,9 @@ $.Redactor.prototype.sub = function() {
 			},
 			en: {
 				"sub": "Sub"
+			},
+			es: {
+				"sub": "Subíndice"
 			}
 		},
 		init: function() {

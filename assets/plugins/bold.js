@@ -6,6 +6,9 @@ $.Redactor.prototype.bold = function() {
 			},
 			en: {
 				"bold": "Bold"
+			},
+			es: {
+				"bold": "Negrita"
 			}
 		},
 		init: function() {

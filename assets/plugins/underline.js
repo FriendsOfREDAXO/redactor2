@@ -6,6 +6,9 @@ $.Redactor.prototype.underline = function() {
 			},
 			en: {
 				"underline": "Underline"
+			},
+			es: {
+				"underline": "Subrayar"
 			}
 		},
 		init: function() {

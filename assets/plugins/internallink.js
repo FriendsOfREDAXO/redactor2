@@ -6,6 +6,9 @@ $.Redactor.prototype.internallink = function() {
 			},
 			en: {
 				"internallink": "Internal link"
+			},
+			es: {
+				"internallink": "Enlace interno"
 			}
 		},
 		init: function() {

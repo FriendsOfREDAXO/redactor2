@@ -6,6 +6,9 @@ $.Redactor.prototype.orderedlist = function() {
 			},
 			en: {
 				"orderedlist": "Ordered list"
+			},
+			es: {
+				"orderedlist": "Lista ordenada"
 			}
 		},
 		init: function() {

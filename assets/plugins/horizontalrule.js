@@ -6,6 +6,9 @@ $.Redactor.prototype.horizontalrule = function() {
 			},
 			en: {
 				"horizontalrule": "Line"
+			},
+			es: {
+				"horizontalrule": "Línea"
 			}
 		},
 		init: function() {

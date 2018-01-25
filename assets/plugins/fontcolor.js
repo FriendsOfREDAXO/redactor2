@@ -8,6 +8,10 @@ $.Redactor.prototype.fontcolor = function() {
 			en: {
 				"fontcolor": "Fontcolor",
 				"fontcolor_remove": "Remove fontcolor",
+			},
+			es: {
+				"fontcolor": "Color de fuente",
+				"fontcolor_remove": "Borrar color de fuente",
 			}
 		},
 		init: function () {

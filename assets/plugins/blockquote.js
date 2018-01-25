@@ -6,6 +6,9 @@ $.Redactor.prototype.blockquote = function() {
 			},
 			en: {
 				"blockquote": "Quote"
+			},
+			es: {
+				"blockquote": "Entrecomillas"
 			}
 		},
 		init: function() {

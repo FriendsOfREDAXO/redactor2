@@ -17,6 +17,13 @@
 					"align-center": "Align Center",
 					"align-right": "Align Right",
 					"align-justify": "Align Justify"
+				},
+				es: {
+					"align": "Alinear",
+					"align-left": "Alinear a la izquierda",
+					"align-center": "Alinear al centro",
+					"align-right": "Alinear a la derecha",
+					"align-justify": "Alinear justificado"
 				}
 			},
 			init: function()

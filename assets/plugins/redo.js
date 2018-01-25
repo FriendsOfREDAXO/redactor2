@@ -6,6 +6,9 @@ $.Redactor.prototype.redo = function() {
 			},
 			en: {
 				"redo": "Redo"
+			},
+			es: {
+				"redo": "Rehacer"
 			}
 		},
 		init: function() {

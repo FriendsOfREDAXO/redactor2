@@ -6,6 +6,9 @@ $.Redactor.prototype.heading3 = function() {
 				},
 				en: {
 					"heading3": "Header 3"
+				},
+				es: {
+					"heading3": "Título 3"
 				}
 			},
 		init: function() {

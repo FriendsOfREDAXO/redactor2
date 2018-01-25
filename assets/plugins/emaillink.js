@@ -14,6 +14,13 @@ $.Redactor.prototype.emaillink = function() {
 				"emaillink_emailaddress": "Emailaddress",
 				"emaillink_insert": "Insert",
 				"emaillink_abort": "Abort"
+			},
+			es: {
+				"emaillink": "Link de email",
+				"emaillink_linktext": "Texto de link",
+				"emaillink_emailaddress": "Dirección de email",
+				"emaillink_insert": "Insertar",
+				"emaillink_abort": "Cancelar"
 			}
 		},
 		getTemplate: function() {

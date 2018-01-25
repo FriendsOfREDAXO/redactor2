@@ -18,6 +18,15 @@ $.Redactor.prototype.groupheading = function() {
 				"groupheading_4": "Heading 4",
 				"groupheading_5": "Heading 5",
 				"groupheading_6": "Heading 6",
+			},
+			es: {
+				"groupheading": "Título",
+				"groupheading_1": "Título 1",
+				"groupheading_2": "Título 2",
+				"groupheading_3": "Título 3",
+				"groupheading_4": "Título 4",
+				"groupheading_5": "Título 5",
+				"groupheading_6": "Título 6",
 			}
 		},
 		init: function()

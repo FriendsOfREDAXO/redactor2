@@ -13,6 +13,11 @@
 					"change-text-direction": "RTL-LTR",
 					"left-to-right": "Left to Right",
 					"right-to-left": "Right to Left"
+				},
+				es: {
+					"change-text-direction": "RTL-LTR",
+					"left-to-right": "Izquierda a derecha",
+					"right-to-left": "Derecha a izquierda"
 				}
 			},
 			init: function()
