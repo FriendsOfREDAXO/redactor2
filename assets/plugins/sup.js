@@ -6,6 +6,9 @@ $.Redactor.prototype.sup = function() {
 			},
 			en: {
 				"sup": "Sup"
+			},
+			es: {
+				"sup": "Sup"
 			}
 		},
 		init: function() {

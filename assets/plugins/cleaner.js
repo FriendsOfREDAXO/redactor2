@@ -6,6 +6,9 @@ $.Redactor.prototype.cleaner = function() {
 			},
 			en: {
 				"cleaner": "Remove formats"
+			},
+			es: {
+				"cleaner": "Eliminar formatos"
 			}
 		},
 		init: function() {

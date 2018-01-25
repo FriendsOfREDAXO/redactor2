@@ -7,6 +7,9 @@ $.Redactor.prototype.styles = function()
 			},
 			en: {
 				"styles": "Styles"
+			},
+			es: {
+				"styles": "Estilos"
 			}
 		},
 		init: function()

@@ -13,6 +13,11 @@
 					"properties": "Properties",
 					"properties_save": "Save",
 					"properties_abort": "Abort"
+				},
+				es: {
+					"properties": "Propiedades",
+					"properties_save": "Guardar",
+					"properties_abort": "Cancelar"
 				}
 			},
 			block: false,

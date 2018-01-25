@@ -14,6 +14,13 @@ $.Redactor.prototype.telephonelink = function() {
 				"telephonelink_phonelink": "Telephone Number",
 				"telephonelink_insert": "Insert",
 				"telephonelink_abort": "Abort"
+			},
+			es: {
+				"telephonelink": "Enlace telefónico",
+				"telephonelink_linktext": "Texto del enlace",
+				"telephonelink_phonelink": "Número de teléfono",
+				"telephonelink_insert": "Insertar",
+				"telephonelink_abort": "Cancelar"
 			}
 		},
 		getTemplate: function() {

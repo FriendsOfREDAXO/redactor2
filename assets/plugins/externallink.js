@@ -14,6 +14,13 @@ $.Redactor.prototype.externallink = function() {
 				"externallink_linkurl": "URL",
 				"externallink_insert": "Insert",
 				"externallink_abort": "Cancel"
+			},
+			es: {
+				"externallink": "Enlace externo",
+				"externallink_linktext": "Texto de Link",
+				"externallink_linkurl": "URL",
+				"externallink_insert": "Insertar",
+				"externallink_abort": "Cancelar"
 			}
 		},
 		getTemplate: function() {

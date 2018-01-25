@@ -32,6 +32,22 @@ $.Redactor.prototype.grouplink = function() {
 				"grouplink_grouplinktext": "Linktext",
 				"grouplink_insert": "Insert",
 				"grouplink_abort": "Abort"
+			},
+			es: {
+				"grouplink": "Enlazar",
+				"grouplink_email": "Enlace de email",
+				"grouplink_email_emailaddress": "Dirección de email",
+				"grouplink_external": "Enlace externo",
+				"grouplink_external_url": "URL",
+				"grouplink_internal": "Enlace interno",
+				"grouplink_media": "Enlace de medios",
+				"grouplink_telephone": "Enlace telefónico",
+				"grouplink_telephone_telephonenumber": "Número de teléfono",
+				"grouplink_anchor": "Enlace de anclaje",
+				"grouplink_anchor_anchor": "Ancla",
+				"grouplink_grouplinktext": "Texto del enlace",
+				"grouplink_insert": "Insertar",
+				"grouplink_abort": "Cancelar"
 			}
 		},
 		init: function()

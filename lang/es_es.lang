@@ -1,0 +1,86 @@
+redactor2_title = Redactor 2 Editor
+
+#subpage help
+redactor2_help_infotext = El complemento incluye el editor de editor WYSIWYG en el back-end. <br> <br> Textareas con la clase <i> redactorEditor2-% profileName% </ i> se convierten automáticamente de un campo de entrada de texto normal en un editor WYSIWYG. <br> por ejemplo: <textarea <b> class = "redactorEditor2-full" </ b> </ textarea> <br> <br> En el backend se puede crear un Perfil diferente con diferentes configuraciones para el editor Redactor. </ b> <br> <br> Da la posibilidad de proporcionar al editor los propios estilos CSS. Todo lo que tienes que hacer es crear un archivo llamado skin.css en la carpeta / assets / addons / redactor2.
+
+#subpage profiles
+redactor2_profiles = Perfil
+redactor2_profiles_norowsmessage = No se encontró el perfil
+redactor2_profiles_copy = Perfil duplicado
+
+redactor2_profiles_message_copy_success = Perfil duplicado con éxito
+
+redactor2_profiles_column_name = Nombre
+redactor2_profiles_column_description = Descripción
+redactor2_profiles_column_cssclass = Clase CSS
+redactor2_profiles_column_functions = Características
+
+redactor2_profiles_formcaption_add = Agregar perfil
+redactor2_profiles_formcaption_edit = Editar perfil
+
+redactor2_profiles_label_name = Nombre
+redactor2_profiles_label_description = Descripción
+redactor2_profiles_label_minheight = Altura mínima
+redactor2_profiles_label_maxheight = Altura máxima
+redactor2_profiles_label_characterlimit = Sin límite </ i>
+redactor2_profiles_label_urltype = Tipo de URL
+redactor2_profiles_label_urltype_option_relative = Relativamente
+redactor2_profiles_label_urltype_option_absolute = Absolutamente
+redactor2_profiles_label_toolbarfixed = ¿Barra de herramientas arreglada?
+redactor2_profiles_label_toolbarfixed_option_true = Sí
+redactor2_profiles_label_toolbarfixed_option_false = No
+redactor2_profiles_label_shortcuts = Atajos activos?
+redactor2_profiles_label_shortcuts_option_true = Sí
+redactor2_profiles_label_shortcuts_option_false = No
+redactor2_profiles_label_linkify = ¿Convertir enlaces automáticamente?
+redactor2_profiles_label_linkify_option_true = Sí
+redactor2_profiles_label_linkify_option_false = No
+redactor2_profiles_label_redactorplugins = Plugins
+redactor2_profiles_label_redactorcustomplugins = Complementos personalizados
+redactor2_profiles_label_redactorcustomplugins_help = Coma separada por la sintaxis "name:path/to/plugin.js"
+
+redactor2_profiles_plugins_anchorlink_description = Inserta un enlace de anclaje
+redactor2_profiles_plugins_alignment_description = Establece la alineación del texto seleccionado
+redactor2_profiles_plugins_blockquote_description = Insertar una cotización
+redactor2_profiles_plugins_bold_description = Hace que el texto seleccionado sea negrita
+redactor2_profiles_plugins_cleaner_description = Elimina todos los formatos / estilos del texto seleccionado
+redactor2_profiles_plugins_clips_description = Inserta fragmentos de texto predefinidos
+redactor2_profiles_plugins_deleted_description = Pase el texto resaltado
+redactor2_profiles_plugins_emaillink_description = Inserta un enlace de correo electrónico
+redactor2_profiles_plugins_externallink_description = Inserta un enlace externo
+redactor2_profiles_plugins_fontcolor_description = Define el color de la fuente
+redactor2_profiles_plugins_fontfamily_description = Define la fuente
+redactor2_profiles_plugins_fontsize_description = Define el tamaño de la fuente
+redactor2_profiles_plugins_fullscreen_description = Permite pantalla completa
+redactor2_profiles_plugins_groupheading_description = Inserta un encabezado mediante menú desplegable
+redactor2_profiles_plugins_grouplink_description = Inserta un enlace mediante menú desplegable
+redactor2_profiles_plugins_grouplist_description = Inserta una lista mediante menú desplegable
+redactor2_profiles_plugins_heading1_description = Inserta un título de tamaño 1
+redactor2_profiles_plugins_heading2_description = Inserta un encabezado de tamaño 2
+redactor2_profiles_plugins_heading3_description = Inserta un encabezado de tamaño 3
+redactor2_profiles_plugins_heading4_description = Inserta un encabezado de tamaño 4
+redactor2_profiles_plugins_heading5_description = Inserta un encabezado de tamaño 5
+redactor2_profiles_plugins_heading6_description = Inserta un encabezado de tamaño 6
+redactor2_profiles_plugins_horizontalrule_description = Inserta una línea horizontal
+redactor2_profiles_plugins_internallink_description = Inserta un enlace interno usando el mapa de enlaces
+redactor2_profiles_plugins_italic_description = Hace que el texto seleccionado sea cursiva
+redactor2_profiles_plugins_media_description = Inserta una imagen usando el grupo de medios
+redactor2_profiles_plugins_medialink_description = Inserta un enlace a un archivo del grupo de medios
+redactor2_profiles_plugins_orderedlist_description = Inserta una lista ordenada
+redactor2_profiles_plugins_paragraph_description = Inserta un párrafo
+redactor2_profiles_plugins_properties_description = Le da al bloque actual una ID o clase personalizada
+redactor2_profiles_plugins_redo_description = Repite la última acción
+redactor2_profiles_plugins_source_description = Cambia al modo HTML
+redactor2_profiles_plugins_styles_description = Permite definir etiquetas personalizadas en línea utilizables
+redactor2_profiles_plugins_sub_description = Pon texto profundo
+redactor2_profiles_plugins_sup_description = Poner texto arriba
+redactor2_profiles_plugins_table_description = Inserta una mesa
+redactor2_profiles_plugins_telephonelink_description = Inserta un enlace telefónico
+redactor2_profiles_plugins_textdirection_description = Establece la alineación del texto
+redactor2_profiles_plugins_underline_description = Subraya el texto seleccionado
+redactor2_profiles_plugins_undo_description = Deshace la última acción
+redactor2_profiles_plugins_unorderedlist_description = Inserta una lista desordenada
+
+#permissions
+perm_general_redactor2[] = Derechos para Redactor-Addon
+perm_general_redactor2[profiles] = Derechos para la página de 'Perfil' de Redactor-Addons

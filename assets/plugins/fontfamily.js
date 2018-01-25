@@ -8,6 +8,10 @@ $.Redactor.prototype.fontfamily = function() {
 			en: {
 				"fontfamily": "Fontfamily",
 				"fontfamily_remove": "Remove fontfamily",
+			},
+			es: {
+				"fontfamily": "Tipográfia",
+				"fontfamily_remove": "Borrar tipográfia",
 			}
 		},
 		init: function () {

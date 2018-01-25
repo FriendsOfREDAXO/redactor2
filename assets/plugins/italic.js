@@ -6,6 +6,9 @@ $.Redactor.prototype.italic = function() {
 			},
 			en: {
 				"italic": "Italic"
+			},
+			es: {
+				"italic": "Itálico"
 			}
 		},
 		

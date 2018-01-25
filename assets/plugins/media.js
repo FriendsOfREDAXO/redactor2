@@ -6,6 +6,9 @@ $.Redactor.prototype.media = function() {
 			},
 			en: {
 				"media": "Insert media"
+			},
+			es: {
+				"media": "Insertar media"
 			}
 		},
 		init: function() {

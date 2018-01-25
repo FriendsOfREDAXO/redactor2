@@ -6,6 +6,9 @@ $.Redactor.prototype.unorderedlist = function() {
 			},
 			en: {
 				"unorderedlist": "Unordered list"
+			},
+			es: {
+				"unorderedlist": "Lista desordenada"
 			}
 		},
 		init: function() {

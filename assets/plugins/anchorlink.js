@@ -14,6 +14,13 @@ $.Redactor.prototype.anchorlink = function() {
 				"anchorlink_anchor": "Anchor",
 				"anchorlink_insert": "Insert",
 				"anchorlink_abort": "Abort"
+			},
+			es: {
+				"anchorlink": "Enlace de anclaje",
+				"anchorlink_linktext": "Texto del enlace",
+				"anchorlink_anchor": "Ancla",
+				"anchorlink_insert": "Insertar",
+				"anchorlink_abort": "Abortar"
 			}
 		},
 		getTemplate: function() {

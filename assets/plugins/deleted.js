@@ -6,6 +6,9 @@ $.Redactor.prototype.deleted = function() {
 			},
 			en: {
 				"deleted": "Strikethrough"
+			},
+			es: {
+				"deleted": "Tachado"
 			}
 		},
 		init: function() {

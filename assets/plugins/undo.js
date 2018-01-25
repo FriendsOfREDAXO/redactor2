@@ -6,6 +6,9 @@ $.Redactor.prototype.undo = function() {
 			},
 			en: {
 				"undo": "Undo"
+			},
+			es: {
+				"undo": "Deshacer"
 			}
 		},
 		init: function() {

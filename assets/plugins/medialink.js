@@ -6,6 +6,9 @@ $.Redactor.prototype.medialink = function() {
 			},
 			en: {
 				"medialink": "Media link"
+			},
+			es: {
+				"medialink": "Enlace de Media"
 			}
 		},
 		init: function() {
