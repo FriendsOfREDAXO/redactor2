@@ -39,7 +39,7 @@ __Via Modul oder AddOn ein Profil anlegen:__
 ```php
 <?php
   if (!redactor2::profileExists('simple')) {
-    redactor2::insertProfile('simple', 'Lorem Ipsum', '300', '800', 'relative', 'bold,table');
+    redactor2::insertProfile('simple', $description = '', $minheight = '300', $maxheight = '800', $urltype = 'relative', $characterlimit = 0, $toolbarfixed = 0, $shortcuts = 0, $linkify = 1, $redactorPlugins = '', $redactorCustomPlugins = '');
   }
 ?>
 ```
