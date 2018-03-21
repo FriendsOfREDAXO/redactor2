@@ -183,6 +183,9 @@
 							'<b>fontsize[12px|15pt|120%]</b><br>'.
 							$this->i18n('profiles_plugins_fontsize_description').'<br>'.
 							'<br>'.
+							'<b>format[Absatz Klein=p.small|Absatz Mittel=p.middle|Absatz Gross=p.big]</b><br>'.
+							$this->i18n('profiles_plugins_format_description').'<br>'.
+							'<br>'.
 							'<b>fullscreen</b><br>'.
 							$this->i18n('profiles_plugins_fullscreen_description').'<br>'.
 							'<br>'.
