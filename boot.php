@@ -1,7 +1,7 @@
 <?php
 	if (rex::isBackend() && !empty(rex::getUser())) {
 		//Start - extension points to delete the profiles-cache
-			rex_extension::register('REX_FORM_SAVED', function (rex_extension_point $ep) {
+	                $deleteCacheFn = function (rex_extension_point $ep) {
 				$params = $ep->getParams();
 				$formParams = $params['form']->getParams();
 				
@@ -10,18 +10,9 @@
 						unlink($this->getAssetsUrl('cache/redactor2_profiles.js'));
 					break;
 				}
-			});
-			
-			rex_extension::register('REX_FORM_DELETED', function (rex_extension_point $ep) {
-				$params = $ep->getParams();
-				$formParams = $params['form']->getParams();
-				
-				switch ($formParams['page']) {
-					case 'redactor2/profiles':
-						unlink($this->getAssetsUrl('cache/redactor2_profiles.js'));
-					break;
-				}
-			});
+			};
+			rex_extension::register('REX_FORM_SAVED', $deleteCacheFn);
+			rex_extension::register('REX_FORM_DELETED', $deleteCacheFn);
 		//End - extension points to delete the profiles-cache
 		
 		rex_view::addCssFile($this->getAssetsUrl('vendor/redactor.css'));
