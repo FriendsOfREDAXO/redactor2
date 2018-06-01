@@ -51,6 +51,7 @@ redactor2_profiles_plugins_externallink_description = Inserta un enlace externo
 redactor2_profiles_plugins_fontcolor_description = Define el color de la fuente
 redactor2_profiles_plugins_fontfamily_description = Define la fuente
 redactor2_profiles_plugins_fontsize_description = Define el tamaño de la fuente
+redactor2_profiles_plugins_format_description = Define diferentes formatos
 redactor2_profiles_plugins_fullscreen_description = Permite pantalla completa
 redactor2_profiles_plugins_groupheading_description = Inserta un encabezado mediante menú desplegable
 redactor2_profiles_plugins_grouplink_description = Inserta un enlace mediante menú desplegable
