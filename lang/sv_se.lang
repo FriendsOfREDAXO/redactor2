@@ -6,10 +6,14 @@ redactor2_help_infotext = Denna tillägg tillåter användning av Redactor 2 WYS
 #subpage profiles
 redactor2_profiles = Profiler
 redactor2_profiles_norowsmessage = Inga profiler hittades
+redactor2_profiles_copy = Duplicera profil
+
+redactor2_profiles_message_copy_success = Profil duplicerades
 
 redactor2_profiles_column_name = Namn
 redactor2_profiles_column_description = Beskrivning
 redactor2_profiles_column_cssclass = CSS klass
+redactor2_profiles_column_functions = Funktioner
 
 redactor2_profiles_formcaption_add = Tillfoga profil
 redactor2_profiles_formcaption_edit = Redigera profil
@@ -35,6 +39,7 @@ redactor2_profiles_label_redactorplugins = Buttons
 redactor2_profiles_label_redactorcustomplugins = Custom Plugins
 redactor2_profiles_label_redactorcustomplugins_help = Komma-separerad med syntaxen "namn:led/till/plugin.js"
 
+redactor2_profiles_plugins_anchorlink_description = Tillfoga anchor-link
 redactor2_profiles_plugins_alignment_description = Ändrar justeringen av den markerade texten
 redactor2_profiles_plugins_blockquote_description = Infoga ett citat
 redactor2_profiles_plugins_bold_description = Gör den markerade texten fet
@@ -46,6 +51,7 @@ redactor2_profiles_plugins_externallink_description = Infogar en extern länk
 redactor2_profiles_plugins_fontcolor_description = Definierar textfärgen
 redactor2_profiles_plugins_fontfamily_description = Definierar typsnittfamiljen
 redactor2_profiles_plugins_fontsize_description = Definierar teckensnittstorleken
+redactor2_profiles_plugins_format_description = Definerar olika stilar
 redactor2_profiles_plugins_fullscreen_description = Växlar till fullskärm
 redactor2_profiles_plugins_groupheading_description = Infogar en rubrik via rullgardinsmenyn
 redactor2_profiles_plugins_grouplink_description = Infogar en länk via rullgardinsmenyn
