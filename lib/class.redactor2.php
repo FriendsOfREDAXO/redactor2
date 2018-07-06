@@ -36,4 +36,15 @@
 				return false;
 			}
 		}
+		
+		public static function clean($content) {
+			//Start - remove empty tags
+				do {
+					$tmp = $content;
+					$content = preg_replace('#<([^ >]+)[^>]*>[[:space:]]*</\1>#', '', $content);
+				} while ($content !== $tmp);
+			//End - remove empty tags
+			
+			return $content;
+		}
 	}
