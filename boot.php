@@ -7,7 +7,8 @@
 				
 				switch ($formParams['page']) {
 					case 'redactor2/profiles':
-						unlink($this->getAssetsUrl('cache/redactor2_profiles.js'));
+						unlink($this->getAssetsUrl('cache/redactor2_profiles_de.js'));
+						unlink($this->getAssetsUrl('cache/redactor2_profiles_en.js'));
 					break;
 				}
 			});
@@ -18,7 +19,8 @@
 				
 				switch ($formParams['page']) {
 					case 'redactor2/profiles':
-						unlink($this->getAssetsUrl('cache/redactor2_profiles.js'));
+						unlink($this->getAssetsUrl('cache/redactor2_profiles_de.js'));
+						unlink($this->getAssetsUrl('cache/redactor2_profiles_en.js'));
 					break;
 				}
 			});
@@ -40,7 +42,7 @@
 		
 		rex_view::addJsFile($this->getAssetsUrl('langs/'.$redactorLanguage.'.js'));
 		
-		if (!file_exists($this->getAssetsUrl('cache/redactor2_profiles.js'))) {
+		if (!file_exists($this->getAssetsUrl('cache/redactor2_profiles_'.$redactorLanguage.'.js'))) {
 			//Start - get redactor-profiles
 				$sql = rex_sql::factory();
 				$profiles = $sql->setQuery("SELECT * FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC")->getArray();
@@ -166,11 +168,11 @@
 				$jsCode[] = '  redactorInit();';
 				$jsCode[] = '});';
 	
-				if (!rex_file::put($this->getAssetsPath('cache/redactor2_profiles.js').'', implode(PHP_EOL, $jsCode))) {
+				if (!rex_file::put($this->getAssetsPath('cache/redactor2_profiles_'.$redactorLanguage.'.js').'', implode(PHP_EOL, $jsCode))) {
 					echo 'js-file konnte nicht gespeichert werden';
 				}
 			}
 
-			rex_view::addJsFile($this->getAssetsUrl('cache/redactor2_profiles.js'));
+			rex_view::addJsFile($this->getAssetsUrl('cache/redactor2_profiles_'.$redactorLanguage.'.js'));
 		//End - get redactor-profiles
 	}
