@@ -21,7 +21,7 @@
 		
 		$customPlugins = [];
 		
-		if (!file_exists($this->getAssetsUrl('cache/redactor2_profiles_'.$redactorLanguage.'.js')) || true) {
+		if (!file_exists($this->getAssetsUrl('cache/redactor2_profiles_'.$redactorLanguage.'.js'))) {
 			//Start - get profiles
 				$sql = rex_sql::factory();
 				$profiles = $sql->setQuery("SELECT * FROM `".rex::getTablePrefix()."redactor2_profiles` ORDER BY `name` ASC")->getArray();
@@ -195,7 +195,7 @@
 		$jsCode[] = '}';
 		
 		
-		$jsCode[] = '$(document).ready(function () {';
+		$jsCode[] = '$(document).on(\'ready pjax:success\',function() {';
 		$jsCode[] = '	if ($("[class*=\'redactorEditor2-\']").length > 0) {';
 		$jsCode[] = '		redactor2preloader(["'.$this->getAssetsUrl('cache/redactor2_profiles_'.$redactorLanguage.'.js').'"], function() {';
 		$jsCode[] = '			redactor2loadassets();';
