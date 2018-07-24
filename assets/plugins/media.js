@@ -27,7 +27,15 @@ $.Redactor.prototype.media = function() {
 			});
 		},
 		set: function(filename) {
-			this.insert.html('<img src="index.php?rex_media_type=redactorImage&rex_media_file='+filename+'" alt="">');
+			var imageOpenTag = '';
+			var imageCloseTag = '';
+			
+			if (this.opts.imageTag != '') {
+				imageOpenTag = '<'+this.opts.imageTag+'>';
+				imageCloseTag = '</'+this.opts.imageTag+'>';
+			}
+			
+			this.insert.html(imageOpenTag+'<img src="index.php?rex_media_type=redactorImage&rex_media_file='+filename+'" alt="">'+imageCloseTag);
 		}
 	};
 };

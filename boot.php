@@ -73,7 +73,8 @@
 					$jsCode[] = '  urltype: \''.$profile['urltype'].'\',';
 					$jsCode[] = '  toolbarFixed: '.(($profile['toolbarfixed']) ? 'true' : 'false').',';
 					$jsCode[] = '  shortcutsAdd: '.(($profile['shortcuts']) ? 'true' : 'false').',';
-					$jsCode[] = '  imageTag: \'\',';
+					$jsCode[] = '  imageTag: \''.$profile['imagetag'].'\',';
+					$jsCode[] = '  externalUrlTarget: \''.$profile['externalurltarget'].'\',';
 					if ($profile['characterlimit'] != 0) {
 						$jsCode[] = '  limiter: '.$profile['characterlimit'].',';
 					}

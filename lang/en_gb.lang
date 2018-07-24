@@ -26,6 +26,9 @@ redactor2_profiles_label_characterlimit = Characterlimit<br><i>0 = No limit</i>
 redactor2_profiles_label_urltype = URL type
 redactor2_profiles_label_urltype_option_relative = Relative
 redactor2_profiles_label_urltype_option_absolute = Absolute
+redactor2_profiles_label_externalurltarget = Target for external links
+redactor2_profiles_label_externalurltarget_option_blank = New window
+redactor2_profiles_label_externalurltarget_option_self = Same window
 redactor2_profiles_label_toolbarfixed = Toolbar fixed?
 redactor2_profiles_label_toolbarfixed_option_true = Yes
 redactor2_profiles_label_toolbarfixed_option_false = No
@@ -35,6 +38,7 @@ redactor2_profiles_label_shortcuts_option_false = No
 redactor2_profiles_label_linkify = Convert links automatically?
 redactor2_profiles_label_linkify_option_true = Yes
 redactor2_profiles_label_linkify_option_false = No
+redactor2_profiles_label_imagetag = HTML-Tag around images<br><i>e.g. p or figure</i>
 redactor2_profiles_label_redactorplugins = Plugins
 redactor2_profiles_label_redactorcustomplugins = Custom Plugins
 redactor2_profiles_label_redactorcustomplugins_help = Commaseparated with the Syntax "name:/path/to/plugin.js"

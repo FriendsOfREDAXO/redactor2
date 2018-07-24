@@ -81,7 +81,11 @@ $.Redactor.prototype.externallink = function() {
 				var linktext = selectedText;
 			}
 			
-			this.insert.html('<a href="'+linkurl+'" target="_blank">'+linktext+'</a>');
+			if (this.opts.externalUrlTarget == 'self') {
+				this.insert.html('<a href="'+linkurl+'">'+linktext+'</a>');
+			} else {
+				this.insert.html('<a href="'+linkurl+'" target="_blank">'+linktext+'</a>');
+			}
 		}
 	};
 };

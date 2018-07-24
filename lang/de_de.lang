@@ -26,6 +26,9 @@ redactor2_profiles_label_characterlimit = Zeichenlimit<br><i>0 = Kein Limit</i>
 redactor2_profiles_label_urltype = URL-Art
 redactor2_profiles_label_urltype_option_relative = Relativ
 redactor2_profiles_label_urltype_option_absolute = Absolut
+redactor2_profiles_label_externalurltarget = Ziel von externen Links
+redactor2_profiles_label_externalurltarget_option_blank = Neues Fenster
+redactor2_profiles_label_externalurltarget_option_self = Gleiches Fenster
 redactor2_profiles_label_toolbarfixed = Toolbar fixiert?
 redactor2_profiles_label_toolbarfixed_option_true = Ja
 redactor2_profiles_label_toolbarfixed_option_false = Nein
@@ -35,6 +38,7 @@ redactor2_profiles_label_shortcuts_option_false = Nein
 redactor2_profiles_label_linkify = Links automatisch konvertieren?
 redactor2_profiles_label_linkify_option_true = Ja
 redactor2_profiles_label_linkify_option_false = Nein
+redactor2_profiles_label_imagetag = HTML-Tag um Bilder<br><i>z.B. p oder figure</i>
 redactor2_profiles_label_redactorplugins = Plugins
 redactor2_profiles_label_redactorcustomplugins = Custom Plugins
 redactor2_profiles_label_redactorcustomplugins_help = Kommagetrennt mit der Syntax "name:pfad/zum/plugin.js"

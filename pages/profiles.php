@@ -9,7 +9,7 @@
 			$sql = rex_sql::factory();
 			
 			try {
-				$sql->setQuery('INSERT INTO '.rex::getTablePrefix() . 'redactor2_profiles (name, description, urltype, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, redactor_plugins, redactor_customplugins) SELECT name, description, urltype, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, redactor_plugins, redactor_customplugins FROM '.rex::getTablePrefix() . 'redactor2_profiles WHERE id = ?', [$profile_id]);
+				$sql->setQuery('INSERT INTO '.rex::getTablePrefix() . 'redactor2_profiles (name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins, redactor_customplugins) SELECT name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins, redactor_customplugins FROM '.rex::getTablePrefix() . 'redactor2_profiles WHERE id = ?', [$profile_id]);
 				$success = $this->i18n('profiles_message_copy_success');
 			} catch (rex_sql_exception $e) {
 				$error = $sql->getError();
@@ -104,6 +104,16 @@
 			$select->addOption($this->i18n('profiles_label_urltype_option_relative'), 'relative');
 			$select->addOption($this->i18n('profiles_label_urltype_option_absolute'), 'absolute');
 		//End - add urltype-field
+		
+		//Start - add externalurltarget-field
+			$field = $form->addSelectField('externalurltarget');
+			$field->setLabel($this->i18n('profiles_label_externalurltarget'));
+
+			$select = $field->getSelect();
+			$select->setSize(1);
+			$select->addOption($this->i18n('profiles_label_externalurltarget_option_blank'), 'blank');
+			$select->addOption($this->i18n('profiles_label_externalurltarget_option_self'), 'self');
+		//End - add externalurltarget-field
 
 		//Start - add toolbarfixed-field
 			$field = $form->addSelectField('toolbarfixed');
@@ -134,6 +144,11 @@
 			$select->addOption($this->i18n('profiles_label_linkify_option_true'), '1');
 			$select->addOption($this->i18n('profiles_label_linkify_option_false'), '0');
 		//End - add linkify-field
+		
+		//Start - add imagetag-field
+			$field = $form->addTextField('imagetag');
+			$field->setLabel($this->i18n('profiles_label_imagetag'));
+		//End - add imagetag-field
 		
 		//Start - add redactor_plugins-field
 			$field = $form->addTextAreaField('redactor_plugins');

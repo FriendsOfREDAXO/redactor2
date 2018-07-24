@@ -328,7 +328,11 @@ $.Redactor.prototype.grouplink = function() {
 				var grouplinktext = selectedText;
 			}
 			
-			this.insert.html('<a href="'+grouplinkurl+'" target="_blank">'+grouplinktext+'</a>');
+			if (this.opts.externalUrlTarget == 'self') {
+				this.insert.html('<a href="'+grouplinkurl+'">'+grouplinktext+'</a>');
+			} else {
+				this.insert.html('<a href="'+grouplinkurl+'" target="_blank">'+grouplinktext+'</a>');
+			}
 		},
 		insertInternal: function(grouplinkurl, grouplinktext) {
 			var selectedText = this.selection.text();
