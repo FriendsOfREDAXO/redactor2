@@ -7,8 +7,8 @@
 				
 				switch ($formParams['page']) {
 					case 'redactor2/profiles':
-						unlink($this->getAssetsUrl('cache/redactor2_profiles_de.js'));
-						unlink($this->getAssetsUrl('cache/redactor2_profiles_en.js'));
+						if (file_exists($this->getAssetsUrl('cache/redactor2_profiles_de.js'))) unlink($this->getAssetsUrl('cache/redactor2_profiles_de.js'));
+						if (file_exists($this->getAssetsUrl('cache/redactor2_profiles_en.js'))) unlink($this->getAssetsUrl('cache/redactor2_profiles_en.js'));
 					break;
 				}
 			};
