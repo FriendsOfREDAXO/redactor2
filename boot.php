@@ -117,10 +117,6 @@
 								list($pluginName, $pluginPath) = explode(':', $plugin);
 								$plugin = trim($pluginName);
 								
-								if (!in_array(rex_url::assets($pluginPath), rex_view::getJsFiles())) {
-									rex_view::addJsFile(rex_url::assets($pluginPath));
-								}
-								
 								if (preg_match('/(.*)\[(.*)\]/', $plugin, $matches)) {
 									//Start - explode parameters
 										$parameters = explode('|', $matches[2]);
@@ -150,7 +146,23 @@
 					$jsCode[] = implode(PHP_EOL, $redactorConfig);
 	
 					$jsCode[] = '});';
+					
+					//Start - add files for custom plugins
+						if (trim($profile['redactor_customplugins']) != '') {
+							$plugins = explode(',', $profile['redactor_customplugins']);
+							foreach ($plugins as $plugin) {
+								list($pluginName, $pluginPath) = explode(':', $plugin);
+								
+								$jsCode[] = '$.ajax({';
+								$jsCode[] = '  url: "'.rex_url::assets($pluginPath).'",';
+								$jsCode[] = '  dataType: "script",';
+								$jsCode[] = '	 success: function() {redactorInit();}';
+								$jsCode[] = '});';
+							}
+						}
+					//End - add files for custom plugins
 				}
+				
 				$jsCode[] = '}';
 	
 				$jsCode[] = '$(document).on(\'ready pjax:success\',function() {';
@@ -159,12 +171,12 @@
 				$jsCode[] = '$(document).on(\'be_table:row-added\',function() {';
 				$jsCode[] = '  redactorInit();';
 				$jsCode[] = '});';
-	
+				
 				if (!rex_file::put($this->getAssetsPath('cache/redactor2_profiles_'.$redactorLanguage.'.js').'', implode(PHP_EOL, $jsCode))) {
 					echo 'js-file konnte nicht gespeichert werden';
 				}
 			}
-
+		
 			rex_view::addJsFile($this->getAssetsUrl('cache/redactor2_profiles_'.$redactorLanguage.'.js'));
 		//End - get redactor-profiles
 	}
