@@ -11,9 +11,9 @@ if (rex::isBackend() && !empty(rex::getUser())) {
     // $redactorLanguage im Profile ??
 
     rex_view::addCssFile($this->getAssetsUrl('vendor/redactor.css'));
-    rex_view::addCssFile($this->getAssetsUrl('vendor/redactor_custom.css'));
-
     rex_view::addJsFile($this->getAssetsUrl('vendor/redactor.js'));
+
+    rex_view::addCssFile($this->getAssetsUrl('redactor_custom.css'));
     rex_view::addJsFile($this->getAssetsUrl('redactor_plugins.min.js'));
     rex_view::addJsFile($this->getAssetsUrl('redaxo.js'));
 
