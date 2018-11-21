@@ -1,5 +1,8 @@
 <?php
 
+rex_extension::register('REX_FORM_SAVED', function () { redactor2::createJavascriptFile(); } );
+rex_extension::register('REX_FORM_DELETED', function () { redactor2::createJavascriptFile(); } );
+
 $func = rex_request('func', 'string');
 $success = '';
 $error = '';
@@ -60,6 +63,7 @@ if ($func == '') {
     $content = $fragment->parse('core/page/section.php');
 
     echo $content;
+
 } elseif ($func == 'add' || $func == 'edit') {
     $id = rex_request('id', 'int');
 
