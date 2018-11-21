@@ -15,7 +15,12 @@ if (rex::isBackend() && !empty(rex::getUser())) {
 
     rex_view::addJsFile($this->getAssetsUrl('vendor/redactor.js'));
     rex_view::addJsFile($this->getAssetsUrl('redactor_plugins.min.js'));
-    rex_view::addJsFile($this->getAssetsUrl('cache/redaxo.js'));
+    rex_view::addJsFile($this->getAssetsUrl('redaxo.js'));
+
+    if (!file_exists($this->getAssetsUrl('cache/profiles.js'))) {
+        redactor2::createJavascriptFile();
+    }
+
     rex_view::addJsFile($this->getAssetsUrl('cache/profiles.js'));
     rex_view::addJsFile($this->getAssetsUrl('langs/'.redactor2::getRedactorLanguage().'.js'));
 
