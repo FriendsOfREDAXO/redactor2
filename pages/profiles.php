@@ -1,8 +1,5 @@
 <?php
 
-rex_extension::register('REX_FORM_SAVED', function () { redactor2::createJavascriptFile(); } );
-rex_extension::register('REX_FORM_DELETED', function () { redactor2::createJavascriptFile(); } );
-
 $func = rex_request('func', 'string');
 $success = '';
 $error = '';
@@ -13,7 +10,7 @@ if ($func == 'copy') {
         $sql = rex_sql::factory();
 
         try {
-            $sql->setQuery('INSERT INTO '.rex::getTablePrefix() . 'redactor2_profiles (name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins, redactor_customplugins) SELECT name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins, redactor_customplugins FROM '.rex::getTablePrefix() . 'redactor2_profiles WHERE id = ?', [$profile_id]);
+            $sql->setQuery('INSERT INTO '.rex::getTablePrefix() . 'redactor2_profiles (name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins) SELECT name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins FROM '.rex::getTablePrefix() . 'redactor2_profiles WHERE id = ?', [$profile_id]);
             $success = $this->i18n('profiles_message_copy_success');
         } catch (rex_sql_exception $e) {
             $error = $sql->getError();
@@ -21,14 +18,17 @@ if ($func == 'copy') {
 
         $func = '';
     }
+    redactor2::createJavascriptFile();
 }
 
 if ($success != '') {
     echo rex_view::success($success);
+    redactor2::createJavascriptFile();
 }
 
 if ($error != '') {
     echo rex_view::error($error);
+    redactor2::createJavascriptFile();
 }
 
 if ($func == '') {
@@ -36,7 +36,6 @@ if ($func == '') {
     $list->addTableAttribute('class', 'table-striped');
     $list->setNoRowsMessage($this->i18n('profiles_norowsmessage'));
 
-    // icon column
     $thIcon = '<a href="'.$list->getUrl(['func' => 'add']).'"><i class="rex-icon rex-icon-add-action"></i></a>';
     $tdIcon = '<i class="rex-icon fa-file-text-o"></i>';
     $list->addColumn($thIcon, $tdIcon, 0, ['<th class="rex-table-icon">###VALUE###</th>', '<td class="rex-table-icon">###VALUE###</td>']);
@@ -63,7 +62,6 @@ if ($func == '') {
     $content = $fragment->parse('core/page/section.php');
 
     echo $content;
-
 } elseif ($func == 'add' || $func == 'edit') {
     $id = rex_request('id', 'int');
 
@@ -75,32 +73,21 @@ if ($func == '') {
 
     $form = rex_form::factory(rex::getTablePrefix().'redactor2_profiles', '', 'id='.$id);
 
-    //Start - add name-field
     $field = $form->addTextField('name');
     $field->setLabel($this->i18n('profiles_label_name'));
-    //End - add name-field
 
-    //Start - add description-field
     $field = $form->addTextField('description');
     $field->setLabel($this->i18n('profiles_label_description'));
-    //End - add description-field
 
-    //Start - add minheight-field
     $field = $form->addTextField('minheight');
     $field->setLabel($this->i18n('profiles_label_minheight'));
-    //End - add minheight-field
 
-    //Start - add maxheight-field
     $field = $form->addTextField('maxheight');
     $field->setLabel($this->i18n('profiles_label_maxheight'));
-    //End - add maxheight-field
 
-    //Start - add characterlimit-field
     $field = $form->addTextField('characterlimit');
     $field->setLabel($this->i18n('profiles_label_characterlimit'));
-    //End - add characterlimit-field
 
-    //Start - add urltype-field
     $field = $form->addSelectField('urltype');
     $field->setLabel($this->i18n('profiles_label_urltype'));
 
@@ -108,9 +95,7 @@ if ($func == '') {
     $select->setSize(1);
     $select->addOption($this->i18n('profiles_label_urltype_option_relative'), 'relative');
     $select->addOption($this->i18n('profiles_label_urltype_option_absolute'), 'absolute');
-    //End - add urltype-field
 
-    //Start - add externalurltarget-field
     $field = $form->addSelectField('externalurltarget');
     $field->setLabel($this->i18n('profiles_label_externalurltarget'));
 
@@ -118,9 +103,7 @@ if ($func == '') {
     $select->setSize(1);
     $select->addOption($this->i18n('profiles_label_externalurltarget_option_blank'), 'blank');
     $select->addOption($this->i18n('profiles_label_externalurltarget_option_self'), 'self');
-    //End - add externalurltarget-field
 
-    //Start - add toolbarfixed-field
     $field = $form->addSelectField('toolbarfixed');
     $field->setLabel($this->i18n('profiles_label_toolbarfixed'));
 
@@ -128,9 +111,7 @@ if ($func == '') {
     $select->setSize(1);
     $select->addOption($this->i18n('profiles_label_toolbarfixed_option_true'), '1');
     $select->addOption($this->i18n('profiles_label_toolbarfixed_option_false'), '0');
-    //End - add toolbarfixed-field
 
-    //Start - add shortcuts-field
     $field = $form->addSelectField('shortcuts');
     $field->setLabel($this->i18n('profiles_label_shortcuts'));
 
@@ -138,9 +119,7 @@ if ($func == '') {
     $select->setSize(1);
     $select->addOption($this->i18n('profiles_label_shortcuts_option_true'), '1');
     $select->addOption($this->i18n('profiles_label_shortcuts_option_false'), '0');
-    //End - add shortcuts-field
 
-    //Start - add linkify-field
     $field = $form->addSelectField('linkify');
     $field->setLabel($this->i18n('profiles_label_linkify'));
 
@@ -148,14 +127,10 @@ if ($func == '') {
     $select->setSize(1);
     $select->addOption($this->i18n('profiles_label_linkify_option_true'), '1');
     $select->addOption($this->i18n('profiles_label_linkify_option_false'), '0');
-    //End - add linkify-field
 
-    //Start - add imagetag-field
     $field = $form->addTextField('imagetag');
     $field->setLabel($this->i18n('profiles_label_imagetag'));
-    //End - add imagetag-field
 
-    //Start - add redactor_plugins-field
     $field = $form->addTextAreaField('redactor_plugins');
     $field->setLabel($this->i18n('profiles_label_redactorplugins'));
 
@@ -297,11 +272,6 @@ if ($func == '') {
                 </dd>
             </dl>
         ');
-    //End - add redactor_plugins-field
-
-    //Start - add redactor_custom_plugins-field
-    $field = $form->addTextAreaField('redactor_customplugins');
-    $field->setLabel($this->i18n('profiles_label_redactorcustomplugins'));
 
     $field = $form->addRawField('
             <dl class="rex-form-group form-group">
@@ -313,7 +283,6 @@ if ($func == '') {
                 </dd>
             </dl>
         ');
-    //End - add redactor_custom_plugins-field
 
     if ($func == 'edit') {
         $form->addParam('id', $id);
@@ -328,4 +297,6 @@ if ($func == '') {
     $content = $fragment->parse('core/page/section.php');
 
     echo $content;
+
+    redactor2::createJavascriptFile();
 }
