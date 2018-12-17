@@ -40,7 +40,8 @@ redactor2_profiles_label_linkify_option_true = Yes
 redactor2_profiles_label_linkify_option_false = No
 redactor2_profiles_label_imagetag = HTML-Tag around images<br><i>e.g. p or figure</i>
 redactor2_profiles_label_redactorplugins = Plugins
-redactor2_profiles_label_redactorcustomplugins_help = Include your plugins via your project addon. (-EP PACKAGES_INCLUDED LATE-)
+redactor2_profiles_label_redactorcustomplugins_help = Include your plugins via your projectaddon. Please include your Javascript with the Extension Point `PACKAGES_INCLUDED` and level `rex_extension::LATE`
+
 
 redactor2_profiles_plugins_anchorlink_description = Inserts an anchor link
 redactor2_profiles_plugins_alignment_description = Changes the alignment of the highlighted text

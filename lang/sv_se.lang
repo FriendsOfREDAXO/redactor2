@@ -36,7 +36,6 @@ redactor2_profiles_label_linkify = Konvertera länkar automatisk?
 redactor2_profiles_label_linkify_option_true = Ja
 redactor2_profiles_label_linkify_option_false = Nej
 redactor2_profiles_label_redactorplugins = Buttons
-redactor2_profiles_label_redactorcustomplugins_help = Include your plugins via your project addon. (-EP PACKAGES_INCLUDED LATE-)
 
 redactor2_profiles_plugins_anchorlink_description = Tillfoga anchor-link
 redactor2_profiles_plugins_alignment_description = Ändrar justeringen av den markerade texten
