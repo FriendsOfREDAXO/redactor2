@@ -2,6 +2,7 @@ redactor2_title = Redactor 2 Editor
 
 #subpage help
 redactor2_help_infotext = This addon allows usage of the Redactor 2 WYSIWYG editor in the backend.<br><br>Textarea fields with the class <i>redactorEditor2-%profileName%</i> will automatically be turned into a proper Redactor 2 editor field.<br>Example: <textarea <b>class="redactorEditor2-full"</b>></textarea><br><br>You can setup multiple profiles with different configurations to use with the Redactor 2 editor in the backend. <br><br>You can even define your own skin for the editor using CSS. To do so, add a file called skin.css in the folder /assets/addons/redactor2
+redactor2_help = Help
 
 #subpage profiles
 redactor2_profiles = Profiles
