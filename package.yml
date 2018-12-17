@@ -9,6 +9,7 @@ page:
     pjax: true
     subpages:
         profiles: { title: 'translate:profiles', perm: redactor2[profiles] }
+        help: { title: 'translate:Help', icon: rex-icon fa-info-circle }
         
 requires:
     redaxo: '>=5.2' # benötigt mindestens REDAXO 5.2
