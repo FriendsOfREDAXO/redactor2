@@ -12,7 +12,9 @@
 $file = rex_file::get(rex_path::addon('redactor2', 'README.md'));
 $body = rex_markdown::factory()->parse($file);
 $fragment = new rex_fragment();
+$fragment->setVar('title', $this->i18n('help'));
 $fragment->setVar('body', $body, false);
 $help = $fragment->parse('core/page/section.php');
-echo $help;
+echo '<style> .rtor img {max-width: 100% }</style>';
+echo '<div class="rtor">' . $help . '</div>';
 ?>
