@@ -128,6 +128,9 @@ class redactor2
         return $currentLanguage;
     }
 
+    /*
+     * Languages which are available in redactor2 AND redaxo
+     */
     public static function getLanguages()
     {
         return ['de','en','es'];
