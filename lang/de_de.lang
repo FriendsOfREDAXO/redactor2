@@ -3,6 +3,8 @@ redactor2_title = Redactor 2 Editor
 #subpage help
 redactor2_help_infotext = Das Addon bindet den WYSIWYG-Editor redactor im Backend ein.<br><br>Textareas mit der Klasse <i>redactorEditor2-%profileName%</i> werden automatisch von einem normalen Texteingabefeld in einen WYSIWYG-Editor umgewandelt.<br>z.B.: <textarea <b>class="redactorEditor2-full"</b>></textarea><br><br>Im Backend können verschiedene Profile mit unterschiedlichen Konfigurationseinstellungen für den Redactor-Editor angelegt werden.</b><br><br>Es gibt die Möglichkeit, dem Editor eigene CSS-Styles zu geben. Dafür muss lediglich im Ordner /assets/addons/redactor2 eine Datei mit dem Namen skin.css angelegt werden.
 
+redactor2_help = Hilfe
+
 #subpage profiles
 redactor2_profiles = Profile
 redactor2_profiles_norowsmessage = Es wurden keine Profile gefunden
