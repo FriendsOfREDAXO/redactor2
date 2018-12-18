@@ -133,7 +133,7 @@ class redactor2
      */
     public static function getLanguages()
     {
-        return ['de','en','es'];
+        return ['de','en','es','it','pt','sv'];
     }
 
 }
