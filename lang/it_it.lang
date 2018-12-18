@@ -32,8 +32,6 @@ redactor2_profiles_label_linkify = Converti automaticamente i link?
 redactor2_profiles_label_linkify_option_true = Si
 redactor2_profiles_label_linkify_option_false = no
 redactor2_profiles_label_redactorplugins = Plugins
-redactor2_profiles_label_redactorcustomplugins = Plugin personalizzati
-redactor2_profiles_label_redactorcustomplugins_help = Separazione comma con la sintassi "name:pfad/zum/plugin.js"
 
 redactor2_profiles_plugins_alignment_description = Imposta l'allineamento del testo selezionato
 redactor2_profiles_plugins_blockquote_description = Inserisce un commento

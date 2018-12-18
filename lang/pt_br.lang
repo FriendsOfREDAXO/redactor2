@@ -29,8 +29,6 @@ redactor2_profiles_label_shortcuts = Shortcuts ativo?
 redactor2_profiles_label_shortcuts_option_true = Sim
 redactor2_profiles_label_shortcuts_option_false = Não
 redactor2_profiles_label_redactorplugins = Plugins
-redactor2_profiles_label_redactorcustomplugins = Custom Plugins
-redactor2_profiles_label_redactorcustomplugins_help = Commaseparated with the Syntax "name:/path/to/plugin.js"
 
 redactor2_profiles_plugins_alignment_description = Altera o alinhamento do texto em destaque
 redactor2_profiles_plugins_blockquote_description = Insere uma citação

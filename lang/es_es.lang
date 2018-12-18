@@ -36,8 +36,6 @@ redactor2_profiles_label_linkify = ¿Convertir enlaces automáticamente?
 redactor2_profiles_label_linkify_option_true = Sí
 redactor2_profiles_label_linkify_option_false = No
 redactor2_profiles_label_redactorplugins = Plugins
-redactor2_profiles_label_redactorcustomplugins = Complementos personalizados
-redactor2_profiles_label_redactorcustomplugins_help = Coma separada por la sintaxis "name:path/to/plugin.js"
 
 redactor2_profiles_plugins_anchorlink_description = Inserta un enlace de anclaje
 redactor2_profiles_plugins_alignment_description = Establece la alineación del texto seleccionado

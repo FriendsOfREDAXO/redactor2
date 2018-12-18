@@ -18,6 +18,7 @@ $.Redactor.prototype.heading2 = function() {
 		},
 		set: function() {
 			this.block.format('h2');
+            this.selection.remove();
 		}
 	};
 };

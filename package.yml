@@ -1,5 +1,5 @@
 package: redactor2
-version: '3.5.0'
+version: '3.6.0'
 author: Friends Of REDAXO
 supportpage: github.com/FriendsOfREDAXO/redactor2
 
@@ -12,6 +12,6 @@ page:
         help: { title: 'translate:Help', icon: rex-icon fa-info-circle, itemclass: pull-right}
         
 requires:
-    redaxo: '>=5.2' # benötigt mindestens REDAXO 5.2
+    redaxo: '>=5.6'
     php:
         version: '>=5.6' # benötigt mindestens PHP 5.6
