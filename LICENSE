@@ -1,21 +1,63 @@
-The MIT License (MIT)
+REDAXO OEM License
 
-Copyright (c) 2016 Friends Of REDAXO
+License Agreement
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This license is a legal agreement between you and Imperavi LLC for the use of Redactor (*current to date and all future versions*) Software (the "Software"). By downloading any version of the Software, you agree to be legally bound by the terms and conditions of this license agreement. Imperavi LLC reserves the right to alter this agreement at any time, for any reason, without notice.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Revised on: October 24, 2018
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Redactor Installations
+
+Redactor Pro License & OEM License purchases allow "live" installations in a production environment and ancillary "development use only" installations as needed to support the live installation (such as development and a staging servers) according to the terms of each license tier described below. Every installation regardless of the project type, location or legal form requires valid paid License. If you have specific installation needs not covered by this license, please contact us: support@imperavi.com.
+
+Permitted Use
+
+Redactor License Tiers:
+
+Professional License: Holder of the Professional License may use the current version of the Software for a sole purpose of integration it within an unlimited number of applications of an unlimited number of website, located on an unlimited number of domains with unlimited subdomains (*.domain.com) engaging in commercial, for-profit, or non-commercial, non-for-profit activities, including "Software as a Service" products (SaaS). The Professional License does not allow integration of the Software with open source products, or downloadable extensions, plugins or applications. Technical support to the Professional license holders is provided in form of Documentation on Imperavi.com website only; Professional License holders also allowed to submit bugs and request features via customer’s account page.
+
+OEM License: Holder of the OEM License may use the current version of the Software for a sole purpose of integration it within an unlimited number of applications of an unlimited number of website, located on an unlimited number of domains with unlimited subdomains (*.domain.com) engaging in commercial, for-profit, or non-commercial, non-for-profit activities. The OEM License allows integration of the Software with open source products, “Software as a Service” products (SaaS), downloadable extensions, plugins and applications. Technical support to the OEM license holders is provided in a form of Documentation on Imperavi.com website only; OEM License holders also allowed to submit bugs and request features via customer’s account page.
+
+Upgrades, Updates, New Versions
+
+Upgrades of License tires are not available — a new, full-price license must be purchased instead. License downgrades for partial refund are not available. All License tiers are only valid for the current major version of Redactor (1.x, 2.x, et cetera) and its minor updates. Each new major version of Redactor will require purchasing of a new license; existing license holders will receive a continuity discount upon purchasing each new license for each major version of Redactor.
+
+Restrictions
+
+Unless you have been granted prior, written explicit consent from Imperavi LLC, you may not:
+
+Reproduce, distribute, or transfer the Software as a sole product, or portions thereof, to any third party.
+Sell, rent, lease, assign, or sublet the Software as a sole product or portions thereof.
+Grant rights to any other person.
+Use the software in violation of any European Union or international laws or regulations.
+Display of Copyright Notices
+
+All copyright and proprietary notices and logos (if any) of Redactor and/or Imperavi LLC within the Software files must remain intact.
+
+Making copies
+
+You may make copies of the Software for backup purposes, provided that you reproduce the Software in its original form and with all proprietary notices on the back-up copy. You may include copies of the Software as an integral part of your product (according to the purchased License tier and Permitted Use stated above).
+
+Software Modification
+
+You may alter, modify, or extend the Software for use as an integral part of your product or service according to the License tier, or commission a third-party to perform modifications for you, but you may not resell, redistribute or transfer the modified or derivative version of the Software as a sole product without prior written consent from Imperavi LLC. Components from the Software may not be extracted and used in other programs without prior written consent from Imperavi LLC.
+
+Technical Support
+
+Technical support is provided in a form of Documentation on imperavi.com website only; Licence holders also allowed to submit bugs and suggest features via their customer account page. For the Bug Reports and Feature Suggestions we reserve the right to solely determine best course of action: we can accept, decline or postpone any work in regards of received Bug Reports or Feature Suggestion. We give no guarantee whatsoever that we will fix any particular malfunction, and we reserve the right to determine whether Reported Bug is a malfunction or not. We don’t give any guarantee whatsoever that we will implement any of Suggested Features.
+
+Refund Policy
+
+We offer a 14-day money back guarantee. If for any reason Redactor doesn’t work out for your project, simply email us within 14 days of purchase for a full refund.
+
+Indemnity
+
+You agree to indemnify and hold harmless Imperavi LLC for any third-party claims, actions or suits, as well as any related expenses, liabilities, damages, settlements or fees arising from your use or misuse of the Software, or a violation of any terms of this license.
+
+Disclaimer Of Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, WARRANTIES OF QUALITY, PERFORMANCE, NON-INFRINGEMENT, MERCHANTABILITY, OR FITNESS FOR A PARTICULAR PURPOSE. FURTHER, IMPERAVI LLC DOES NOT WARRANT THAT THE SOFTWARE OR ANY RELATED SERVICE WILL ALWAYS BE AVAILABLE.
+
+Limitations Of Liability
+
+YOU ASSUME ALL RISK ASSOCIATED WITH THE INSTALLATION AND USE OF THE SOFTWARE. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS OF THE SOFTWARE BE LIABLE FOR CLAIMS, DAMAGES OR OTHER LIABILITY ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE. LICENSE HOLDERS ARE SOLELY RESPONSIBLE FOR DETERMINING THE APPROPRIATENESS OF USE AND ASSUME ALL RISKS ASSOCIATED WITH ITS USE, INCLUDING BUT NOT LIMITED TO THE RISKS OF PROGRAM ERRORS, DAMAGE TO EQUIPMENT, LOSS OF DATA OR SOFTWARE PROGRAMS, OR UNAVAILABILITY OR INTERRUPTION OF OPERATIONS.
