@@ -26,6 +26,9 @@ redactor2_profiles_label_characterlimit = Sin límite </ i>
 redactor2_profiles_label_urltype = Tipo de URL
 redactor2_profiles_label_urltype_option_relative = Relativamente
 redactor2_profiles_label_urltype_option_absolute = Absolutamente
+redactor2_profiles_label_externalurltarget = Objetivo para enlaces externos
+redactor2_profiles_label_externalurltarget_option_blank = Nueva ventana
+redactor2_profiles_label_externalurltarget_option_self = Misma ventana
 redactor2_profiles_label_toolbarfixed = ¿Barra de herramientas arreglada?
 redactor2_profiles_label_toolbarfixed_option_true = Sí
 redactor2_profiles_label_toolbarfixed_option_false = No
@@ -35,6 +38,7 @@ redactor2_profiles_label_shortcuts_option_false = No
 redactor2_profiles_label_linkify = ¿Convertir enlaces automáticamente?
 redactor2_profiles_label_linkify_option_true = Sí
 redactor2_profiles_label_linkify_option_false = No
+redactor2_profiles_label_imagetag = Etiqueta HTML para imágenes <br> <i> z. p o figura </ i>
 redactor2_profiles_label_redactorplugins = Plugins
 
 redactor2_profiles_plugins_anchorlink_description = Inserta un enlace de anclaje
