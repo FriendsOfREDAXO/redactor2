@@ -26,6 +26,9 @@ redactor2_profiles_label_characterlimit = Max. antal tecken<br><i>0 = No limit</
 redactor2_profiles_label_urltype = URL-typ
 redactor2_profiles_label_urltype_option_relative = Relative
 redactor2_profiles_label_urltype_option_absolute = Absolut
+redactor2_profiles_label_externalurltarget = Mål av externa länkar
+redactor2_profiles_label_externalurltarget_option_blank = Nytt fönster
+redactor2_profiles_label_externalurltarget_option_self = Samma fönster
 redactor2_profiles_label_toolbarfixed = Tool fast?
 redactor2_profiles_label_toolbarfixed_option_true = Ja
 redactor2_profiles_label_toolbarfixed_option_false = Nej
@@ -35,6 +38,7 @@ redactor2_profiles_label_shortcuts_option_false = Nej
 redactor2_profiles_label_linkify = Konvertera länkar automatisk?
 redactor2_profiles_label_linkify_option_true = Ja
 redactor2_profiles_label_linkify_option_false = Nej
+redactor2_profiles_label_imagetag = HTML-tagg omkring bilder <br> <i> t.ex. p eller figure </ i>
 redactor2_profiles_label_redactorplugins = Buttons
 
 redactor2_profiles_plugins_anchorlink_description = Tillfoga anchor-link
