@@ -1,3 +1,3 @@
 <?php
 
-include $this->getPath('install.php');
+include ( __DIR__ . 'install.php' );
