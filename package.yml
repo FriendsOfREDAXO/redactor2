@@ -12,6 +12,6 @@ page:
         help: { title: 'translate:help', icon: rex-icon fa-info-circle, itemclass: pull-right}
         
 requires:
-    redaxo: '>=5.6'
+    redaxo: '^5.6'
     php:
         version: '>=5.6' # benötigt mindestens PHP 5.6
