@@ -256,7 +256,7 @@ $.Redactor.prototype.grouplink = function() {
 		setInternal: function()
 		{
 			var that = this;
-			var grouplinkMap = openLinkMap('', '&clang='+ that.opts.clang_id);
+			var grouplinkMap = openLinkMap('', '&clang='+ rex.clang_id);
 			$(grouplinkMap).on('rex:selectLink', function (event, grouplinkurl, grouplinktext) {
 				event.preventDefault();
 				grouplinkMap.close();

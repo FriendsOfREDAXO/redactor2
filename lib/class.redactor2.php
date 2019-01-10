@@ -136,4 +136,17 @@ class redactor2
         return ['de','en','es','it','pt','sv'];
     }
 
+    public static function createRedactorPlugInsFile()
+    {
+        $content = [];
+        foreach(glob(rex_addon::get('redactor2')->getPath('assets/plugins/*')) as $file) {
+            $content[] = rex_file::get($file);
+        }
+        $assetsPath = rex_addon::get('redactor2')->getPath('assets/redactor_plugins.js');
+        rex_file::put($assetsPath, implode("\n", $content));
+        $assetsPath = rex_addon::get('redactor2')->getAssetsPath('redactor_plugins.js');
+        rex_file::put($assetsPath, implode("\n", $content));
+
+    }
+
 }
