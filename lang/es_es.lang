@@ -3,6 +3,8 @@ redactor2_title = Redactor 2 Editor
 #subpage help
 redactor2_help_infotext = El complemento incluye el editor de editor WYSIWYG en el back-end. <br> <br> Textareas con la clase <i> redactorEditor2-% profileName% </ i> se convierten automáticamente de un campo de entrada de texto normal en un editor WYSIWYG. <br> por ejemplo: <textarea <b> class = "redactorEditor2-full" </ b> </ textarea> <br> <br> En el backend se puede crear un Perfil diferente con diferentes configuraciones para el editor Redactor. </ b> <br> <br> Da la posibilidad de proporcionar al editor los propios estilos CSS. Todo lo que tienes que hacer es crear un archivo llamado skin.css en la carpeta / assets / addons / redactor2.
 
+redactor2_help = Ayuda
+
 #subpage profiles
 redactor2_profiles = Perfil
 redactor2_profiles_norowsmessage = No se encontró el perfil
@@ -40,6 +42,7 @@ redactor2_profiles_label_linkify_option_true = Sí
 redactor2_profiles_label_linkify_option_false = No
 redactor2_profiles_label_imagetag = Etiqueta HTML para imágenes <br> <i> z. p o figura </ i>
 redactor2_profiles_label_redactorplugins = Plugins
+redactor2_profiles_label_redactorcustomplugins_help = Incluya sus complementos a través de su proyecto. Incluya su Javascript con el Punto de Extensión `PACKAGES_INCLUDED` y el nivel `rex_extension::LATE`
 
 redactor2_profiles_plugins_anchorlink_description = Inserta un enlace de anclaje
 redactor2_profiles_plugins_alignment_description = Establece la alineación del texto seleccionado
