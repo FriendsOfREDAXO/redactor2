@@ -3,6 +3,8 @@ redactor2_title = Redactor 2 Editor
 #subpage help
 redactor2_help_infotext = Denna tillägg tillåter användning av Redactor 2 WYSIWYG-editoren i backenden. <br> <br> Textarea-fält med klassen <i> redactorEditor2-% profileName% </i> kommer automatiskt att omvandlas till ett korrekt Redaktor 2-redigeringsfält.<br> Exempel: <textarea <b> class = "redactorEditor2-full" </ b >> </ textarea> <br> <br> Du kan konfigurera flera profiler med olika konfigurationer för att använda med Redactor 2-redigeraren i backend. <br><br> Du kan även definiera dina egna CSS-stilar för redaktören. Lägg då till en fil som heter skin.css i mappen / tillgångar / addons / redactor2
 
+redactor2_help = Hjälp
+
 #subpage profiles
 redactor2_profiles = Profiler
 redactor2_profiles_norowsmessage = Inga profiler hittades
@@ -40,6 +42,7 @@ redactor2_profiles_label_linkify_option_true = Ja
 redactor2_profiles_label_linkify_option_false = Nej
 redactor2_profiles_label_imagetag = HTML-tagg omkring bilder <br> <i> t.ex. p eller figure </ i>
 redactor2_profiles_label_redactorplugins = Buttons
+redactor2_profiles_label_redactorcustomplugins_help = Integrera dina egna plugins via ProjectAddon. Inkludera egna javascripts enligt Extension Point `PACKAGES_INCLUDED` och level` rex_extension :: LATE
 
 redactor2_profiles_plugins_anchorlink_description = Tillfoga anchor-link
 redactor2_profiles_plugins_alignment_description = Ändrar justeringen av den markerade texten
