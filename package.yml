@@ -1,5 +1,5 @@
 package: redactor2
-version: '4.0.1'
+version: '4.0.2'
 author: Friends Of REDAXO
 supportpage: github.com/FriendsOfREDAXO/redactor2
 
@@ -10,7 +10,7 @@ page:
     subpages:
         profiles: { title: 'translate:profiles', perm: redactor2[profiles] }
         help: { title: 'translate:help', icon: rex-icon fa-info-circle, itemclass: pull-right}
-        
+
 requires:
     redaxo: '^5.6'
     php:

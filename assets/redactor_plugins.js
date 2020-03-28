@@ -99,17 +99,17 @@ $.Redactor.prototype.anchorlink = function() {
 		},
 		getTemplate: function() {
 			var selectedText = this.selection.text();
-			
+
 			var modalContent = '';
 			modalContent += '<div class="modal-section" id="redactor-modal-anchorlink">';
-				
+
 			if (selectedText == '') {
 				modalContent += '  <section>';
 				modalContent += '    <label for="anchorlink_linktext">' + this.lang.get('anchorlink_linktext') + '</label>';
 				modalContent += '    <input type="text" id="anchorlink_linktext">';
 				modalContent += '  </section>';
 			}
-			
+
 			modalContent += '  <section>';
 			modalContent += '    <label for="anchorlink_anchor">' + this.lang.get('anchorlink_anchor') + '</label>';
 			modalContent += '    <input type="text" id="anchorlink_anchor">';
@@ -119,7 +119,7 @@ $.Redactor.prototype.anchorlink = function() {
 			modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('anchorlink_abort') + '</button>';
 			modalContent += '  </section>';
 			modalContent += '</div>';
-				
+
 			return String() + modalContent;
 		},
 		init: function() {
@@ -130,12 +130,12 @@ $.Redactor.prototype.anchorlink = function() {
 		show: function() {
 			this.modal.addTemplate('anchorlink', this.anchorlink.getTemplate());
 			this.modal.load('anchorlink', this.lang.get('anchorlink'), 600);
-			
+
 			var button = this.modal.getActionButton();
 			button.on('click', this.anchorlink.set);
-			
+
 			this.modal.show();
-			
+
 			setTimeout(function() {
 				if ($('#anchorlink_linktext').length != 0) {
 					document.getElementById('anchorlink_linktext').focus();
@@ -148,13 +148,13 @@ $.Redactor.prototype.anchorlink = function() {
 			var linktext = $('#anchorlink_linktext').val();
 			var anchor = $('#anchorlink_anchor').val();
 			this.modal.close();
-			
+
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var linktext = selectedText;
 			}
-			
+
 			this.insert.html('<a href="#'+anchor+'">'+linktext+'</a>');
 		}
 	};
@@ -230,19 +230,19 @@ $.Redactor.prototype.cleaner = function() {
 				this.inline.removeFormat();
 				this.inline.removeAllAttr();
 				this.inline.removeAllClass();
-				
+
 				// get the current selection
 				var html = this.selection.html();
-				
+
 				// Strip out html
 				html = html.replace(/(<([^>]+)>)/ig,"");
-				
+
 				// buffer
 				this.buffer.set();
-				
+
 				// Replace selection with clean text
 				this.selection.replace(html);
-				
+
 				// Sync code
 				this.code.sync();
 			}
@@ -256,7 +256,7 @@ $.Redactor.prototype.clips = function()
 		{
 			if (!this.opts.clips) return;
 			var clips = this.opts.clips;
-			
+
 			var that = this;
 			var dropdown = {};
 
@@ -269,7 +269,7 @@ $.Redactor.prototype.clips = function()
 					}
 				};
 			});
-			
+
 			var button = this.button.add('clips', 'Clips');
 			this.button.setIcon(button, '<i class="fa fa-th-large"></i>');
 			this.button.addDropdown(button, dropdown);
@@ -330,17 +330,17 @@ $.Redactor.prototype.emaillink = function() {
 		},
 		getTemplate: function() {
 			var selectedText = this.selection.text();
-			
+
 			var modalContent = '';
 			modalContent += '<div class="modal-section" id="redactor-modal-emaillink">';
-				
+
 			if (selectedText == '') {
 				modalContent += '  <section>';
 				modalContent += '    <label for="emaillink_linktext">' + this.lang.get('emaillink_linktext') + '</label>';
 				modalContent += '    <input type="text" id="emaillink_linktext">';
 				modalContent += '  </section>';
 			}
-			
+
 			modalContent += '  <section>';
 			modalContent += '    <label for="emaillink_emailaddress">' + this.lang.get('emaillink_emailaddress') + '</label>';
 			modalContent += '    <input type="text" id="emaillink_emailaddress">';
@@ -350,7 +350,7 @@ $.Redactor.prototype.emaillink = function() {
 			modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('emaillink_abort') + '</button>';
 			modalContent += '  </section>';
 			modalContent += '</div>';
-				
+
 			return String() + modalContent;
 		},
 		init: function() {
@@ -361,12 +361,12 @@ $.Redactor.prototype.emaillink = function() {
 		show: function() {
 			this.modal.addTemplate('emaillink', this.emaillink.getTemplate());
 			this.modal.load('emaillink', this.lang.get('emaillink'), 600);
-			
+
 			var button = this.modal.getActionButton();
 			button.on('click', this.emaillink.set);
-			
+
 			this.modal.show();
-			
+
 			setTimeout(function() {
 				if ($('#emaillink_linktext').length != 0) {
 					document.getElementById('emaillink_linktext').focus();
@@ -379,13 +379,13 @@ $.Redactor.prototype.emaillink = function() {
 			var linktext = $('#emaillink_linktext').val();
 			var emailaddress = $('#emaillink_emailaddress').val();
 			this.modal.close();
-			
+
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var linktext = selectedText;
 			}
-			
+
 			this.insert.html('<a href="mailto:'+emailaddress+'">'+linktext+'</a>');
 		}
 	};
@@ -417,17 +417,17 @@ $.Redactor.prototype.externallink = function() {
 		},
 		getTemplate: function() {
 			var selectedText = this.selection.text();
-			
+
 			var modalContent = '';
 			modalContent += '<div class="modal-section" id="redactor-modal-externallink">';
-				
+
 				if (selectedText == '') {
 					modalContent += '  <section>';
 					modalContent += '    <label for="externallink_linktext">' + this.lang.get('externallink_linktext') + '</label>';
 					modalContent += '    <input type="text" id="externallink_linktext">';
 					modalContent += '  </section>';
 				}
-				
+
 				modalContent += '  <section>';
 				modalContent += '    <label for="externallink_linkurl">' + this.lang.get('externallink_linkurl') + '</label>';
 				modalContent += '    <input type="text" id="externallink_linkurl">';
@@ -437,7 +437,7 @@ $.Redactor.prototype.externallink = function() {
 				modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('externallink_abort') + '</button>';
 				modalContent += '  </section>';
 				modalContent += '</div>';
-				
+
 			return String() + modalContent;
 		},
 		init: function() {
@@ -448,12 +448,12 @@ $.Redactor.prototype.externallink = function() {
 		show: function() {
 			this.modal.addTemplate('externallink', this.externallink.getTemplate());
 			this.modal.load('externallink', this.lang.get('externallink'), 600);
-			
+
 			var button = this.modal.getActionButton();
 			button.on('click', this.externallink.set);
-			
+
 			this.modal.show();
-			
+
 			setTimeout(function() {
 				if ($('#externallink_linktext').length != 0) {
 					document.getElementById('externallink_linktext').focus();
@@ -466,13 +466,13 @@ $.Redactor.prototype.externallink = function() {
 			var linktext = $('#externallink_linktext').val();
 			var linkurl = $('#externallink_linkurl').val();
 			this.modal.close();
-			
+
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var linktext = selectedText;
 			}
-			
+
 			if (this.opts.externalUrlTarget == 'self') {
 				this.insert.html('<a href="'+linkurl+'">'+linktext+'</a>');
 			} else {
@@ -500,10 +500,10 @@ $.Redactor.prototype.fontcolor = function() {
 		init: function () {
 			if (!this.opts.fontcolor) return;
 			var colors = this.opts.fontcolor;
-			
+
 			var that = this;
 			var dropdown = {};
-			
+
 			$.each(colors, function(i, s) {
 				dropdown['s' + i] = {
 					title: s[0],
@@ -512,14 +512,14 @@ $.Redactor.prototype.fontcolor = function() {
 					}
 				};
 			});
-			
+
 			dropdown['s' + colors.length] = {
 				title: this.lang.get('fontcolor_remove'),
 				func: function() {
 					that.fontcolor.remove();
 				}
 			}
-			
+
 			var button = this.button.add('fontcolor', this.lang.get('fontcolor'));
 			this.button.setIcon(button, '<i class="fa fa-paint-brush"></i>');
 			this.button.addDropdown(button, dropdown);
@@ -552,10 +552,10 @@ $.Redactor.prototype.fontfamily = function() {
 		init: function () {
 			if (!this.opts.fontfamily) return;
 			var fonts = this.opts.fontfamily;
-			
+
 			var that = this;
 			var dropdown = {};
-			
+
 			$.each(fonts, function(i, s) {
 				dropdown['s' + i] = {
 					title: s,
@@ -564,14 +564,14 @@ $.Redactor.prototype.fontfamily = function() {
 					}
 				};
 			});
-			
+
 			dropdown['s' + fonts.length] = {
 				title: this.lang.get('fontfamily_remove'),
 				func: function() {
 					that.fontfamily.remove();
 				}
 			};
-			
+
 			var button = this.button.add('fontfamily', this.lang.get('fontfamily'));
 			this.button.setIcon(button, '<i class="fa fa-font"></i>');
 			this.button.addDropdown(button, dropdown);
@@ -603,10 +603,10 @@ $.Redactor.prototype.fontsize = function() {
 		init: function() {
 			if (!this.opts.fontsize) return;
 			var fonts = this.opts.fontsize;
-			
+
 			var that = this;
 			var dropdown = {};
-			
+
 			$.each(fonts, function(i, s) {
 				dropdown['s' + i] = {
 					title: s,
@@ -615,14 +615,14 @@ $.Redactor.prototype.fontsize = function() {
 					}
 				};
 			});
-			
+
 			dropdown['s' + fonts.length] = {
 				title: this.lang.get('fontsize_remove'),
 				func: function() {
 					that.fontsize.remove();
 				}
 			};
-			
+
 			var button = this.button.add('fontsize', this.lang.get('fontsize'));
 			this.button.setIcon(button, '<i class="fa fa-text-height"></i>');
 			this.button.addDropdown(button, dropdown);
@@ -646,13 +646,13 @@ $.Redactor.prototype.format = function() {
 			}
 		},
 		init: function() {
-			
+
 			if (!this.opts.format) return;
 			var format = this.opts.format;
-			
+
 			var that = this;
 			var dropdown = {};
-			
+
 			$.each(format, function(i, s)
 			{
 				dropdown[i] = {
@@ -662,7 +662,7 @@ $.Redactor.prototype.format = function() {
 					}
 				};
 			});
-			
+
 			var button = this.button.add('format', this.lang.get('format'));
 			this.button.setIcon(button, '<i class="re-icon-format"></i>');
 			this.button.addDropdown(button, dropdown);
@@ -869,10 +869,10 @@ $.Redactor.prototype.groupheading = function() {
 		{
 			if (!this.opts.groupheading) return;
 			var groupheading = this.opts.groupheading;
-			
+
 			var that = this;
 			var dropdown = {};
-			
+
 			if (groupheading.indexOf("1") != -1) {
 				dropdown.groupheading1 = { title: that.lang.get('groupheading_1'), func: that.groupheading.setGroupheading1 };
 			}
@@ -891,7 +891,7 @@ $.Redactor.prototype.groupheading = function() {
 			if (groupheading.indexOf("6") != -1) {
 				dropdown.groupheading6 = { title: that.lang.get('groupheading_6'), func: that.groupheading.setGroupheading6 };
 			}
-			
+
 			var button = this.button.add('groupheading', this.lang.get('groupheading'));
 			this.button.setIcon(button, '<i class="fa fa-header"></i>');
 			this.button.addDropdown(button, dropdown);
@@ -978,10 +978,10 @@ $.Redactor.prototype.grouplink = function() {
 		{
 			if (!this.opts.grouplink) return;
 			var grouplink = this.opts.grouplink;
-			
+
 			var that = this;
 			var dropdown = {};
-			
+
 			if (grouplink.indexOf("email") != -1) {
 				dropdown.email = { title: that.lang.get('grouplink_email'), func: that.grouplink.setEmail };
 			}
@@ -1000,24 +1000,24 @@ $.Redactor.prototype.grouplink = function() {
 			if (grouplink.indexOf("anchor") != -1) {
 				dropdown.anchor = { title: that.lang.get('grouplink_anchor'), func: that.grouplink.setAnchor };
 			}
-			
+
 			var button = this.button.add('grouplink', this.lang.get('grouplink'));
 			this.button.setIcon(button, '<i class="fa fa-link"></i>');
 			this.button.addDropdown(button, dropdown);
 		},
 		getEmailTemplate: function() {
 			var selectedText = this.selection.text();
-			
+
 			var modalContent = '';
 			modalContent += '<div class="modal-section" id="redactor-modal-emailgrouplink">';
-				
+
 			if (selectedText == '') {
 				modalContent += '  <section>';
 				modalContent += '    <label for="emailgrouplink_grouplinktext">' + this.lang.get('grouplink_grouplinktext') + '</label>';
 				modalContent += '    <input type="text" id="emailgrouplink_grouplinktext">';
 				modalContent += '  </section>';
 			}
-			
+
 			modalContent += '  <section>';
 			modalContent += '    <label for="emailgrouplink_emailaddress">' + this.lang.get('grouplink_email_emailaddress') + '</label>';
 			modalContent += '    <input type="text" id="emailgrouplink_emailaddress">';
@@ -1027,22 +1027,22 @@ $.Redactor.prototype.grouplink = function() {
 			modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('grouplink_abort') + '</button>';
 			modalContent += '  </section>';
 			modalContent += '</div>';
-				
+
 			return String() + modalContent;
 		},
 		getTelephoneTemplate: function() {
 			var selectedText = this.selection.text();
-			
+
 			var modalContent = '';
 			modalContent += '<div class="modal-section" id="redactor-modal-telephonegrouplink">';
-				
+
 			if (selectedText == '') {
 				modalContent += '  <section>';
 				modalContent += '    <label for="telephonegrouplink_grouplinktext">' + this.lang.get('grouplink_grouplinktext') + '</label>';
 				modalContent += '    <input type="text" id="telephonegrouplink_grouplinktext">';
 				modalContent += '  </section>';
 			}
-			
+
 			modalContent += '  <section>';
 			modalContent += '    <label for="telephonegrouplink_telephonenumber">' + this.lang.get('grouplink_telephone_telephonenumber') + '</label>';
 			modalContent += '    <input type="text" id="telephonegrouplink_telephonenumber">';
@@ -1052,22 +1052,22 @@ $.Redactor.prototype.grouplink = function() {
 			modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('grouplink_abort') + '</button>';
 			modalContent += '  </section>';
 			modalContent += '</div>';
-				
+
 			return String() + modalContent;
 		},
 		getAnchorTemplate: function() {
 			var selectedText = this.selection.text();
-			
+
 			var modalContent = '';
 			modalContent += '<div class="modal-section" id="redactor-modal-anchorgrouplink">';
-				
+
 			if (selectedText == '') {
 				modalContent += '  <section>';
 				modalContent += '    <label for="anchorgrouplink_grouplinktext">' + this.lang.get('grouplink_grouplinktext') + '</label>';
 				modalContent += '    <input type="text" id="anchorgrouplink_grouplinktext">';
 				modalContent += '  </section>';
 			}
-			
+
 			modalContent += '  <section>';
 			modalContent += '    <label for="anchorgrouplink_anchor">' + this.lang.get('grouplink_anchor_anchor') + '</label>';
 			modalContent += '    <input type="text" id="anchorgrouplink_anchor">';
@@ -1077,22 +1077,22 @@ $.Redactor.prototype.grouplink = function() {
 			modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('grouplink_abort') + '</button>';
 			modalContent += '  </section>';
 			modalContent += '</div>';
-				
+
 			return String() + modalContent;
 		},
 		getExternalTemplate: function() {
 			var selectedText = this.selection.text();
-			
+
 			var modalContent = '';
 			modalContent += '<div class="modal-section" id="redactor-modal-externalgrouplink">';
-				
+
 			if (selectedText == '') {
 				modalContent += '  <section>';
 				modalContent += '    <label for="externalgrouplink_grouplinktext">' + this.lang.get('grouplink_grouplinktext') + '</label>';
 				modalContent += '    <input type="text" id="externalgrouplink_grouplinktext">';
 				modalContent += '  </section>';
 			}
-			
+
 			modalContent += '  <section>';
 			modalContent += '    <label for="externalgrouplink_grouplinkurl">' + this.lang.get('grouplink_external_url') + '</label>';
 			modalContent += '    <input type="text" id="externalgrouplink_grouplinkurl">';
@@ -1102,19 +1102,19 @@ $.Redactor.prototype.grouplink = function() {
 			modalContent += '    <button id="redactor-modal-button-cancel">' + this.lang.get('grouplink_abort') + '</button>';
 			modalContent += '  </section>';
 			modalContent += '</div>';
-				
+
 			return String() + modalContent;
 		},
 		setEmail: function()
 		{
 			this.modal.addTemplate('grouplink', this.grouplink.getEmailTemplate());
 			this.modal.load('grouplink', this.lang.get('grouplink_email'), 600);
-			
+
 			var button = this.modal.getActionButton();
 			button.on('click', this.grouplink.insertEmail);
-			
+
 			this.modal.show();
-			
+
 			setTimeout(function() {
 				if ($('#emailgrouplink_grouplinktext').length != 0) {
 					document.getElementById('emailgrouplink_grouplinktext').focus();
@@ -1127,12 +1127,12 @@ $.Redactor.prototype.grouplink = function() {
 		{
 			this.modal.addTemplate('grouplink', this.grouplink.getTelephoneTemplate());
 			this.modal.load('grouplink', this.lang.get('grouplink_telephone'), 600);
-			
+
 			var button = this.modal.getActionButton();
 			button.on('click', this.grouplink.insertTelephone);
-			
+
 			this.modal.show();
-			
+
 			setTimeout(function() {
 				if ($('#telephonegrouplink_grouplinktext').length != 0) {
 					document.getElementById('telephonegrouplink_grouplinktext').focus();
@@ -1145,12 +1145,12 @@ $.Redactor.prototype.grouplink = function() {
 		{
 			this.modal.addTemplate('grouplink', this.grouplink.getAnchorTemplate());
 			this.modal.load('grouplink', this.lang.get('grouplink_anchor'), 600);
-			
+
 			var button = this.modal.getActionButton();
 			button.on('click', this.grouplink.insertAnchor);
-			
+
 			this.modal.show();
-			
+
 			setTimeout(function() {
 				if ($('#anchorgrouplink_grouplinktext').length != 0) {
 					document.getElementById('anchorgrouplink_grouplinktext').focus();
@@ -1163,12 +1163,12 @@ $.Redactor.prototype.grouplink = function() {
 		{
 			this.modal.addTemplate('grouplink', this.grouplink.getExternalTemplate());
 			this.modal.load('grouplink', this.lang.get('grouplink_external'), 600);
-			
+
 			var button = this.modal.getActionButton();
 			button.on('click', this.grouplink.insertExternal);
-			
+
 			this.modal.show();
-			
+
 			setTimeout(function() {
 				if ($('#externalgrouplink_grouplinktext').length != 0) {
 					document.getElementById('externalgrouplink_grouplinktext').focus();
@@ -1184,7 +1184,7 @@ $.Redactor.prototype.grouplink = function() {
 			$(grouplinkMap).on('rex:selectLink', function (event, grouplinkurl, grouplinktext) {
 				event.preventDefault();
 				grouplinkMap.close();
-				
+
 				that.grouplink.insertInternal(grouplinkurl, grouplinktext);
 			});
 		},
@@ -1195,7 +1195,7 @@ $.Redactor.prototype.grouplink = function() {
 			$(mediapool).on('rex:selectMedia', function (event, filename) {
 				event.preventDefault();
 				mediapool.close();
-				
+
 				that.grouplink.insertMedia(filename);
 			});
 		},
@@ -1204,13 +1204,13 @@ $.Redactor.prototype.grouplink = function() {
 			var grouplinktext = $('#emailgrouplink_grouplinktext').val();
 			var emailaddress = $('#emailgrouplink_emailaddress').val();
 			this.modal.close();
-			
+
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var grouplinktext = selectedText;
 			}
-			
+
 			this.insert.html('<a href="mailto:'+emailaddress+'">'+grouplinktext+'</a>');
 		},
 		insertTelephone: function()
@@ -1218,13 +1218,13 @@ $.Redactor.prototype.grouplink = function() {
 			var grouplinktext = $('#telephonegrouplink_grouplinktext').val();
 			var telephonenumber = $('#telephonegrouplink_telephonenumber').val();
 			this.modal.close();
-			
+
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var grouplinktext = selectedText;
 			}
-			
+
 			this.insert.html('<a href="tel:'+telephonenumber+'">'+grouplinktext+'</a>');
 		},
 		insertAnchor: function()
@@ -1232,26 +1232,26 @@ $.Redactor.prototype.grouplink = function() {
 			var grouplinktext = $('#anchorgrouplink_grouplinktext').val();
 			var anchor = $('#anchorgrouplink_anchor').val();
 			this.modal.close();
-			
+
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var grouplinktext = selectedText;
 			}
-			
+
 			this.insert.html('<a href="#'+anchor+'">'+grouplinktext+'</a>');
 		},
 		insertExternal: function() {
 			var grouplinktext = $('#externalgrouplink_grouplinktext').val();
 			var grouplinkurl = $('#externalgrouplink_grouplinkurl').val();
 			this.modal.close();
-			
+
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var grouplinktext = selectedText;
 			}
-			
+
 			if (this.opts.externalUrlTarget == 'self') {
 				this.insert.html('<a href="'+grouplinkurl+'">'+grouplinktext+'</a>');
 			} else {
@@ -1260,7 +1260,7 @@ $.Redactor.prototype.grouplink = function() {
 		},
 		insertInternal: function(grouplinkurl, grouplinktext) {
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var grouplinktext = selectedText;
 			}
@@ -1269,7 +1269,7 @@ $.Redactor.prototype.grouplink = function() {
 		},
 		insertMedia: function(filename) {
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var grouplinktext = selectedText;
 			} else {
@@ -1309,10 +1309,10 @@ $.Redactor.prototype.grouplist = function() {
 		{
 			if (!this.opts.grouplist) return;
 			var grouplist = this.opts.grouplist;
-			
+
 			var that = this;
 			var dropdown = {};
-			
+
 			if (grouplist.indexOf("unorderedlist") != -1) {
 				dropdown.unorderedlist = { title: that.lang.get('grouplist_unorderedlist'), func: that.grouplist.setUnorderedlist };
 			}
@@ -1325,7 +1325,7 @@ $.Redactor.prototype.grouplist = function() {
 			if (grouplist.indexOf("outdent") != -1) {
 				dropdown.outdent = { title: that.lang.get('grouplist_outdent'), func: that.grouplist.setOutdent };
 			}
-			
+
 			var button = this.button.add('grouplist', this.lang.get('grouplist'));
 			this.button.setIcon(button, '<i class="fa fa-list"></i>');
 			this.button.addDropdown(button, dropdown);
@@ -1539,13 +1539,13 @@ $.Redactor.prototype.internallink = function() {
 			$(linkMap).on('rex:selectLink', function (event, linkurl, linktext) {
 				event.preventDefault();
 				linkMap.close();
-				
+
 				that.internallink.set(linkurl, linktext);
 			});
 		},
 		set: function(linkurl, linktext) {
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var linktext = selectedText;
 			}
@@ -1567,7 +1567,7 @@ $.Redactor.prototype.italic = function() {
 				"italic": "Itálico"
 			}
 		},
-		
+
 		init: function() {
 			var button = this.button.add('italic', this.lang.get('italic'));
 			this.button.setIcon(button, '<i class="fa fa-italic"></i>');
@@ -1647,19 +1647,19 @@ $.Redactor.prototype.media = function() {
 			$(mediapool).on('rex:selectMedia', function (event, filename) {
 				event.preventDefault();
 				mediapool.close();
-				
+
 				that.media.set(filename);
 			});
 		},
 		set: function(filename) {
 			var imageOpenTag = '';
 			var imageCloseTag = '';
-			
+
 			if (this.opts.imageTag != '') {
 				imageOpenTag = '<'+this.opts.imageTag+'>';
 				imageCloseTag = '</'+this.opts.imageTag+'>';
 			}
-			
+
 			this.insert.html(imageOpenTag+'<img src="index.php?rex_media_type=redactorImage&rex_media_file='+filename+'" alt="">'+imageCloseTag);
 		}
 	};
@@ -1688,13 +1688,13 @@ $.Redactor.prototype.medialink = function() {
 			$(mediapool).on('rex:selectMedia', function (event, filename) {
 				event.preventDefault();
 				mediapool.close();
-				
+
 				that.medialink.set(filename);
 			});
 		},
 		set: function(filename) {
 			var selectedText = this.selection.text();
-			
+
 			if (selectedText != '') {
 				var linktext = selectedText;
 			} else {
@@ -2270,10 +2270,10 @@ $.Redactor.prototype.styles = function()
 		{
 			if (!this.opts.styles) return;
 			var styles = this.opts.styles;
-			
+
 			var that = this;
 			var dropdown = {};
-			
+
 			$.each(styles, function(i, s)
 			{
 				dropdown[s[0]] = {
@@ -2283,7 +2283,7 @@ $.Redactor.prototype.styles = function()
 					}
 				};
 			});
-			
+
 			var button = this.button.add('styles', this.lang.get('styles'));
 			this.button.setIcon(button, '<i class="fa fa-pencil-square-o"></i>');
 			this.button.addDropdown(button, dropdown);
@@ -2597,7 +2597,7 @@ $.Redactor.prototype.sup = function() {
 					return false;
 				}
 
-				if ($table.size() === 0)
+				if ($table.length === 0)
 				{
 					return false;
 				}
@@ -2701,7 +2701,7 @@ $.Redactor.prototype.sup = function() {
 
 				this.buffer.set();
 
-				if ($table.find('thead').size() !== 0)
+				if ($table.find('thead').length !== 0)
 				{
 					this.table.deleteHead();
 					return;
@@ -2728,7 +2728,7 @@ $.Redactor.prototype.sup = function() {
 				}
 
 				var $thead = $table.find('thead');
-				if ($thead.size() === 0)
+				if ($thead.length === 0)
 				{
 					return;
 				}
@@ -2900,7 +2900,7 @@ $.Redactor.prototype.telephonelink = function() {
 			button.on('click', this.telephonelink.set);
 
 			this.modal.show();
-			
+
 			setTimeout(function() {
 				if ($('#telephonelink_linktext').length != 0) {
 					document.getElementById('telephonelink_linktext').focus();
