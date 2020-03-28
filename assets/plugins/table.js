@@ -256,7 +256,7 @@
 					return false;
 				}
 
-				if ($table.size() === 0)
+				if ($table.length === 0)
 				{
 					return false;
 				}
@@ -360,7 +360,7 @@
 
 				this.buffer.set();
 
-				if ($table.find('thead').size() !== 0)
+				if ($table.find('thead').length !== 0)
 				{
 					this.table.deleteHead();
 					return;
@@ -387,7 +387,7 @@
 				}
 
 				var $thead = $table.find('thead');
-				if ($thead.size() === 0)
+				if ($thead.length === 0)
 				{
 					return;
 				}
