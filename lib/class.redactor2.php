@@ -2,7 +2,7 @@
 
 class redactor2
 {
-    public static function insertProfile($name, $description = '', $minheight = '300', $maxheight = '800', $urltype = 'relative', $characterlimit = 0, $toolbarfixed = 0, $shortcuts = 0, $linkify = 1, $redactorPlugins = '')
+    public static function insertProfile($name, $description = '', $minheight = '300', $maxheight = '800', $urltype = 'relative', $characterlimit = 0, $toolbarfixed = 0, $shortcuts = 0, $linkify = 1, $redactorPlugins = '', $redactor_settings = '')
     {
         $sql = rex_sql::factory();
         $sql->setTable(rex::getTablePrefix().'redactor2_profiles');
@@ -17,6 +17,7 @@ class redactor2
         $sql->setValue('shortcuts', $shortcuts);
         $sql->setValue('linkify', $linkify);
         $sql->setValue('redactor_plugins', $redactorPlugins);
+        $sql->setValue('redactor_settings', $redactor_settings);
 
         try {
             $sql->insert();
@@ -100,6 +101,18 @@ class redactor2
                             $redactorPlugins[] = $matches[1];
                         } else {
                             $redactorPlugins[] = $plugin;
+                        }
+                    }
+                }
+
+                if (trim($profile['redactor_settings']) != '') {
+                    $settings = explode("\n", $profile['redactor_settings']);
+                    foreach ($settings as $setting) {
+                        $matches = null;
+                        if (preg_match('/(.*):\W?(.*)/', $setting, $matches)) {
+                            $settingKey = $matches[1];
+                            $settingVal = $matches[2];
+                            $profiles[$name][$settingKey] = $settingVal;
                         }
                     }
                 }
