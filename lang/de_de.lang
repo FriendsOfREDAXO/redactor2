@@ -43,6 +43,8 @@ redactor2_profiles_label_linkify_option_false = Nein
 redactor2_profiles_label_imagetag = HTML-Tag um Bilder<br><i>z.B. p oder figure</i>
 redactor2_profiles_label_redactorplugins = Plugins
 redactor2_profiles_label_redactorcustomplugins_help = Bitte eigene Plugins über das ProjektAddon einbinden. Eigene Javascripte entsprechend über den Extension Point `PACKAGES_INCLUDED` und Level `rex_extension::LATE` einbinden
+redactor2_profiles_label_redactorsettings = Settings
+redactor2_profiles_label_redactorsettings_help = Format: <code>key: val</code> Unterschiedliche Settings durch Zeilenumbruch trennen.
 
 redactor2_profiles_plugins_anchorlink_description = Fügt einen Anker-Link ein
 redactor2_profiles_plugins_alignment_description = Setzt die Ausrichtung des markierten Texts

@@ -284,7 +284,18 @@ if ($func == '') {
             </dl>
         ');
 
-    $form->addTextAreaField('redactor_settings');
+    $field = $form->addTextAreaField('redactor_settings');
+    $field->setLabel($this->i18n('profiles_label_redactorsettings'));
+    $field = $form->addRawField('
+            <dl class="rex-form-group form-group">
+                <dt>
+                    &nbsp;
+                </dt>
+                <dd>
+                    <p>'.$this->i18n('profiles_label_redactorsettings_help').'</p>
+                </dd>
+            </dl>
+        ');
 
     if ($func == 'edit') {
         $form->addParam('id', $id);
