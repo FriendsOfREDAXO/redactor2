@@ -43,6 +43,8 @@ redactor2_profiles_label_linkify_option_false = No
 redactor2_profiles_label_imagetag = Etiqueta HTML para imágenes <br> <i> z. p o figura </ i>
 redactor2_profiles_label_redactorplugins = Plugins
 redactor2_profiles_label_redactorcustomplugins_help = Incluya sus complementos a través de su proyecto. Incluya su Javascript con el Punto de Extensión `PACKAGES_INCLUDED` y el nivel `rex_extension::LATE`
+redactor2_profiles_label_redactorsettings = Settings
+redactor2_profiles_label_redactorsettings_help = Formato: <code>key: val</code> Usa una linea por configuraión.
 
 redactor2_profiles_plugins_anchorlink_description = Inserta un enlace de anclaje
 redactor2_profiles_plugins_alignment_description = Establece la alineación del texto seleccionado
