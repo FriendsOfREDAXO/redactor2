@@ -10,7 +10,7 @@ if ($func == 'copy') {
         $sql = rex_sql::factory();
 
         try {
-            $sql->setQuery('INSERT INTO '.rex::getTablePrefix() . 'redactor2_profiles (name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins) SELECT name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins, redactor_settings FROM '.rex::getTablePrefix() . 'redactor2_profiles WHERE id = ?', [$profile_id]);
+            $sql->setQuery('INSERT INTO '.rex::getTablePrefix() . 'redactor2_profiles (name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins, redactor_settings) SELECT name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins, redactor_settings FROM '.rex::getTablePrefix() . 'redactor2_profiles WHERE id = ?', [$profile_id]);
             $success = $this->i18n('profiles_message_copy_success');
         } catch (rex_sql_exception $e) {
             $error = $sql->getError();
