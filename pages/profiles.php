@@ -10,7 +10,7 @@ if ($func == 'copy') {
         $sql = rex_sql::factory();
 
         try {
-            $sql->setQuery('INSERT INTO '.rex::getTablePrefix() . 'redactor2_profiles (name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins) SELECT name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins FROM '.rex::getTablePrefix() . 'redactor2_profiles WHERE id = ?', [$profile_id]);
+            $sql->setQuery('INSERT INTO '.rex::getTablePrefix() . 'redactor2_profiles (name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins, redactor_settings) SELECT name, description, urltype, externalurltarget, minheight, maxheight, characterlimit, toolbarfixed, shortcuts, linkify, imagetag, redactor_plugins, redactor_settings FROM '.rex::getTablePrefix() . 'redactor2_profiles WHERE id = ?', [$profile_id]);
             $success = $this->i18n('profiles_message_copy_success');
         } catch (rex_sql_exception $e) {
             $error = $sql->getError();
@@ -280,6 +280,19 @@ if ($func == '') {
                 </dt>
                 <dd>
                     <p>'.$this->i18n('profiles_label_redactorcustomplugins_help').'</p>
+                </dd>
+            </dl>
+        ');
+
+    $field = $form->addTextAreaField('redactor_settings');
+    $field->setLabel($this->i18n('profiles_label_redactorsettings'));
+    $field = $form->addRawField('
+            <dl class="rex-form-group form-group">
+                <dt>
+                    &nbsp;
+                </dt>
+                <dd>
+                    <p>'.$this->i18n('profiles_label_redactorsettings_help').'</p>
                 </dd>
             </dl>
         ');
