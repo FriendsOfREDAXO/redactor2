@@ -43,6 +43,8 @@ redactor2_profiles_label_linkify_option_false = Nej
 redactor2_profiles_label_imagetag = HTML-tagg omkring bilder <br> <i> t.ex. p eller figure </ i>
 redactor2_profiles_label_redactorplugins = Buttons
 redactor2_profiles_label_redactorcustomplugins_help = Integrera dina egna plugins via ProjectAddon. Inkludera egna javascripts enligt Extension Point `PACKAGES_INCLUDED` och level` rex_extension :: LATE
+redactor2_profiles_label_redactorsettings = Inställningar
+redactor2_profiles_label_redactorsettings_help = Format: <code> nyckel: val </code> Separera olika inställningar med en radbrytning.
 
 redactor2_profiles_plugins_anchorlink_description = Tillfoga anchor-link
 redactor2_profiles_plugins_alignment_description = Ändrar justeringen av den markerade texten
