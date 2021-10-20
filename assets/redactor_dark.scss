@@ -1,0 +1,262 @@
+@mixin _redactor2-dark {
+
+    .redactor-layer,
+    .redactor-box {
+        background-color: #151c22;
+    }
+
+    .redactor-placeholder:after {
+        color: rgba(255, 255, 255, 0.3);
+    }
+
+    .redactor-layer {
+        border-color: rgba(#151c22, 0.8);
+    }
+
+    .redactor-toolbar-box .re-button-tooltip {
+        background-color: #26323f;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .redactor-toolbar {
+        background-color: #1b232c;
+    }
+
+    .redactor-toolbar li a {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .redactor-toolbar li a:hover {
+        background-color: #114b7a;
+        color: inherit;
+    }
+
+    .redactor-toolbar li a:active,
+    .redactor-toolbar li a.redactor-act {
+        background-color: #151c22;
+        color: #7abaec;
+    }
+
+    .redactor-toolbar li a.redactor-button-disabled:hover {
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    .redactor-toolbar li a.redactor-button-focus {
+        background-color: #114b7a;
+        color: inherit;
+    }
+
+    .redactor-toolbar li a {
+        border-right-color: #151c22;
+    }
+
+    .redactor-dropdown {
+        color: rgba(255, 255, 255, 0.75);
+        background-color: #202b35;
+    }
+
+    .redactor-dropdown li {
+        border-bottom-color: #151c22;
+    }
+
+    .redactor-dropdown li:hover {
+        background-color: inherit;
+    }
+
+    .redactor-dropdown li:hover a {
+        color: #7abaec !important;
+    }
+
+    .redactor-dropdown li.redactor-dropdown-link-inactive a,
+    .redactor-dropdown li.redactor-dropdown-link-inactive a:hover {
+        color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    .redactor-dropdown a {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .redactor-dropdown a.selected {
+        background-color: #1b232c;
+        color: #7abaec;
+    }
+
+    .redactor-dropdown a.redactor-dropdown-link-selected {
+        background-color: #1b232c;
+        color: #7abaec;
+    }
+
+    #redactor-modal-overlay {
+        background-color: rgba(#151c22, 0.95);
+    }
+
+    #redactor-modal {
+        background: #202b35;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    #redactor-modal #redactor-modal-header {
+        color: rgba(255, 255, 255, 0.75);
+        border-bottom-color: #151c22;
+    }
+
+    #redactor-modal #redactor-modal-close {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    #redactor-modal #redactor-modal-close:hover {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    #redactor-modal #redactor-modal-body label {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    #redactor-modal #redactor-modal-body label .desc {
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    #redactor-modal select,
+    #redactor-modal input[type="text"],
+    #redactor-modal input[type="password"],
+    #redactor-modal input[type="email"],
+    #redactor-modal input[type="url"],
+    #redactor-modal input[type="number"],
+    #redactor-modal textarea {
+        border-color: rgba(#151c22, 0.8);
+        background-color: rgba(#1b232c, 0.8);
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    #redactor-modal select:focus,
+    #redactor-modal input[type="text"]:focus,
+    #redactor-modal input[type="password"]:focus,
+    #redactor-modal input[type="email"]:focus,
+    #redactor-modal input[type="url"]:focus,
+    #redactor-modal input[type="number"]:focus,
+    #redactor-modal textarea:focus {
+        background-color: #151c22;
+        border-color: #114b7a;
+    }
+
+    #redactor-modal button {
+        color: rgba(255, 255, 255, 0.75);
+        background-color: #2e3b4a;
+    }
+
+    #redactor-modal button:hover {
+        color: inherit;
+        background-color: darken(#2e3b4a, 4%);
+    }
+
+    #redactor-modal button#redactor-modal-button-delete {
+        color: inherit;
+        background-color: #801919;
+    }
+
+    #redactor-modal button#redactor-modal-button-delete:hover {
+        color: inherit;
+        background-color: darken(#801919, 4%);
+    }
+
+    #redactor-modal button#redactor-modal-button-action {
+        color: inherit;
+        background-color: #1867a6;
+    }
+
+    #redactor-modal button#redactor-modal-button-action:hover {
+        color: inherit;
+        background-color: darken(#1867a6, 4%);
+    }
+
+    .redactor-styles {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .redactor-styles h1,
+    .redactor-styles h2,
+    .redactor-styles h3,
+    .redactor-styles h4,
+    .redactor-styles h5,
+    .redactor-styles h6 {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .redactor-styles blockquote {
+        color: rgba(192, 192, 192, 0.75);
+    }
+
+    .redactor-styles cite {
+        color: rgba(192, 192, 192, 0.75);
+    }
+
+    .redactor-styles abbr[title],
+    .redactor-styles dfn[title] {
+        border-bottom-color: rgba(192, 192, 192, 0.75);
+    }
+
+    .redactor-styles mark {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .redactor-styles pre {
+        color: #7abaec;
+        background-color: #1b232c;
+    }
+
+    .redactor-styles code {
+        color: #7abaec;
+        background-color: #1b232c;
+    }
+
+    .redactor-styles var {
+        color: rgba(255, 255, 255, 0.75);
+        background-color: #0d6a38;
+    }
+
+    .redactor-styles samp {
+        color: rgba(255, 255, 255, 0.75);
+        background-color: #0d6a38;
+    }
+
+    .redactor-styles kbd {
+        color: rgba(255, 255, 255, 0.75);
+        background-color: #114b7a;
+    }
+
+    .redactor-styles hr {
+        border-top-color: rgba(192, 192, 192, 0.4);
+    }
+
+    .redactor-styles table {
+        background-color: transparent;
+    }
+
+    .redactor-styles table caption {
+        color: rgba(192, 192, 192, 0.75);
+    }
+
+    .redactor-styles table th {
+        background-color: rgba(128, 128, 128, 0.05);
+    }
+
+    .redactor-styles table th,
+    .redactor-styles table td {
+        border-color: rgba(192, 192, 192, 0.2);
+    }
+
+    .redactor-styles table tfoot th,
+    .redactor-styles table tfoot td {
+        color: rgba(192, 192, 192, 0.75);
+    }
+}
+
+body.rex-theme-dark {
+    @include _redactor2-dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    body.rex-has-theme:not(.rex-theme-light) {
+        @include _redactor2-dark;
+    }
+}
