@@ -46,7 +46,128 @@
         color: inherit;
     }
 
-    // ------------
+    .redactor-toolbar li a {
+        border-right-color: #151c22;
+    }
+
+    .redactor-dropdown {
+        color: rgba(255, 255, 255, 0.75);
+        background-color: #202b35;
+    }
+
+    .redactor-dropdown li {
+        border-bottom-color: #151c22;
+    }
+
+    .redactor-dropdown li:hover {
+        background-color: inherit;
+    }
+
+    .redactor-dropdown li:hover a {
+        color: #7abaec !important;
+    }
+
+    .redactor-dropdown li.redactor-dropdown-link-inactive a,
+    .redactor-dropdown li.redactor-dropdown-link-inactive a:hover {
+        color: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    .redactor-dropdown a {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .redactor-dropdown a.selected {
+        background-color: #1b232c;
+        color: #7abaec;
+    }
+
+    .redactor-dropdown a.redactor-dropdown-link-selected {
+        background-color: #1b232c;
+        color: #7abaec;
+    }
+
+    #redactor-modal-overlay {
+        background-color: rgba(#151c22, 0.95);
+    }
+
+    #redactor-modal {
+        background: #202b35;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    #redactor-modal #redactor-modal-header {
+        color: rgba(255, 255, 255, 0.75);
+        border-bottom-color: #151c22;
+    }
+
+    #redactor-modal #redactor-modal-close {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    #redactor-modal #redactor-modal-close:hover {
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    #redactor-modal #redactor-modal-body label {
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    #redactor-modal #redactor-modal-body label .desc {
+        color: rgba(255, 255, 255, 0.45);
+    }
+
+    #redactor-modal select,
+    #redactor-modal input[type="text"],
+    #redactor-modal input[type="password"],
+    #redactor-modal input[type="email"],
+    #redactor-modal input[type="url"],
+    #redactor-modal input[type="number"],
+    #redactor-modal textarea {
+        border-color: rgba(#151c22, 0.8);
+        background-color: rgba(#1b232c, 0.8);
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    #redactor-modal select:focus,
+    #redactor-modal input[type="text"]:focus,
+    #redactor-modal input[type="password"]:focus,
+    #redactor-modal input[type="email"]:focus,
+    #redactor-modal input[type="url"]:focus,
+    #redactor-modal input[type="number"]:focus,
+    #redactor-modal textarea:focus {
+        background-color: #151c22;
+        border-color: #114b7a;
+    }
+
+    #redactor-modal button {
+        color: rgba(255, 255, 255, 0.75);
+        background-color: #2e3b4a;
+    }
+
+    #redactor-modal button:hover {
+        color: inherit;
+        background-color: darken(#2e3b4a, 4%);
+    }
+
+    #redactor-modal button#redactor-modal-button-delete {
+        color: inherit;
+        background-color: #801919;
+    }
+
+    #redactor-modal button#redactor-modal-button-delete:hover {
+        color: inherit;
+        background-color: darken(#801919, 4%);
+    }
+
+    #redactor-modal button#redactor-modal-button-action {
+        color: inherit;
+        background-color: #1867a6;
+    }
+
+    #redactor-modal button#redactor-modal-button-action:hover {
+        color: inherit;
+        background-color: darken(#1867a6, 4%);
+    }
 
     .redactor-styles {
         color: rgba(255, 255, 255, 0.75);
