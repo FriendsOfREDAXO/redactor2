@@ -1,6 +1,13 @@
 # Redactor2 Changelog
 
 
+## 4.2.1 – 20.10.2021
+
+### Bugfixes
+
+- Fix invalid `package.yml` file
+
+
 ## 4.2.0 – 20.10.2021
 
 ### Features
