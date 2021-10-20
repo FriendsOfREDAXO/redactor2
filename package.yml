@@ -8,8 +8,8 @@ page:
     perm: redactor2[]
     pjax: true
     subpages:
-        profiles: { title: 'translate:profiles', perm: redactor2[profiles] }
-        help: { title: 'translate:help', icon: rex-icon fa-info-circle, itemclass: pull-right}
+        profiles: { title: 'translate:profiles', perm: 'redactor2[profiles]' }
+        help: { title: 'translate:help', icon: 'rex-icon fa-info-circle' }
 
 requires:
     redaxo: '^5.6'
