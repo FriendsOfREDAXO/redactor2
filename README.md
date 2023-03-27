@@ -1,6 +1,8 @@
-Redactor-Editor
+Redactor-Editor 2.x
 ===============
 
+⚠️ Entwicklung eingestellt: Nachfolger ist das [redactor-AddOn](https://github.com/FriendsOfREDAXO/redactor).
+<hr>
 Addon für REDAXO 5: Bindet den WYSIWYG-Editor [Redactor](http://imperavi.com/redactor/) in Version 2 im Backend ein. Ist Version 3 oder neuer gewünscht, bitte den [Nachfolger dieses AddOns](https://github.com/FriendsOfREDAXO/redactor) beachten.
 
 ![Screenshot](https://raw.githubusercontent.com/FriendsOfREDAXO/redactor2/assets/redactor2.png)
